@@ -14,7 +14,7 @@ import pandas as pd
 PROJECT_ROOT = next(p for p in Path(__file__).resolve().parents if (p / "requirements.txt").exists())
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from scripts.diagnostics import shap_price_importance_2023_2025_sided_updated as shap_updated  # noqa: E402
+from scripts.modelling import shap_price_importance_2023_2025_sided_updated as shap_updated  # noqa: E402
 
 SP_SUMMARY_PATH = shap_updated.SP_SUMMARY_PATH
 REPORT_DIR = PROJECT_ROOT / "reports" / "full_2023_2025"
