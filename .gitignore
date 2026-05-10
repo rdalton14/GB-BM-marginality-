@@ -1,0 +1,40 @@
+# Local environments and editor state
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+
+# Assistant/local tool state
+.claude/
+
+# Secrets and local-only configuration
+config/
+*.env
+.env
+.env.*
+
+# Python caches and build artefacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Legacy snapshots and superseded generated outputs
+archive/
+reports/**/archive/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,722 @@
+[
+  {
+    "settlementDate": "2026-01-01",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 764,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-01&to=2026-01-01&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-02",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 285,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-02&to=2026-01-02&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-03",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 377,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-03&to=2026-01-03&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-04",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 251,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-04&to=2026-01-04&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-05",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 1026,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-05&to=2026-01-05&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-06",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 1986,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-06&to=2026-01-06&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-07",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 208,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-07&to=2026-01-07&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-08",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 573,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-08&to=2026-01-08&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-09",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 156,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-09&to=2026-01-09&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-10",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 230,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-10&to=2026-01-10&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-11",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 319,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-11&to=2026-01-11&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-12",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 261,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-12&to=2026-01-12&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-13",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 225,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-13&to=2026-01-13&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-14",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 493,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-14&to=2026-01-14&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-15",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 199,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-15&to=2026-01-15&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-16",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 204,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-16&to=2026-01-16&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-17",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 241,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-17&to=2026-01-17&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-18",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 263,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-18&to=2026-01-18&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-19",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 336,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-19&to=2026-01-19&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-20",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 697,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-20&to=2026-01-20&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-21",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 618,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-21&to=2026-01-21&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-22",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 256,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-22&to=2026-01-22&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-23",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 246,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-23&to=2026-01-23&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-24",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 522,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-24&to=2026-01-24&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-25",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 527,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-25&to=2026-01-25&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-26",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 593,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-26&to=2026-01-26&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-27",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 180,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-27&to=2026-01-27&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-28",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 481,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-28&to=2026-01-28&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-29",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 482,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-29&to=2026-01-29&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-30",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 139,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-30&to=2026-01-30&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-01-31",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 90,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-01-31&to=2026-01-31&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-01",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 53,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-01&to=2026-02-01&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-02",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 536,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-02&to=2026-02-02&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-03",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 240,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-03&to=2026-02-03&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-04",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 249,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-04&to=2026-02-04&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-05",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 365,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-05&to=2026-02-05&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-06",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 308,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-06&to=2026-02-06&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-07",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 166,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-07&to=2026-02-07&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-08",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 194,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-08&to=2026-02-08&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-09",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 187,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-09&to=2026-02-09&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-10",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 513,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-10&to=2026-02-10&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-11",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 411,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-11&to=2026-02-11&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-12",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 60,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-12&to=2026-02-12&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-13",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 133,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-13&to=2026-02-13&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-14",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 121,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-14&to=2026-02-14&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-15",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 409,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-15&to=2026-02-15&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-16",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 257,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-16&to=2026-02-16&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-17",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 192,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-17&to=2026-02-17&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-18",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 318,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-18&to=2026-02-18&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-19",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 674,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-19&to=2026-02-19&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-20",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 579,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-20&to=2026-02-20&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-21",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 331,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-21&to=2026-02-21&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-22",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 462,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-22&to=2026-02-22&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-23",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 318,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-23&to=2026-02-23&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-24",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 160,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-24&to=2026-02-24&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-25",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 171,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-25&to=2026-02-25&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-26",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 167,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-26&to=2026-02-26&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-27",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 126,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-27&to=2026-02-27&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-02-28",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 109,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-02-28&to=2026-02-28&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-01",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 618,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-01&to=2026-03-01&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-02",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 352,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-02&to=2026-03-02&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-03",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 109,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-03&to=2026-03-03&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-04",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 322,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-04&to=2026-03-04&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-05",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 232,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-05&to=2026-03-05&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-06",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 91,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-06&to=2026-03-06&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-07",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 141,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-07&to=2026-03-07&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-08",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 48,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-08&to=2026-03-08&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-09",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 331,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-09&to=2026-03-09&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-10",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 300,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-10&to=2026-03-10&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-11",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 647,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-11&to=2026-03-11&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-12",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 477,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-12&to=2026-03-12&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-13",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 497,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-13&to=2026-03-13&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-14",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 128,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-14&to=2026-03-14&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-15",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 550,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-15&to=2026-03-15&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-16",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 800,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-16&to=2026-03-16&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-17",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 294,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-17&to=2026-03-17&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-18",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 309,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-18&to=2026-03-18&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-19",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 160,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-19&to=2026-03-19&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-20",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 192,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-20&to=2026-03-20&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-21",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 291,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-21&to=2026-03-21&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-22",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 175,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-22&to=2026-03-22&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-23",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 327,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-23&to=2026-03-23&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-24",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 474,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-24&to=2026-03-24&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-25",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 525,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-25&to=2026-03-25&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-26",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 108,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-26&to=2026-03-26&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-27",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 692,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-27&to=2026-03-27&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-28",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 216,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-28&to=2026-03-28&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-29",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 307,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-29&to=2026-03-29&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-30",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 428,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-30&to=2026-03-30&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  },
+  {
+    "settlementDate": "2026-03-31",
+    "status": "ok",
+    "status_code": 200,
+    "row_count": 383,
+    "error": null,
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/DISBSAD?from=2026-03-31&to=2026-03-31&settlementPeriodFrom=1&settlementPeriodTo=48&format=json"
+  }
+]

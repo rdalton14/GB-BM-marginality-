@@ -1,0 +1,51 @@
+predictor,feature,side,regimes_in_top20,top20_regimes,best_regime_rank,mean_abs_shap_mean,direction_pattern_low_normal_high_extreme,min_active_rows
+Generation type,CCGT_OFFER,OFFER,4,"Low <= p10, Normal p10-p75, High p90-p95, Extreme > p95",1,3.1699307288686898,+ | + | + | +,17
+Generation type,CCGT_BID,BID,4,"Low <= p10, Normal p10-p75, High p90-p95, Extreme > p95",2,0.9588107384760622,+ | - | - | -,5
+Generation type,BATTERY_OFFER,OFFER,4,"Low <= p10, Normal p10-p75, High p90-p95, Extreme > p95",3,0.9385457446757475,+ | + | - | -,15
+Generation type,BATTERY_BID,BID,4,"Low <= p10, Normal p10-p75, High p90-p95, Extreme > p95",3,0.573381936480687,+ | - | 0 | 0,1
+Generation type,OTHER_OFFER,OFFER,4,"Low <= p10, Normal p10-p75, High p90-p95, Extreme > p95",2,0.3619240463791383,+ | + | - | +,7
+Generation type,PS_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",1,1.387392303776264,NA | + | + | -,381
+Family ID,T_DINO_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",2,0.7568128285690362,NA | + | + | -,92
+Generation type,LOAD RESPONSE_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",4,0.5192744524952216,+ | + | + | -,5
+Family ID,T_COSO_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",4,0.38027589713768595,0 | + | - | +,1
+Family ID,T_SEAB_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",4,0.2948990383753453,NA | + | + | -,59
+Generation type,DIESEL_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",6,0.27811985979884146,NA | + | - | -,55
+Generation type,OTHER_BID,BID,3,"Low <= p10, Normal p10-p75, High p90-p95",6,0.20524109863998563,+ | - | + | 0,1
+Generation type,NPSHYD_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",3,0.1898690377413301,0 | + | - | +,1
+Family ID,T_PEMB_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",5,0.18796596645147332,NA | + | - | -,36
+Generation type,LOAD RESPONSE_BID,BID,3,"Low <= p10, Normal p10-p75, High p90-p95",5,0.17966327637202043,+ | - | + | NA,6
+BMU ID,T_CARR-1_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",13,0.08995367203143485,NA | + | - | -,6
+Generation type,OCGT_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",10,0.07608660926254787,NA | + | - | +,43
+Generation type,COAL_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",11,0.0649721840274305,NA | + | + | -,26
+Generation type,NPSHYD_BID,BID,3,"Low <= p10, Normal p10-p75, Extreme > p95",11,0.060413289529557705,+ | - | NA | -,5
+Generation type,BIOMASS_OFFER,OFFER,3,"Normal p10-p75, High p90-p95, Extreme > p95",11,0.059986271887548195,0 | + | + | -,3
+Family ID,T_RYHPS_OFFER,OFFER,2,"High p90-p95, Extreme > p95",1,2.7368869375585327,NA | + | + | +,9
+BMU ID,T_RYHPS-1_OFFER,OFFER,2,"High p90-p95, Extreme > p95",1,2.5306984725093877,NA | + | + | +,7
+Family ID,T_CNQPS_OFFER,OFFER,2,"Normal p10-p75, Extreme > p95",2,2.4084302626295817,NA | + | + | +,40
+Generation type,WIND_BID,BID,2,"Low <= p10, Normal p10-p75",1,2.1760284350459638,- | - | 0 | NA,1
+BMU ID,T_CNQPS-1_OFFER,OFFER,2,"High p90-p95, Extreme > p95",2,1.3073305002196738,NA | + | + | +,6
+Generation type,BIOMASS_BID,BID,2,"Low <= p10, Normal p10-p75",4,0.4412254434098994,+ | - | 0 | NA,1
+Family ID,T_DRAXX_BID,BID,2,"Low <= p10, Normal p10-p75",1,0.40400666284189596,+ | - | 0 | NA,1
+BMU ID,T_COSO-1_OFFER,OFFER,2,"Normal p10-p75, Extreme > p95",4,0.37706309308498864,0 | + | - | +,1
+Generation type,PS_BID,BID,2,"Low <= p10, Normal p10-p75",9,0.3619553354713998,+ | - | NA | NA,331
+Family ID,T_PEMB_BID,BID,2,"Low <= p10, Normal p10-p75",3,0.3325491454620859,+ | - | NA | NA,53
+BMU ID,T_DINO-2_OFFER,OFFER,2,"High p90-p95, Extreme > p95",1,0.3308882664540142,NA | + | + | -,9
+Generation type,BritNed_OFFER,OFFER,2,"High p90-p95, Extreme > p95",5,0.27307557741752964,NA | + | + | +,11
+Family ID,T_CARR_OFFER,OFFER,2,"Normal p10-p75, Extreme > p95",7,0.23376424204411764,NA | + | + | -,41
+Generation type,Viking_OFFER,OFFER,2,"High p90-p95, Extreme > p95",6,0.2150013616060836,NA | + | - | +,6
+Family ID,2__GSTAT_B_OFFER,OFFER,2,"Normal p10-p75, Extreme > p95",5,0.19139285615195567,0 | + | + | -,1
+Family ID,T_WBURB_CC_OFFER,OFFER,2,"Normal p10-p75, Extreme > p95",5,0.1750370421374816,0 | + | - | -,1
+BMU ID,T_SEAB-2_OFFER,OFFER,2,"High p90-p95, Extreme > p95",7,0.16761064376236914,NA | + | + | -,6
+Family ID,T_SGRWO_BID,BID,2,"Low <= p10, Normal p10-p75",8,0.16503192443582215,+ | - | NA | NA,46
+Family ID,T_DINO_BID,BID,2,"Low <= p10, Normal p10-p75",11,0.1649657765719884,+ | - | NA | NA,91
+Family ID,T_CRUA_OFFER,OFFER,2,"Normal p10-p75, High p90-p95",1,0.16319693180724928,NA | + | + | -,44
+Family ID,2__AFLEX_OFFER,OFFER,2,"High p90-p95, Extreme > p95",9,0.16017492771952604,NA | + | + | -,8
+Family ID,T_FFES_OFFER,OFFER,2,"Normal p10-p75, Extreme > p95",13,0.1533596235669482,NA | + | + | -,34
+BMU ID,T_DRAXX-2_BID,BID,2,"Low <= p10, Normal p10-p75",4,0.13710487530552007,+ | - | 0 | NA,1
+BMU ID,T_DRAXX-3_BID,BID,2,"Low <= p10, Normal p10-p75",7,0.1349516149484115,+ | - | NA | NA,33
+Family ID,2__NFLEX_LR_OFFER,OFFER,2,"High p90-p95, Extreme > p95",4,0.12330497180087352,NA | + | + | -,11
+Family ID,T_GRAI_BID,BID,2,"Low <= p10, Normal p10-p75",5,0.11496084873780439,+ | - | + | 0,1
+BMU ID,T_ROCK-1_OFFER,OFFER,2,"Normal p10-p75, Extreme > p95",10,0.11377422746176095,NA | + | + | +,8
+BMU ID,T_HUMR-1_OFFER,OFFER,2,"Normal p10-p75, Extreme > p95",8,0.10491510597634102,NA | + | - | -,0
+Generation type,IFA2_OFFER,OFFER,2,"High p90-p95, Extreme > p95",10,0.0999831508216417,NA | 0 | - | +,2
+Family ID,T_GRAI_OFFER,OFFER,2,"Normal p10-p75, High p90-p95",7,0.09813207709412256,0 | + | - | -,1

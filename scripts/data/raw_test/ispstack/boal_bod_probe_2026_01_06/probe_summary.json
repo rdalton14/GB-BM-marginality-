@@ -1,0 +1,24 @@
+[
+  {
+    "dataset": "BOAL",
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/BOAL?publishDateTimeFrom=2026-01-06T00%3A00%3A00&publishDateTimeTo=2026-01-07T00%3A00%3A00&format=json",
+    "status_code": 404,
+    "row_count_guess": null,
+    "sample_keys": [
+      "message",
+      "statusCode"
+    ],
+    "output_file": "C:\\Users\\robda\\PycharmProjects\\Dissertation\\scripts\\data\\raw_test\\ispstack\\boal_bod_probe_2026_01_06\\boal_response.json"
+  },
+  {
+    "dataset": "BOD",
+    "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/BOD?publishDateTimeFrom=2026-01-06T00%3A00%3A00&publishDateTimeTo=2026-01-07T00%3A00%3A00&format=json",
+    "status_code": 404,
+    "row_count_guess": null,
+    "sample_keys": [
+      "message",
+      "statusCode"
+    ],
+    "output_file": "C:\\Users\\robda\\PycharmProjects\\Dissertation\\scripts\\data\\raw_test\\ispstack\\boal_bod_probe_2026_01_06\\bod_response.json"
+  }
+]

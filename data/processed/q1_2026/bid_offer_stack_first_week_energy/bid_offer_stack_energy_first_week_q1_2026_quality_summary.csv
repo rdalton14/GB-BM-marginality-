@@ -1,0 +1,13 @@
+metric,value
+files_loaded,7.0
+raw_rows_first_week,90766.0
+energy_stack_rows,58396.0
+energy_bid_rows,23122.0
+energy_offer_rows,35274.0
+settlement_periods_covered,336.0
+expected_settlement_periods,336.0
+settlement_period_coverage_share,1.0
+numeric_disbsad_energy_rows_retained,1768.0
+numeric_disbsad_energy_rows_with_resolved_bmu_id,1728.0
+unique_bid_ids,242.0
+unique_offer_ids,385.0

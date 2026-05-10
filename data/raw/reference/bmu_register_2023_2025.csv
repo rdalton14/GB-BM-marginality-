@@ -1,0 +1,981 @@
+elexon_bmu_id,family_id,bmu_name,fuel_type,lead_party,bmu_type,gen_capacity_mw,gsp_group,is_numeric_id,identity_source
+2__AFLEX003,2__AFLEX,2__AFLEX003,LOAD RESPONSE,Flexitricity Limited,S,49.0,Eastern,False,named_ispstack_id
+2__AFLEX004,2__AFLEX,2__AFLEX004,LOAD RESPONSE,Flexitricity Limited,S,49.0,Eastern,False,named_ispstack_id
+2__AFLEX005,2__AFLEX,2__AFLEX005,LOAD RESPONSE,Flexitricity Limited,S,49.0,Eastern,False,named_ispstack_id
+2__ALOND002,2__ALOND,EDFE Aggregate Eastern 02,LOAD RESPONSE,EDF Energy Customers Limited,S,0.0,Eastern GSP Group,False,named_ispstack_id
+2__AMRCY001,2__AMRCY,2__AMRCY001,BATTERY,Octopus Energy Limited,S,15.96,Eastern,False,named_ispstack_id
+2__ASTAT005,2__ASTAT_B,STAT_A6,BATTERY,Statkraft Markets Gmbh,S,51.313,Eastern,False,named_ispstack_id
+2__ASTAT008,2__ASTAT_B,STAT_A9,BATTERY,Statkraft Markets Gmbh,S,28.749,Eastern,False,named_ispstack_id
+2__ASTAT003,2__ASTAT_OTH,STAT_A4,OTHER,Statkraft Markets Gmbh,S,42.0,Eastern,False,named_ispstack_id
+2__BBPGM001,2__BBPGM,2__BBPGM001,BATTERY,BP Gas Marketing Limited,S,10.19,East Midlands,False,named_ispstack_id
+2__BECOT003,2__BECOT,ECOT_VPP_11,WIND,ECOTRICITY LIMITED,S,16.0,East Midlands,False,named_ispstack_id
+2__BFLEX001,2__BFLEX,2__BFLEX001,LOAD RESPONSE,Flexitricity Limited,S,49.0,East Midlands,False,named_ispstack_id
+2__BFLEX002,2__BFLEX,2__BFLEX002,LOAD RESPONSE,Flexitricity Limited,S,49.0,East Midlands,False,named_ispstack_id
+2__BFLEX003,2__BFLEX,2__BFLEX003,LOAD RESPONSE,Flexitricity Limited,S,49.0,East Midlands,False,named_ispstack_id
+2__BFLEX004,2__BFLEX,2__BFLEX004,LOAD RESPONSE,Flexitricity Limited,S,49.0,East Midlands,False,named_ispstack_id
+2__BFSEN006,2__BFSEN_B,2__BFSENOK6,BATTERY,F & S Energy Ltd,S,50.573,East Midlands,False,named_ispstack_id
+2__BFSEN005,2__BFSEN_OTH,2__BFSENOK5,OTHER,F & S Energy Ltd,S,52.529,East Midlands,False,named_ispstack_id
+2__BMRCY001,2__BMRCY,AG-BOCT01,OTHER,Octopus Energy Limited,S,0.0,East Midlands,False,named_ispstack_id
+2__BSTAT002,2__BSTAT_B,STAT_B3,BATTERY,Statkraft Markets Gmbh,S,6.431,East Midlands,False,named_ispstack_id
+2__BSTAT003,2__BSTAT_B,STAT_B4,BATTERY,Statkraft Markets Gmbh,S,16.0,East Midlands,False,named_ispstack_id
+2__BSTAT004,2__BSTAT_B,STAT_B5,BATTERY,Statkraft Markets Gmbh,S,10.0,East Midlands,False,named_ispstack_id
+2__BSTAT001,2__BSTAT_G,STAT_B2,GAS,Statkraft Markets Gmbh,S,4.0,East Midlands,False,named_ispstack_id
+2__BUKPR001,2__BUKPR,UKPR East Mids,OCGT,UK Power Reserve Limited,S,10.359,East Midlands,False,named_ispstack_id
+2__CMRCY001,2__CMRCY,2__CMRCY001,LOAD RESPONSE,Octopus Energy Limited,S,2.3,London,False,named_ispstack_id
+2__DLOND001,2__DLOND,EDFE Aggregate MANWEB01,OCGT,EDF Energy Customers Limited,S,24.0,Merseyside North Wales,False,named_ispstack_id
+2__DLOND002,2__DLOND,EDFE Aggregate MANWEB02,OCGT,EDF Energy Customers Limited,S,24.0,Merseyside North Wales,False,named_ispstack_id
+2__DSTAT001,2__DSTAT,STAT_D2,BATTERY,Statkraft Markets Gmbh,S,20.0,Merseyside North Wales,False,named_ispstack_id
+2__DSTAT002,2__DSTAT,STAT_D3,BATTERY,Statkraft Markets Gmbh,S,14.0,Merseyside North Wales,False,named_ispstack_id
+2__DSTAT003,2__DSTAT,STAT_D4,BATTERY,Statkraft Markets Gmbh,S,20.447,Merseyside North Wales,False,named_ispstack_id
+2__DSTAT004,2__DSTAT,STAT_D5,BATTERY,Statkraft Markets Gmbh,S,16.0,Merseyside North Wales,False,named_ispstack_id
+2__DSTAT005,2__DSTAT,STAT_D6,BATTERY,Statkraft Markets Gmbh,S,16.0,Merseyside North Wales,False,named_ispstack_id
+2__DSTAT006,2__DSTAT,STAT_D7,BATTERY,Statkraft Markets Gmbh,S,14.0,Merseyside North Wales,False,named_ispstack_id
+2__DSTAT007,2__DSTAT,STAT_D8,BATTERY,Statkraft Markets Gmbh,S,30.0,Merseyside North Wales,False,named_ispstack_id
+2__DUKPR001,2__DUKPR,UKPR MANW,OCGT,UK Power Reserve Limited,S,20.0,Merseyside North Wales,False,named_ispstack_id
+2__ECNDL001,2__ECNDL,Redditch,GAS,NEAS Energy Ltd.,S,20.863,Midlands,False,named_ispstack_id
+2__EFLEX001,2__EFLEX,2__EFLEX001,LOAD RESPONSE,Flexitricity Limited,S,49.0,Midlands,False,named_ispstack_id
+2__EFLEX002,2__EFLEX,2__EFLEX002,LOAD RESPONSE,Flexitricity Limited,S,49.0,Midlands,False,named_ispstack_id
+2__EFLEX003,2__EFLEX,2__EFLEX003,LOAD RESPONSE,Flexitricity Limited,S,49.0,Midlands,False,named_ispstack_id
+2__EFLEX004,2__EFLEX,2__EFLEX004,LOAD RESPONSE,Flexitricity Limited,S,49.0,Midlands,False,named_ispstack_id
+2__EIMPO002,2__EIMPO,2__EIMPO002,LOAD RESPONSE,SSE Energy Supply Limited,S,1.9,Midlands,False,named_ispstack_id
+2__ELOND002,2__ELOND,EDF Aggregate Midlands 2,LOAD RESPONSE,EDF Energy Customers Limited,S,6.0,Midlands,False,named_ispstack_id
+2__EMRCY001,2__EMRCY,AG-EOCT01,LOAD RESPONSE,Octopus Energy Limited,S,0.0,Midlands,False,named_ispstack_id
+2__ESTAT001,2__ESTAT_B,STAT_E2,BATTERY,Statkraft Markets Gmbh,S,20.475,Midlands,False,named_ispstack_id
+2__ESTAT003,2__ESTAT_B,STAT_E4,BATTERY,Statkraft Markets Gmbh,S,18.0,Midlands,False,named_ispstack_id
+2__ESTAT004,2__ESTAT_B,STAT_E5,BATTERY,Statkraft Markets Gmbh,S,12.603,Midlands,False,named_ispstack_id
+2__ESTAT002,2__ESTAT_G,STAT_E3,GAS,Statkraft Markets Gmbh,S,4.0,Midlands,False,named_ispstack_id
+2__FANGE001,2__FANGE,2__FANGE001,LOAD RESPONSE,Limejump Energy Limited,S,50.0,_F - Northern,False,named_ispstack_id
+2__FBPGM001,2__FBPGM,Wormald Green BESS,BATTERY,BP Gas Marketing Limited,S,39.859,Northern,False,named_ispstack_id
+2__FBPGM002,2__FBPGM,Hawthorn Pit BESS,BATTERY,BP Gas Marketing Limited,S,59.642,Northern,False,named_ispstack_id
+2__FFLEX001,2__FFLEX,2__FFLEX001,GAS,Flexitricity Limited,S,49.0,Northern,False,named_ispstack_id
+2__FFSEN005,2__FFSEN,2__FFSENOK5,OTHER,F & S Energy Ltd,S,24.479,Northern,False,named_ispstack_id
+2__FFSEN007,2__FFSEN,2__FFSENOK7,OTHER,F & S Energy Ltd,S,22.826,Northern,False,named_ispstack_id
+2__FSTAT001,2__FSTAT,STAT_F2,BATTERY,Statkraft Markets Gmbh,S,50.0,Northern,False,named_ispstack_id
+2__FSTAT002,2__FSTAT,STAT_F3,BATTERY,Statkraft Markets Gmbh,S,50.0,Northern,False,named_ispstack_id
+2__FSTAT003,2__FSTAT,STAT_F4,BATTERY,Statkraft Markets Gmbh,S,50.0,Northern,False,named_ispstack_id
+2__GANGE001,2__GANGE,2__GANGE001,LOAD RESPONSE,Limejump Energy Limited,S,50.0,North Western,False,named_ispstack_id
+2__GCMRO001,2__GCMRO,2__GCMRO001,OTHER,BGI Trading Limited,S,16.379,North Western,False,named_ispstack_id
+2__GCMRO002,2__GCMRO,2__GCMRO002,OTHER,BGI Trading Limited,S,14.0,North Western,False,named_ispstack_id
+2__GFLEX008,2__GFLEX_B,2__GFLEX008,BATTERY,Flexitricity Limited,S,49.0,North Western,False,named_ispstack_id
+2__GFLEX004,2__GFLEX_G,2__GFLEX004,GAS,Flexitricity Limited,S,49.0,North Western,False,named_ispstack_id
+2__GFLEX005,2__GFLEX_G,2__GFLEX005,GAS,Flexitricity Limited,S,49.0,North Western,False,named_ispstack_id
+2__GFLEX001,2__GFLEX_LR,2__GFLEX001,LOAD RESPONSE,Flexitricity Limited,S,49.0,North Western,False,named_ispstack_id
+2__GFLEX002,2__GFLEX_LR,2__GFLEX002,LOAD RESPONSE,Flexitricity Limited,S,49.0,North Western,False,named_ispstack_id
+2__GFLEX003,2__GFLEX_LR,2__GFLEX003,LOAD RESPONSE,Flexitricity Limited,S,49.0,North Western,False,named_ispstack_id
+2__GFSEN005,2__GFSEN,2__GFSENOK5,OTHER,F & S Energy Ltd,S,48.783,North Western,False,named_ispstack_id
+2__GFSEN006,2__GFSEN,2__GFSENOK6,OTHER,F & S Energy Ltd,S,46.138,North Western,False,named_ispstack_id
+2__GLOND001,2__GLOND_LR,EDFE Aggregate N West 01,LOAD RESPONSE,EDF Energy Customers Limited,S,0.0,North Western,False,named_ispstack_id
+2__GLOND002,2__GLOND_LR,EDFE Agg NW Eng 02,LOAD RESPONSE,EDF Energy Customers Limited,S,0.0,North Western,False,named_ispstack_id
+2__GLOND003,2__GLOND_OC,EDFE Aggregate NW Eng 3,OCGT,EDF Energy Customers Limited,S,50.0,North Western,False,named_ispstack_id
+2__GLOND004,2__GLOND_OC,EDFE Aggregate NW Eng 4,OCGT,EDF Energy Customers Limited,S,24.0,North Western,False,named_ispstack_id
+2__GSMAE003,2__GSMAE,2__GSMAE003,CCGT,Smartestenergy Limited,S,61.882,North Western,False,named_ispstack_id
+2__GSTAT001,2__GSTAT_B,STAT_G2,BATTERY,Statkraft Markets Gmbh,S,20.0,North Western,False,named_ispstack_id
+2__GSTAT002,2__GSTAT_B,STAT_G3,BATTERY,Statkraft Markets Gmbh,S,20.0,North Western,False,named_ispstack_id
+2__GSTAT003,2__GSTAT_B,STAT_G4,BATTERY,Statkraft Markets Gmbh,S,20.0,North Western,False,named_ispstack_id
+2__GSTAT004,2__GSTAT_B,STAT_G5,BATTERY,Statkraft Markets Gmbh,S,20.354,North Western,False,named_ispstack_id
+2__GSTAT005,2__GSTAT_B,STAT_G6,BATTERY,Statkraft Markets Gmbh,S,20.0,North Western,False,named_ispstack_id
+2__GSTAT006,2__GSTAT_B,STAT_G7,BATTERY,Statkraft Markets Gmbh,S,6.302,North Western,False,named_ispstack_id
+2__GSTAT007,2__GSTAT_B,STAT_G8,BATTERY,Statkraft Markets Gmbh,S,8.0,North Western,False,named_ispstack_id
+2__GSTAT008,2__GSTAT_B,STAT_G9,BATTERY,Statkraft Markets Gmbh,S,22.0,North Western,False,named_ispstack_id
+2__GSTAT009,2__GSTAT_B,STAT_G10,BATTERY,Statkraft Markets Gmbh,S,16.45,North Western,False,named_ispstack_id
+2__GSTAT010,2__GSTAT_B,STAT_G11,BATTERY,Statkraft Markets Gmbh,S,16.0,North Western,False,named_ispstack_id
+2__GSTAT011,2__GSTAT_B,STAT_G12,BATTERY,Statkraft Markets Gmbh,S,14.0,North Western,False,named_ispstack_id
+2__GSTAT012,2__GSTAT_B,STAT_G13,BATTERY,Statkraft Markets Gmbh,S,16.0,North Western,False,named_ispstack_id
+2__GSTAT015,2__GSTAT_B,STAT_G16,BATTERY,Statkraft Markets Gmbh,S,16.0,North Western,False,named_ispstack_id
+2__GSTAT016,2__GSTAT_B,STAT_G17,BATTERY,Statkraft Markets Gmbh,S,8.0,North Western,False,named_ispstack_id
+2__GSTAT017,2__GSTAT_B,STAT_G18,BATTERY,Statkraft Markets Gmbh,S,28.0,North Western,False,named_ispstack_id
+2__GSTAT013,2__GSTAT_G,STAT_G14,GAS,Statkraft Markets Gmbh,S,14.0,North Western,False,named_ispstack_id
+2__HANGE004,2__HANGE_B,2__HANGE004,BATTERY,Limejump Energy Limited,S,49.335,Southern,False,named_ispstack_id
+2__HANGE001,2__HANGE_LR,2__HANGE001,LOAD RESPONSE,Limejump Energy Limited,S,50.0,Southern,False,named_ispstack_id
+2__HANGE002,2__HANGE_LR,2__HANGE002,LOAD RESPONSE,Limejump Energy Limited,S,50.0,Southern,False,named_ispstack_id
+2__HANGE003,2__HANGE_LR,2__HANGE003,LOAD RESPONSE,Limejump Energy Limited,S,49.813,Southern,False,named_ispstack_id
+2__HANGE005,2__HANGE_OTH,2__HANGE005,OTHER,Limejump Energy Limited,S,101.899,Southern,False,named_ispstack_id
+2__HFLEX001,2__HFLEX,2__HFLEX001,LOAD RESPONSE,Flexitricity Limited,S,49.0,Southern,False,named_ispstack_id
+2__HIMPO002,2__HIMPO,2__HIMPO002,LOAD RESPONSE,SSE Energy Supply Limited,S,52.564,Southern,False,named_ispstack_id
+2__HLOND001,2__HLOND,EDFE Aggregate S E 01,BATTERY,EDF Energy Customers Limited,S,29.782,Southern,False,named_ispstack_id
+2__HLOND002,2__HLOND,EDFE Aggregate S Eng 02,BATTERY,EDF Energy Customers Limited,S,53.123,Southern,False,named_ispstack_id
+2__HMRCY001,2__HMRCY,AG-HOCT01,LOAD RESPONSE,Octopus Energy Limited,S,0.0,Southern,False,named_ispstack_id
+2__HSTAT001,2__HSTAT,STAT_H2,BATTERY,Statkraft Markets Gmbh,S,100.0,Southern,False,named_ispstack_id
+2__HSTAT002,2__HSTAT,STAT_H3,BATTERY,Statkraft Markets Gmbh,S,52.237,Southern,False,named_ispstack_id
+2__HSTAT003,2__HSTAT,STAT_H4,BATTERY,Statkraft Markets Gmbh,S,20.475,Southern,False,named_ispstack_id
+2__HSTAT004,2__HSTAT,STAT_H5,BATTERY,Statkraft Markets Gmbh,S,20.0,Southern,False,named_ispstack_id
+2__HSTAT005,2__HSTAT,STAT_H6,BATTERY,Statkraft Markets Gmbh,S,16.0,Southern,False,named_ispstack_id
+2__HSTAT006,2__HSTAT,STAT_H7,BATTERY,Statkraft Markets Gmbh,S,16.0,Southern,False,named_ispstack_id
+2__HSTAT007,2__HSTAT,STAT_H8,BATTERY,Statkraft Markets Gmbh,S,40.0,Southern,False,named_ispstack_id
+2__JLOND002,2__JLOND,EDFE Aggregate S E Eng 02,OCGT,EDF Energy Customers Limited,S,12.0,South Eastern,False,named_ispstack_id
+2__JLOND003,2__JLOND,EDFE Aggregate S E Eng 03,OCGT,EDF Energy Customers Limited,S,12.0,South Eastern,False,named_ispstack_id
+2__JMRCY001,2__JMRCY,AG-JOCT01,LOAD RESPONSE,Octopus Energy Limited,S,0.0,South Eastern,False,named_ispstack_id
+2__JSTAT001,2__JSTAT,STAT_J2,BATTERY,Statkraft Markets Gmbh,S,22.0,South Eastern,False,named_ispstack_id
+2__JSTAT002,2__JSTAT,STAT_J3,BATTERY,Statkraft Markets Gmbh,S,6.305,South Eastern,False,named_ispstack_id
+2__JSTAT003,2__JSTAT,STAT_J4,BATTERY,Statkraft Markets Gmbh,S,22.0,South Eastern,False,named_ispstack_id
+2__JUKPR001,2__JUKPR,UKPR S East,OCGT,UK Power Reserve Limited,S,50.0,South Eastern,False,named_ispstack_id
+2__KFLEX001,2__KFLEX,2__KFLEX001,LOAD RESPONSE,Flexitricity Limited,S,49.0,South Wales,False,named_ispstack_id
+2__KSTAT001,2__KSTAT,STAT_K2,BATTERY,Statkraft Markets Gmbh,S,8.0,South Wales,False,named_ispstack_id
+2__KSTAT002,2__KSTAT,STAT_K3,BATTERY,Statkraft Markets Gmbh,S,14.0,South Wales,False,named_ispstack_id
+2__KSTAT003,2__KSTAT,STAT_K4,BATTERY,Statkraft Markets Gmbh,S,16.0,South Wales,False,named_ispstack_id
+2__KSTAT004,2__KSTAT,STAT_K5,BATTERY,Statkraft Markets Gmbh,S,16.3,South Wales,False,named_ispstack_id
+2__KSTAT005,2__KSTAT,STAT_K6,BATTERY,Statkraft Markets Gmbh,S,16.0,South Wales,False,named_ispstack_id
+2__KSTAT006,2__KSTAT,STAT_K7,BATTERY,Statkraft Markets Gmbh,S,21.032,South Wales,False,named_ispstack_id
+2__KUKPR001,2__KUKPR,UKPR S Wales,OTHER,UK Power Reserve Limited,S,10.2,South Wales,False,named_ispstack_id
+2__LANGE001,2__LANGE,2__LANGE001,LOAD RESPONSE,Limejump Energy Limited,S,65.0,South Western,False,named_ispstack_id
+2__LANGE002,2__LANGE,2__LANGE002,LOAD RESPONSE,Limejump Energy Limited,S,50.0,South Western,False,named_ispstack_id
+2__LECOT003,2__LECOT,ECOT_VPP_22,OTHER,ECOTRICITY LIMITED,S,10.0,South Western,False,named_ispstack_id
+2__LFLEX001,2__LFLEX,2__LFLEX001,LOAD RESPONSE,Flexitricity Limited,S,49.0,South Western,False,named_ispstack_id
+2__LSTAT001,2__LSTAT,2_LSTAT001,BATTERY,Statkraft Markets Gmbh,S,20.423,South Western,False,named_ispstack_id
+2__LSTAT002,2__LSTAT,STAT_L3,BATTERY,Statkraft Markets Gmbh,S,20.858,South Western,False,named_ispstack_id
+2__LSTAT003,2__LSTAT,STAT_L4,BATTERY,Statkraft Markets Gmbh,S,20.0,South Western,False,named_ispstack_id
+2__LUKPR001,2__LUKPR,UKPR S West,OTHER,UK Power Reserve Limited,S,10.2,South Western,False,named_ispstack_id
+2__MCMRO002,2__MCMRO,2__MCMRO002,OTHER,BGI Trading Limited,S,36.844,Yorkshire,False,named_ispstack_id
+2__MCMRO003,2__MCMRO,2__MCMRO003,OTHER,BGI Trading Limited,S,50.0,Yorkshire,False,named_ispstack_id
+2__MCNDL001,2__MCNDL_OC,Brigg DG,OCGT,NEAS Energy Ltd.,S,51.433,Yorkshire,False,named_ispstack_id
+2__MCNDL002,2__MCNDL_OTH,Brigg DG-2,OTHER,NEAS Energy Ltd.,S,48.528,Yorkshire,False,named_ispstack_id
+2__MFLEX002,2__MFLEX,2__MFLEX002,LOAD RESPONSE,Flexitricity Limited,S,49.0,Yorkshire,False,named_ispstack_id
+2__MSTAT001,2__MSTAT_B,STAT_M2,BATTERY,Statkraft Markets Gmbh,S,50.0,Yorkshire,False,named_ispstack_id
+2__MSTAT002,2__MSTAT_B,STAT_M3,BATTERY,Statkraft Markets Gmbh,S,50.51,Yorkshire,False,named_ispstack_id
+2__MSTAT003,2__MSTAT_B,STAT_M4,BATTERY,Statkraft Markets Gmbh,S,16.0,Yorkshire,False,named_ispstack_id
+2__MSTAT005,2__MSTAT_B,STAT_M6,BATTERY,Statkraft Markets Gmbh,S,8.0,Yorkshire,False,named_ispstack_id
+2__MSTAT006,2__MSTAT_B,STAT_M7,BATTERY,Statkraft Markets Gmbh,S,16.0,Yorkshire,False,named_ispstack_id
+2__MSTAT004,2__MSTAT_G,STAT_M5,GAS,Statkraft Markets Gmbh,S,6.0,Yorkshire,False,named_ispstack_id
+2__NCPPR001,2__NCPPR,Byers Brae,BATTERY,Octopus Energy Trading Limited,S,30.0,South Scotland,False,named_ispstack_id
+2__NFLEX002,2__NFLEX_B,2__NFLEX002,BATTERY,Flexitricity Limited,S,49.0,South Scotland,False,named_ispstack_id
+2__NFLEX003,2__NFLEX_LR,2__NFLEX003,LOAD RESPONSE,Flexitricity Limited,S,49.0,South Scotland,False,named_ispstack_id
+2__NFLEX004,2__NFLEX_LR,2__NFLEX004,LOAD RESPONSE,Flexitricity Limited,S,49.0,South Scotland,False,named_ispstack_id
+2__NFLEX005,2__NFLEX_LR,2__NFLEX005,LOAD RESPONSE,Flexitricity Limited,S,49.0,South Scotland,False,named_ispstack_id
+2__NFLEX006,2__NFLEX_LR,2__NFLEX006,LOAD RESPONSE,Flexitricity Limited,S,49.0,South Scotland,False,named_ispstack_id
+2__NFLEX007,2__NFLEX_LR,2__NFLEX007,LOAD RESPONSE,Flexitricity Limited,S,49.0,South Scotland,False,named_ispstack_id
+2__NFLEX001,2__NFLEX_OTH,2__NFLEX001,OTHER,Flexitricity Limited,S,50.406,South Scotland,False,named_ispstack_id
+2__NFLEX008,2__NFLEX_OTH,2__NFLEX008,OTHER,Flexitricity Limited,S,49.0,South Scotland,False,named_ispstack_id
+2__NFLEX009,2__NFLEX_OTH,2__NFLEX009,OTHER,Flexitricity Limited,S,49.0,South Scotland,False,named_ispstack_id
+2__NFSEN007,2__NFSEN,2__NFSENOK7,OTHER,F & S Energy Ltd,S,30.674,SOUTH of SCOTLAND GSP,False,named_ispstack_id
+2__NHPOW001,2__NHPOW,2__NHPOW001,NPSHYD,Drax Energy Solutions Limited,S,25.0,South Scotland,False,named_ispstack_id
+2__NHPOW002,2__NHPOW,2__NHPOW002,NPSHYD,Drax Energy Solutions Limited,S,108.0,South Scotland,False,named_ispstack_id
+2__NLOND003,2__NLOND_LR,EDFE Aggregate S Scot 3,LOAD RESPONSE,EDF Energy Customers Limited,S,30.0,South Scotland,False,named_ispstack_id
+2__NLOND001,2__NLOND_OC,EDFE Aggregate S Scotland 01,OCGT,EDF Energy Customers Limited,S,30.0,South Scotland,False,named_ispstack_id
+2__NLOND002,2__NLOND_OC,EDFE Aggregate S Scot 2,OCGT,EDF Energy Customers Limited,S,30.0,South Scotland,False,named_ispstack_id
+2__NSTAT001,2__NSTAT_B,STAT_N2,BATTERY,Statkraft Markets Gmbh,S,20.0,South Scotland,False,named_ispstack_id
+2__NSTAT002,2__NSTAT_B,STAT_N3,BATTERY,Statkraft Markets Gmbh,S,20.0,South Scotland,False,named_ispstack_id
+2__NSTAT003,2__NSTAT_B,STAT_N4,BATTERY,Statkraft Markets Gmbh,S,20.732,South Scotland,False,named_ispstack_id
+2__NSTAT004,2__NSTAT_LR,STAT_N5,LOAD RESPONSE,Statkraft Markets Gmbh,S,12.0,South Scotland,False,named_ispstack_id
+2__PEDGE003,2__PEDGE,2__PEDGE003,WIND,Edgware Energy Limited,S,55.749,North Scotland,False,named_ispstack_id
+2__PEDGE004,2__PEDGE,2__PEDGE004,WIND,Edgware Energy Limited,S,27.376,North Scotland,False,named_ispstack_id
+2__PENEC001,2__PENEC,Rothes Windfarm,WIND,Eneco Energy Trade,S,54.501,North Scotland,False,named_ispstack_id
+2__PENEC002,2__PENEC,Pauls Hill Windfarm,WIND,Eneco Energy Trade,S,70.167,North Scotland,False,named_ispstack_id
+2__PFLEX001,2__PFLEX,2__PFLEX001,OTHER,Flexitricity Limited,S,49.0,North Scotland,False,named_ispstack_id
+2__PFLEX002,2__PFLEX,2__PFLEX002,OTHER,Flexitricity Limited,S,107.325,North Scotland,False,named_ispstack_id
+2__PLOND001,2__PLOND,EDFE Aggregate N Scot 1,OTHER,EDF Energy Customers Limited,S,52.0,North Scotland,False,named_ispstack_id
+2__PMARB001,2__PMARB,Lochaber Hydro,NPSHYD,Marble Power Limited,S,80.0,North Scotland,False,named_ispstack_id
+2__PSMAE001,2__PSMAE,2__PSMAE001,WIND,Smartestenergy Limited,S,0.0,North Scotland,False,named_ispstack_id
+2__PSTAT001,2__PSTAT,STAT P2 North Scotland,WIND,Statkraft Markets Gmbh,S,47.778,North Scotland,False,named_ispstack_id
+2__PSTAT002,2__PSTAT,STAT P3 North Scotland,WIND,Statkraft Markets Gmbh,S,76.0,North Scotland,False,named_ispstack_id
+C__PSTAT011,C__PSTAT,C__PSTAT011-AAA-NAN-184,WIND,Statkraft Markets Gmbh,S,45.267,North Scotland,False,named_ispstack_id
+E_ABERDARE,E_ABERDARE,Aberdare Power Station,OCGT,UK Power Reserve Limited,E,15.4,South Wales,False,named_ispstack_id
+E_ABRTW-1,E_ABRTW,Auchrobert Wind Farm,WIND,Npower Commercial Gas Limited,E,36.0,South Scotland,False,named_ispstack_id
+E_ALCOA-1,E_ALCOA,Alcoa,DIESEL,Conrad Energy (Trading) Ltd,E,40.5,South Wales,False,named_ispstack_id
+E_ARBRB-1,E_ARBRB,Arbroath Battery Storage,OTHER,Octopus Energy Trading Limited,E,34.511,North Scotland,False,named_ispstack_id
+E_ARNKB-2,E_ARNKB_B,Hutton Battery Storage,BATTERY,Flexitricity Limited,E,49.0,Eastern,False,named_ispstack_id
+E_ARNKB-1,E_ARNKB_LR,AR0006-BLOX,LOAD RESPONSE,Octopus Energy Trading Limited,E,41.66,Midlands,False,named_ispstack_id
+E_ASHWW-1,E_ASHWW,Andershaw Wind Farm,WIND,Statkraft Markets Gmbh,E,35.0,South Scotland,False,named_ispstack_id
+E_ASLVW-1,E_ASLVW,Assel Valley Wind Farm,WIND,Npower Commercial Gas Limited,E,26.0,South Scotland,False,named_ispstack_id
+E_BABAW-1,E_BABAW,Baillie Wind Farm,WIND,Statkraft Markets Gmbh,E,52.5,North Scotland,False,named_ispstack_id
+E_BARNB-1,E_BARNB,Hunningley Stairfoot BESS,BATTERY,EDF Energy Customers Limited,E,44.0,Yorkshire,False,named_ispstack_id
+E_BETHW-1,E_BETHW,BETHW-1,WIND,SP Renewables (UK) Limited,E,29.75,North Scotland,False,named_ispstack_id
+E_BHOLB-1,E_BHOLB,Holes Bay Battery,BATTERY,Tesla Motors Limited,E,7.12,Southern,False,named_ispstack_id
+E_BLARW-1,E_BLARW,E_BLARW-1,WIND,Erova Energy Limited,E,35.0,North Scotland,False,named_ispstack_id
+E_BLKPB-1,E_BLKPB,Blackpool,BATTERY,Conrad Energy (Trading) Ltd,E,25.3,North Western,False,named_ispstack_id
+E_BNWKW-1,E_BNWKW,Burn of Whilk Windfarm,WIND,Eneco Energy Trade,E,22.5,North Scotland,False,named_ispstack_id
+E_BRDUW-1,E_BRDUW,Braes of Doune,WIND,Erova Energy Limited,E,74.0,North Scotland,False,named_ispstack_id
+E_BRIDGWTR,E_BRIDGWTR,Bridgwater Power Station,GAS,UK Power Reserve Limited,E,10.18,South Western,False,named_ispstack_id
+E_BROAB-1,E_BROAB,Broadditch Battery,BATTERY,Tesla Motors Limited,E,11.0,South Eastern,False,named_ispstack_id
+E_BROFB-1,E_BROFB,Brook Farm BESS,BATTERY,EDF Energy Customers Limited,E,52.0,Eastern,False,named_ispstack_id
+E_BRYBW-1,E_BRYBW,Berry Burn Wind Farm,WIND,Statkraft Markets Gmbh,E,62.708,North Scotland,False,named_ispstack_id
+E_BSPHM-1,E_BSPHM,Bispham,DIESEL,Conrad Energy (Trading) Ltd,E,20.0,North Western,False,named_ispstack_id
+E_BTUIW-2,E_BTUIW,Beinn An Tuirc 2,WIND,SP Renewables (UK) Limited,E,43.7,North Scotland,False,named_ispstack_id
+E_BTUIW-3,E_BTUIW,Beinn an Tuirc III Windfarm,WIND,SP Renewables (UK) Limited,E,52.0,North Scotland,False,named_ispstack_id
+E_BURBO,E_BURBO,Burbo Offshore Wind,WIND,Orsted Burbo (UK) Limited,E,90.0,Merseyside North Wales,False,named_ispstack_id
+E_BURGH-1,E_BURGH,Burghfield Power Station,OCGT,SSEPG (Operations) Ltd,E,48.0,Southern,False,named_ispstack_id
+E_BURWB-2,E_BURWB_LR,Burwell 1,LOAD RESPONSE,EDF Energy Customers Limited,E,52.0,Eastern,False,named_ispstack_id
+E_BURWB-1,E_BURWB_OTH,Burwell Weirs Drove BESS,OTHER,Arenko Cleantech Limited,E,50.533,Eastern,False,named_ispstack_id
+E_CHAPB-1,E_CHAPB,Chapel Farm BESS,BATTERY,Tesla Motors Limited,E,50.169,Eastern,False,named_ispstack_id
+E_CHICK-1,E_CHICK,Chickerell Power Station,OCGT,SSEPG (Operations) Ltd,E,48.0,Southern,False,named_ispstack_id
+E_CHTRY-1,E_CHTRY,Chatterley,DIESEL,Conrad Energy (Trading) Ltd,E,20.0,Midlands,False,named_ispstack_id
+E_CLAC-1,E_CLAC,Clachan G1,NPSHYD,SSE Generation Ltd,E,43.38,North Scotland,False,named_ispstack_id
+E_CLAYB-1,E_CLAYB,ClayTye Farm 1 Battery Storage,BATTERY,Tesla Motors Limited,E,49.5,Eastern,False,named_ispstack_id
+E_CLAYB-2,E_CLAYB,ClayTye Farm 2 Battery Storage,BATTERY,Tesla Motors Limited,E,49.5,Eastern,False,named_ispstack_id
+E_CLDRW-1,E_CLDRW,CLDRW-1,WIND,Vattenfall Energy Trading,E,38.0,North Scotland,False,named_ispstack_id
+E_CLFLW-1,E_CLFLW,Clachan Flats,WIND,SP Renewables (UK) Limited,E,15.0,North Scotland,False,named_ispstack_id
+E_CNCLW-1,E_CNCLW,Coire Na Cloiche WF,WIND,Statkraft Markets Gmbh,E,30.52,North Scotland,False,named_ispstack_id
+E_CONTB-1,E_CONTB,Contego Battery,BATTERY,Tesla Motors Limited,E,35.8,South Eastern,False,named_ispstack_id
+E_CORB-1,E_CORB,CORBY POWER LIMITED,CCGT,EP UK INVESTMENTS LIMITED,E,240.0,East Midlands,False,named_ispstack_id
+E_CRGTW-1,E_CRGTW,Craig 2 Wind Farm,WIND,British Gas Trading Ltd,E,4.7,South Scotland,False,named_ispstack_id
+E_CROYD-2,E_CROYD,Croydon PS,OCGT,Whitetower Energy Limited,E,50.0,South Eastern,False,named_ispstack_id
+E_CRSSB-1,E_CRSSB,Carnegie Road 1,BATTERY,Arenko Cleantech Limited,E,20.0,Merseyside North Wales,False,named_ispstack_id
+E_CUPAB-1,E_CUPAB,Coupar Battery Storage,OTHER,Octopus Energy Trading Limited,E,41.314,North Scotland,False,named_ispstack_id
+E_DALSW-1,E_DALSW,Dalswinton Windfarm,WIND,Mobius Renewables Gen. (GB),E,30.0,South Scotland,False,named_ispstack_id
+E_DBFRM-1,E_DBFRM,Down Barn Farm,DIESEL,Conrad Energy (Trading) Ltd,E,20.0,Southern,False,named_ispstack_id
+E_DERBY-1,E_DERBY,DERBY,OCGT,Whitetower Energy Limited,E,56.084,East Midlands,False,named_ispstack_id
+E_DIDC3G,E_DIDC3G,Didcot OCGT Unit 3,OCGT,RWE Generation UK plc,E,25.0,Southern,False,named_ispstack_id
+E_DOLLB-1,E_DOLLB,Dollymans Storage,OTHER,Dollymans Storage Limited,E,102.0,Eastern,False,named_ispstack_id
+E_EXETR-2,E_EXETR,Exeter,OCGT,Whitetower Energy Limited,E,50.0,South Western,False,named_ispstack_id
+E_FARNB-1,E_FARNB,Farnham BESS,BATTERY,Tesla Motors Limited,E,20.0,Southern,False,named_ispstack_id
+E_FASN-3,E_FASN,Fasnakyle  G3,NPSHYD,SSE Generation Ltd,E,24.2,North Scotland,False,named_ispstack_id
+E_FASN-4,E_FASN,Fasnakyle G4,NPSHYD,SSE Generation Ltd,E,8.32,North Scotland,False,named_ispstack_id
+E_FDUN-1,E_FDUN,Fort Dunlop,OCGT,Whitetower Energy Limited,E,99.0,Midlands,False,named_ispstack_id
+E_GDSTW-1,E_GDSTW,Gordonstown,WIND,Mobius Renewables Gen. (GB),E,13.289,North Scotland,False,named_ispstack_id
+E_GLOFW-1,E_GLOFW,Glens of Foudland,WIND,Glens of Foudland Ltd,E,26.7,North Scotland,False,named_ispstack_id
+E_GOSHS-1,E_GOSHS,Goose House Lane,DIESEL,Conrad Energy (Trading) Ltd,E,20.0,North Western,False,named_ispstack_id
+E_GRCRB-1,E_GRCRB,Gerrards Cross BESS,BATTERY,FIELD GERRARDS CROSS LTD,E,20.0,Southern,False,named_ispstack_id
+E_GRGRW-1,E_GRGRW,Greengairs East WF-1,WIND,Greengairs East Wind Farm Ltd,E,37.649,South Scotland,False,named_ispstack_id
+E_GYAR-1,E_GYAR,Great Yarmouth Power Limited,CCGT,RWE Generation UK plc,E,420.0,Eastern,False,named_ispstack_id
+E_HAWKB-1,E_HAWKB,HawkersHill  Battery,BATTERY,Tesla Motors Limited,E,20.0,Southern,False,named_ispstack_id
+E_HLTWW-1,E_HLTWW,Hill of Towie,WIND,ScottishPower Energy Retail,E,48.0,North Scotland,False,named_ispstack_id
+E_HRHLW-1,E_HRHLW,Hare Hill Extension Windfarm,WIND,SP Renewables (UK) Limited,E,30.0,South Scotland,False,named_ispstack_id
+E_HYWDW-1,E_HYWDW,Hywind Generator BMU1,WIND,HYWINDSC,E,30.0,North Scotland,False,named_ispstack_id
+E_ILMEB-1,E_ILMEB,Ilmer Lane BESS,BATTERY,Tesla Motors Limited,E,49.5,Eastern,False,named_ispstack_id
+E_JAMBB-1,E_JAMBB_B,Jamesfield 1 Battery Storage,BATTERY,Tesla Motors Limited,E,30.0,North Scotland,False,named_ispstack_id
+E_JAMBB-2,E_JAMBB_OTH,Jamesfield 2 Battery Storage,OTHER,Tesla Motors Limited,E,19.0,North Scotland,False,named_ispstack_id
+E_KLYN-A-1,E_KLYN-A,Kings Lynn A,CCGT,RWE Generation UK plc,E,392.0,Eastern,False,named_ispstack_id
+E_LCHWT-1,E_LCHWT,Letchworth,DIESEL,Conrad Energy (Trading) Ltd,E,15.0,Eastern,False,named_ispstack_id
+E_LITRB-1,E_LITRB,Little Raith BESS,BATTERY,Tesla Motors Limited,E,50.0,South Scotland,False,named_ispstack_id
+E_LSTWY-1,E_LSTWY,Lester Way,DIESEL,Conrad Energy (Trading) Ltd,E,12.72,Southern,False,named_ispstack_id
+E_MDLWH-1,E_MDLWH,Middlewich,DIESEL,Conrad Energy (Trading) Ltd,E,20.0,Merseyside North Wales,False,named_ispstack_id
+E_MINSW-1,E_MINSW,Minsca Wind Farm,WIND,Mobius Renewables Gen. (GB),E,38.123,South Scotland,False,named_ispstack_id
+E_MORFL-1,E_MORFL,Moorfield Drive,DIESEL,Conrad Energy (Trading) Ltd,E,20.0,North Western,False,named_ispstack_id
+E_MOYEW-1,E_MOYEW,Moy Windfarm,WIND,Eneco Energy Trade,E,60.0,North Scotland,False,named_ispstack_id
+E_NEWPB-1,E_NEWPB,Newport BESS,BATTERY,Field Newport Ltd,E,20.933,South Wales,False,named_ispstack_id
+E_NEWTB-1,E_NEWTB,Newton wood BESS,BATTERY,EDF Energy Customers Limited,E,52.0,East Midlands,False,named_ispstack_id
+E_OLDHB-1,E_OLDHB,Oldham BESS,BATTERY,Field Oldham Ltd,E,20.0,North Western,False,named_ispstack_id
+E_PETEM1,E_PETEM,Peterborough,CCGT,River Nene Power Limited,E,245.0,Eastern,False,named_ispstack_id
+E_PETEM3,E_PETEM,Peterborough Power 3,CCGT,River Nene Power Limited,E,49.227,Eastern,False,named_ispstack_id
+E_PGBARY,E_PGBARY,E_PGBARY,DIESEL,Peak Gen Top Co Limited,E,20.318,South Wales,False,named_ispstack_id
+E_PGBRKL,E_PGBRKL,E_PGBRKL,DIESEL,Peak Gen Top Co Limited,E,20.0,Southern,False,named_ispstack_id
+E_PGEXTR,E_PGEXTR,E_PGEXTR,DIESEL,Peak Gen Top Co Limited,E,20.439,South Western,False,named_ispstack_id
+E_PGFARE,E_PGFARE,E_PGFARE,DIESEL,Peak Gen Top Co Limited,E,20.0,Southern,False,named_ispstack_id
+E_PGHVNT,E_PGHVNT,E_PGHVNT,DIESEL,Peak Gen Top Co Limited,E,20.0,Southern,False,named_ispstack_id
+E_PGLLAN,E_PGLLAN,E_PGLLAN,OTHER,Peak Gen Top Co Limited,E,20.525,South Wales,False,named_ispstack_id
+E_PGSOUT,E_PGSOUT,E_PGSOUT,OTHER,Peak Gen Top Co Limited,E,24.0,Southern,False,named_ispstack_id
+E_PILLB-1,E_PILLB,Pillswood 1 Battery Storage,BATTERY,BP Gas Marketing Limited,E,49.9,Yorkshire,False,named_ispstack_id
+E_PILLB-2,E_PILLB,Pillswood 2 Battery Storage,BATTERY,BP Gas Marketing Limited,E,49.9,Yorkshire,False,named_ispstack_id
+E_POTES-1,E_POTES,Port of Tyne Energy Storage,BATTERY,Arenko Cleantech Limited,E,35.0,Northern,False,named_ispstack_id
+E_RAKE-1,E_RAKE,Rake Lane,DIESEL,Conrad Energy (Trading) Ltd,E,20.0,North Western,False,named_ispstack_id
+E_RDFRB-1,E_RDFRB,Redfield Road B,DIESEL,Conrad Energy (Trading) Ltd,E,20.0,East Midlands,False,named_ispstack_id
+E_RDFRD-1,E_RDFRD,Redfield Road,DIESEL,Conrad Energy (Trading) Ltd,E,20.5,East Midlands,False,named_ispstack_id
+E_RDSCR-1,E_RDSCR,Redscar,DIESEL,Conrad Energy (Trading) Ltd,E,40.0,North Western,False,named_ispstack_id
+E_RHEI-1,E_RHEI,E_RHEI-1,NPSHYD,Statkraft Markets Gmbh,E,50.0,Merseyside North Wales,False,named_ispstack_id
+E_ROARB-1,E_ROARB,Roaring Hill BESS,BATTERY,Tesla Motors Limited,E,50.0,South Scotland,False,named_ispstack_id
+E_ROOSB-1,E_ROOSB,Roosecote BESS,BATTERY,CBS ENERGY STORAGE ASSETS LTD,E,49.0,North Western,False,named_ispstack_id
+E_SEVINGTN,E_SEVINGTN,Sevington District Energy,GAS,UK Power Reserve Limited,E,10.3,South Eastern,False,named_ispstack_id
+E_SHILB-1,E_SHILB,Shilton Lane BESS,OTHER,Octopus Energy Trading Limited,E,40.0,South Scotland,False,named_ispstack_id
+E_SHOS-1,E_SHOS,Shoreham Power Station,CCGT,VPI Power Limited,E,460.0,South Eastern,False,named_ispstack_id
+E_SKELB-1,E_SKELB,Skelmersdale Battery,BATTERY,Tesla Motors Limited,E,49.9,North Western,False,named_ispstack_id
+E_SOLUTIA,E_SOLUTIA,Solutia Power Station,GAS,UK Power Reserve Limited,E,15.8,South Wales,False,named_ispstack_id
+E_SUDME-1,E_SUDME,Sudmeadow,DIESEL,Conrad Energy (Trading) Ltd,E,40.0,Midlands,False,named_ispstack_id
+E_SWBKW-1,E_SWBKW,Solwaybank WF,WIND,Vattenfall Energy Trading,E,34.0,South Scotland,False,named_ispstack_id
+E_TAYL2G,E_TAYL2G,E_TAYL2G,OCGT,Uniper UK Limited,E,73.325,London,False,named_ispstack_id
+E_TAYL3G,E_TAYL3G,E_TAYL3G,OCGT,Uniper UK Limited,E,72.0,London,False,named_ispstack_id
+E_TDRVE-1,E_TDRVE,The Drove,OTHER,Conrad Energy (Trading) Ltd,E,6.0,South Western,False,named_ispstack_id
+E_THMRB-1,E_THMRB,Thame Road  BESS,BATTERY,Tesla Motors Limited,E,49.5,Eastern,False,named_ispstack_id
+E_THRNL-1,E_THRNL,THORNHILL PS,OCGT,Whitetower Energy Limited,E,50.0,Yorkshire,False,named_ispstack_id
+E_TLYMW-1,E_TLYMW,Tullymurdoch Wind Farm,WIND,EDF Energy Customers Limited,E,13.856,North Scotland,False,named_ispstack_id
+E_TOLLB-1,E_TOLLB,Tollgate Energy Storage,BATTERY,Tollgate Energy Storage Ltd,E,49.0,Eastern,False,named_ispstack_id
+E_TRFPK-1,E_TRFPK,Trafalgar Park,DIESEL,Conrad Energy (Trading) Ltd,E,14.0,East Midlands,False,named_ispstack_id
+E_TULWW-1,E_TULWW,Tullo Windfarm,WIND,Eneco Energy Trade,E,17.0,North Scotland,False,named_ispstack_id
+E_TULWW-2,E_TULWW,Tullo Extension,WIND,Eneco Energy Trade,E,25.0,North Scotland,False,named_ispstack_id
+E_VKING-2,E_VKING,Viking,OCGT,Whitetower Energy Limited,E,50.0,Northern,False,named_ispstack_id
+E_WTRLN-1,E_WTRLN,Water Lane,DIESEL,Conrad Energy (Trading) Ltd,E,20.0,South Western,False,named_ispstack_id
+I_I2D-BAYW1,I_I2D-BAYW,,IFA2,Baywa r.e. Energy Trading GmbH,I,,,True,disbsad_energy_asset
+I_I2D-BKWE1,I_I2D-BKWE,,IFA2,BKW Energie AG,I,,,True,disbsad_energy_asset
+I_I2D-CACM1,I_I2D-CACM,,IFA2,C A Commodities A/S,I,,,True,disbsad_energy_asset
+I_I2D-CBST1,I_I2D-CBST,,IFA2,Cobblestone Energy,I,,,True,disbsad_energy_asset
+I_I2D-COPN1,I_I2D-COPN,,IFA2,Copenhagen Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_I2D-DARE1,I_I2D-DARE,,IFA2,Dare Power Ltd,I,,,True,disbsad_energy_asset
+I_I2D-DMCC1,I_I2D-DMCC,,IFA2,Cobblestone Energy DMCC,I,,,True,disbsad_energy_asset
+I_I2D-DSKC1,I_I2D-DSKC,,IFA2,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_I2D-DUGE1,I_I2D-DUGE,,IFA2,DXT Commodities SA,I,,,True,disbsad_energy_asset
+I_I2D-DVAL1,I_I2D-DVAL,,IFA2,DVALIN ApS,I,,,True,disbsad_energy_asset
+I_I2D-EDFT1,I_I2D-EDFT,,IFA2,EDF TRADING LIMITED,I,,,True,disbsad_energy_asset
+I_I2D-EDMK1,I_I2D-EDMK,,IFA2,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_I2D-ELEE1,I_I2D-ELEE,,IFA2,Electrabel SA,I,,,True,disbsad_energy_asset
+I_I2D-ELTR1,I_I2D-ELTR,,IFA2,ElectroRoute Energy Trading,I,,,True,disbsad_energy_asset
+I_I2D-EZCO1,I_I2D-EZCO,,IFA2,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_I2D-HELI1,I_I2D-HELI,,IFA2,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_I2D-INCM1,I_I2D-INCM,,IFA2,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_I2D-MFTE1,I_I2D-MFTE,,IFA2,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_I2D-NEAS1,I_I2D-NEAS,,IFA2,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_I2D-NEHO1,I_I2D-NEHO,,IFA2,Nordic Energy House ApS,I,,,True,disbsad_energy_asset
+I_I2D-NITR1,I_I2D-NITR,,IFA2,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_I2D-NORL1,I_I2D-NORL,,IFA2,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_I2D-NTPL1,I_I2D-NTPL,,IFA2,Northpool BV,I,,,True,disbsad_energy_asset
+I_I2D-OPMX1,I_I2D-OPMX,,IFA2,Optimax Energy GmbH,I,,,True,disbsad_energy_asset
+I_I2D-OUTL1,I_I2D-OUTL,,IFA2,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_I2D-PWMR1,I_I2D-PWMR,,IFA2,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_I2D-QTPT1,I_I2D-QTPT,,IFA2,Quantum Power Trading,I,,,True,disbsad_energy_asset
+I_I2D-QUEN1,I_I2D-QUEN,,IFA2,QUENT ApS,I,,,True,disbsad_energy_asset
+I_I2D-SETL1,I_I2D-SETL,,IFA2,Shell Energy Europe Limited,I,,,True,disbsad_energy_asset
+I_I2D-TRLS1,I_I2D-TRLS,,IFA2,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_I2D-VOLT1,I_I2D-VOLT,,IFA2,Volta Energy DAC,I,,,True,disbsad_energy_asset
+I_I2D-VTET1,I_I2D-VTET,,IFA2,Vattenfall Energy Trading,I,,,True,disbsad_energy_asset
+I_I2D-XNON1,I_I2D-XNON,,IFA2,XENON CAPITAL MARKETS LTD,I,,,True,disbsad_energy_asset
+I_I2G-BAYW1,I_I2G-BAYW,,IFA2,Baywa r.e. Energy Trading GmbH,I,,,True,disbsad_energy_asset
+I_I2G-BKWE1,I_I2G-BKWE,,IFA2,BKW Energie AG,I,,,True,disbsad_energy_asset
+I_I2G-CACM1,I_I2G-CACM,,IFA2,C A Commodities A/S,I,,,True,disbsad_energy_asset
+I_I2G-CBST1,I_I2G-CBST,,IFA2,Cobblestone Energy,I,,,True,disbsad_energy_asset
+I_I2G-CONV1,I_I2G-CONV,,IFA2,Convex Energy GmbH,I,,,True,disbsad_energy_asset
+I_I2G-COPN1,I_I2G-COPN,,IFA2,Copenhagen Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_I2G-DARE1,I_I2G-DARE,,IFA2,Dare Power Ltd,I,,,True,disbsad_energy_asset
+I_I2G-DMCC1,I_I2G-DMCC,,IFA2,Cobblestone Energy DMCC,I,,,True,disbsad_energy_asset
+I_I2G-DSKC1,I_I2G-DSKC,,IFA2,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_I2G-DUGE1,I_I2G-DUGE,,IFA2,DXT Commodities SA,I,,,True,disbsad_energy_asset
+I_I2G-DVAL1,I_I2G-DVAL,,IFA2,DVALIN ApS,I,,,True,disbsad_energy_asset
+I_I2G-EDFT1,I_I2G-EDFT,,IFA2,EDF TRADING LIMITED,I,,,True,disbsad_energy_asset
+I_I2G-EDMK1,I_I2G-EDMK,,IFA2,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_I2G-ELEE1,I_I2G-ELEE,,IFA2,Electrabel SA,I,,,True,disbsad_energy_asset
+I_I2G-ELTR1,I_I2G-ELTR,,IFA2,ElectroRoute Energy Trading,I,,,True,disbsad_energy_asset
+I_I2G-EZCO1,I_I2G-EZCO,,IFA2,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_I2G-GAZP1,I_I2G-GAZP,,IFA2,SEFE Marketing & Trading LTD,I,,,True,disbsad_energy_asset
+I_I2G-HELI1,I_I2G-HELI,,IFA2,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_I2G-INCM1,I_I2G-INCM,,IFA2,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_I2G-MFTE1,I_I2G-MFTE,,IFA2,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_I2G-NEAS1,I_I2G-NEAS,,IFA2,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_I2G-NITR1,I_I2G-NITR,,IFA2,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_I2G-NORL1,I_I2G-NORL,,IFA2,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_I2G-NTPL1,I_I2G-NTPL,,IFA2,Northpool BV,I,,,True,disbsad_energy_asset
+I_I2G-OPMX1,I_I2G-OPMX,,IFA2,Optimax Energy GmbH,I,,,True,disbsad_energy_asset
+I_I2G-OUTL1,I_I2G-OUTL,,IFA2,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_I2G-PLAN1,I_I2G-PLAN,,IFA2,BCM Energy,I,,,True,disbsad_energy_asset
+I_I2G-PWMR1,I_I2G-PWMR,,IFA2,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_I2G-QUEN1,I_I2G-QUEN,,IFA2,QUENT ApS,I,,,True,disbsad_energy_asset
+I_I2G-SETL1,I_I2G-SETL,,IFA2,Shell Energy Europe Limited,I,,,True,disbsad_energy_asset
+I_I2G-SSEG1,I_I2G-SSEG,,IFA2,SSE Energy Supply Limited,I,,,True,disbsad_energy_asset
+I_I2G-STGS1,I_I2G-STGS,,IFA2,STG Switzerland GmbH,I,,,True,disbsad_energy_asset
+I_I2G-TRLS1,I_I2G-TRLS,,IFA2,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_I2G-VOLT1,I_I2G-VOLT,,IFA2,Volta Energy DAC,I,,,True,disbsad_energy_asset
+I_I2G-VTET1,I_I2G-VTET,,IFA2,Vattenfall Energy Trading,I,,,True,disbsad_energy_asset
+I_I2G-XNON1,I_I2G-XNON,,IFA2,XENON CAPITAL MARKETS LTD,I,,,True,disbsad_energy_asset
+I_IBD-BKWE1,I_IBD-BKWE,,BritNed,BKW Energie AG,I,,,True,disbsad_energy_asset
+I_IBD-CACM1,I_IBD-CACM,,BritNed,C A Commodities A/S,I,,,True,disbsad_energy_asset
+I_IBD-CBST1,I_IBD-CBST,,BritNed,Cobblestone Energy,I,,,True,disbsad_energy_asset
+I_IBD-COPN1,I_IBD-COPN,,BritNed,Copenhagen Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IBD-DARE1,I_IBD-DARE,,BritNed,Dare Power Ltd,I,,,True,disbsad_energy_asset
+I_IBD-DMCC1,I_IBD-DMCC,,BritNed,Cobblestone Energy DMCC,I,,,True,disbsad_energy_asset
+I_IBD-DSKC1,I_IBD-DSKC,,BritNed,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_IBD-DUFE1,I_IBD-DUFE,,BritNed,DXT Commodities SA,I,,,True,disbsad_energy_asset
+I_IBD-DVAL1,I_IBD-DVAL,,BritNed,DVALIN ApS,I,,,True,disbsad_energy_asset
+I_IBD-EDFT1,I_IBD-EDFT,,BritNed,EDF TRADING LIMITED,I,,,True,disbsad_energy_asset
+I_IBD-EDMK1,I_IBD-EDMK,,BritNed,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_IBD-ELEE1,I_IBD-ELEE,,BritNed,Electrabel SA,I,,,True,disbsad_energy_asset
+I_IBD-ELTR1,I_IBD-ELTR,,BritNed,ElectroRoute Energy Trading,I,,,True,disbsad_energy_asset
+I_IBD-ENTC1,I_IBD-ENTC,,BritNed,Energetech Europe BV,I,,,True,disbsad_energy_asset
+I_IBD-EZCO1,I_IBD-EZCO,,BritNed,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_IBD-HELI1,I_IBD-HELI,,BritNed,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_IBD-IDCE1,I_IBD-IDCE,,BritNed,DC Energy Trading V.O.F.,I,,,True,disbsad_energy_asset
+I_IBD-INCM1,I_IBD-INCM,,BritNed,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_IBD-MFTE1,I_IBD-MFTE,,BritNed,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_IBD-NEAS1,I_IBD-NEAS,,BritNed,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IBD-NEHO1,I_IBD-NEHO,,BritNed,Nordic Energy House ApS,I,,,True,disbsad_energy_asset
+I_IBD-NITR1,I_IBD-NITR,,BritNed,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_IBD-NORL1,I_IBD-NORL,,BritNed,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IBD-NTPL1,I_IBD-NTPL,,BritNed,Northpool BV,I,,,True,disbsad_energy_asset
+I_IBD-OPMX1,I_IBD-OPMX,,BritNed,Optimax Energy GmbH,I,,,True,disbsad_energy_asset
+I_IBD-OUTL1,I_IBD-OUTL,,BritNed,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_IBD-PWMR1,I_IBD-PWMR,,BritNed,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_IBD-QTPT1,I_IBD-QTPT,,BritNed,Quantum Power Trading,I,,,True,disbsad_energy_asset
+I_IBD-SETL1,I_IBD-SETL,,BritNed,Shell Energy Europe Limited,I,,,True,disbsad_energy_asset
+I_IBD-TRLS1,I_IBD-TRLS,,BritNed,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_IBD-VETR1,I_IBD-VETR,,BritNed,Vattenfall Energy Trading,I,,,True,disbsad_energy_asset
+I_IBD-XNON1,I_IBD-XNON,,BritNed,XENON CAPITAL MARKETS LTD,I,,,True,disbsad_energy_asset
+I_IBG-BKWE1,I_IBG-BKWE,,BritNed,BKW Energie AG,I,,,True,disbsad_energy_asset
+I_IBG-CACM1,I_IBG-CACM,,BritNed,C A Commodities A/S,I,,,True,disbsad_energy_asset
+I_IBG-CBST1,I_IBG-CBST,,BritNed,Cobblestone Energy,I,,,True,disbsad_energy_asset
+I_IBG-CONV1,I_IBG-CONV,,BritNed,Convex Energy GmbH,I,,,True,disbsad_energy_asset
+I_IBG-COPN1,I_IBG-COPN,,BritNed,Copenhagen Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IBG-DARE1,I_IBG-DARE,,BritNed,Dare Power Ltd,I,,,True,disbsad_energy_asset
+I_IBG-DMCC1,I_IBG-DMCC,,BritNed,Cobblestone Energy DMCC,I,,,True,disbsad_energy_asset
+I_IBG-DSKC1,I_IBG-DSKC,,BritNed,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_IBG-DUFE1,I_IBG-DUFE,,BritNed,DXT Commodities SA,I,,,True,disbsad_energy_asset
+I_IBG-DVAL1,I_IBG-DVAL,,BritNed,DVALIN ApS,I,,,True,disbsad_energy_asset
+I_IBG-EDFT1,I_IBG-EDFT,,BritNed,EDF TRADING LIMITED,I,,,True,disbsad_energy_asset
+I_IBG-EDMK1,I_IBG-EDMK,,BritNed,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_IBG-ELEE1,I_IBG-ELEE,,BritNed,Electrabel SA,I,,,True,disbsad_energy_asset
+I_IBG-ELTR1,I_IBG-ELTR,,BritNed,ElectroRoute Energy Trading,I,,,True,disbsad_energy_asset
+I_IBG-ENTC1,I_IBG-ENTC,,BritNed,Energetech Europe BV,I,,,True,disbsad_energy_asset
+I_IBG-EZC01,I_IBG-EZC,,BritNed,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_IBG-EZCO1,I_IBG-EZCO,,BritNed,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_IBG-GAZP1,I_IBG-GAZP,,BritNed,SEFE Marketing & Trading LTD,I,,,True,disbsad_energy_asset
+I_IBG-HELI1,I_IBG-HELI,,BritNed,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_IBG-IDCE1,I_IBG-IDCE,,BritNed,DC Energy Trading V.O.F.,I,,,True,disbsad_energy_asset
+I_IBG-INCM1,I_IBG-INCM,,BritNed,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_IBG-MFTE1,I_IBG-MFTE,,BritNed,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_IBG-NEAS1,I_IBG-NEAS,,BritNed,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IBG-NEHO1,I_IBG-NEHO,,BritNed,Nordic Energy House ApS,I,,,True,disbsad_energy_asset
+I_IBG-NITR1,I_IBG-NITR,,BritNed,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_IBG-NORL1,I_IBG-NORL,,BritNed,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IBG-NTPL1,I_IBG-NTPL,,BritNed,Northpool BV,I,,,True,disbsad_energy_asset
+I_IBG-OPMX1,I_IBG-OPMX,,BritNed,Optimax Energy GmbH,I,,,True,disbsad_energy_asset
+I_IBG-OUTL1,I_IBG-OUTL,,BritNed,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_IBG-PWMR1,I_IBG-PWMR,,BritNed,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_IBG-QTPT1,I_IBG-QTPT,,BritNed,Quantum Power Trading,I,,,True,disbsad_energy_asset
+I_IBG-SETL1,I_IBG-SETL,,BritNed,Shell Energy Europe Limited,I,,,True,disbsad_energy_asset
+I_IBG-STGS1,I_IBG-STGS,,BritNed,STG Switzerland GmbH,I,,,True,disbsad_energy_asset
+I_IBG-TRLS1,I_IBG-TRLS,,BritNed,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_IBG-VETR1,I_IBG-VETR,,BritNed,Vattenfall Energy Trading,I,,,True,disbsad_energy_asset
+I_IBG-VOLT1,I_IBG-VOLT,,BritNed,Volta Energy DAC,I,,,True,disbsad_energy_asset
+I_IBG-XNON1,I_IBG-XNON,,BritNed,XENON CAPITAL MARKETS LTD,I,,,True,disbsad_energy_asset
+I_IFD-BAYW1,I_IFD-BAYW,,IFA,Baywa r.e. Energy Trading GmbH,I,,,True,disbsad_energy_asset
+I_IFD-BKWE1,I_IFD-BKWE,,IFA,BKW Energie AG,I,,,True,disbsad_energy_asset
+I_IFD-CACM1,I_IFD-CACM,,IFA,C A Commodities A/S,I,,,True,disbsad_energy_asset
+I_IFD-CBST1,I_IFD-CBST,,IFA,Cobblestone Energy,I,,,True,disbsad_energy_asset
+I_IFD-COPN1,I_IFD-COPN,,IFA,Copenhagen Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IFD-DARE1,I_IFD-DARE,,IFA,Dare Power Ltd,I,,,True,disbsad_energy_asset
+I_IFD-DMCC1,I_IFD-DMCC,,IFA,Cobblestone Energy DMCC,I,,,True,disbsad_energy_asset
+I_IFD-DSKC1,I_IFD-DSKC,,IFA,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_IFD-DVAL1,I_IFD-DVAL,,IFA,DVALIN ApS,I,,,True,disbsad_energy_asset
+I_IFD-EDFT1,I_IFD-EDFT,,IFA,EDF TRADING LIMITED,I,,,True,disbsad_energy_asset
+I_IFD-EDMK1,I_IFD-EDMK,,IFA,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_IFD-ELEE1,I_IFD-ELEE,,IFA,Electrabel SA,I,,,True,disbsad_energy_asset
+I_IFD-ELTR1,I_IFD-ELTR,,IFA,ElectroRoute Energy Trading,I,,,True,disbsad_energy_asset
+I_IFD-ENTC1,I_IFD-ENTC,,IFA,Energetech Europe BV,I,,,True,disbsad_energy_asset
+I_IFD-EZCO1,I_IFD-EZCO,,IFA,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_IFD-HELI1,I_IFD-HELI,,IFA,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_IFD-INCM1,I_IFD-INCM,,IFA,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_IFD-MFTE1,I_IFD-MFTE,,IFA,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_IFD-NEAS1,I_IFD-NEAS,,IFA,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IFD-NITR1,I_IFD-NITR,,IFA,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_IFD-NORL1,I_IFD-NORL,,IFA,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IFD-NTPL1,I_IFD-NTPL,,IFA,Northpool BV,I,,,True,disbsad_energy_asset
+I_IFD-OPMX1,I_IFD-OPMX,,IFA,Optimax Energy GmbH,I,,,True,disbsad_energy_asset
+I_IFD-OUTL1,I_IFD-OUTL,,IFA,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_IFD-PLAN1,I_IFD-PLAN,,IFA,BCM Energy,I,,,True,disbsad_energy_asset
+I_IFD-PWMR1,I_IFD-PWMR,,IFA,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_IFD-QTPT1,I_IFD-QTPT,,IFA,Quantum Power Trading,I,,,True,disbsad_energy_asset
+I_IFD-QUEN1,I_IFD-QUEN,,IFA,QUENT ApS,I,,,True,disbsad_energy_asset
+I_IFD-SETL1,I_IFD-SETL,,IFA,Shell Energy Europe Limited,I,,,True,disbsad_energy_asset
+I_IFD-SSEG1,I_IFD-SSEG,,IFA,SSE Energy Supply Limited,I,,,True,disbsad_energy_asset
+I_IFD-TRLS1,I_IFD-TRLS,,IFA,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_IFD-VOLT1,I_IFD-VOLT,,IFA,Volta Energy DAC,I,,,True,disbsad_energy_asset
+I_IFD-VTFS1,I_IFD-VTFS,,IFA,Vattenfall Energy Trading,I,,,True,disbsad_energy_asset
+I_IFD-XNON1,I_IFD-XNON,,IFA,XENON CAPITAL MARKETS LTD,I,,,True,disbsad_energy_asset
+I_IFG-BAYW1,I_IFG-BAYW,,IFA,Baywa r.e. Energy Trading GmbH,I,,,True,disbsad_energy_asset
+I_IFG-BKWE1,I_IFG-BKWE,,IFA,BKW Energie AG,I,,,True,disbsad_energy_asset
+I_IFG-CACM1,I_IFG-CACM,,IFA,C A Commodities A/S,I,,,True,disbsad_energy_asset
+I_IFG-CBST1,I_IFG-CBST,,IFA,Cobblestone Energy,I,,,True,disbsad_energy_asset
+I_IFG-CONV1,I_IFG-CONV,,IFA,Convex Energy GmbH,I,,,True,disbsad_energy_asset
+I_IFG-COPN1,I_IFG-COPN,,IFA,Copenhagen Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IFG-DARE1,I_IFG-DARE,,IFA,Dare Power Ltd,I,,,True,disbsad_energy_asset
+I_IFG-DMCC1,I_IFG-DMCC,,IFA,Cobblestone Energy DMCC,I,,,True,disbsad_energy_asset
+I_IFG-DSKC1,I_IFG-DSKC,,IFA,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_IFG-DUFE1,I_IFG-DUFE,,IFA,DXT Commodities SA,I,,,True,disbsad_energy_asset
+I_IFG-DVAL1,I_IFG-DVAL,,IFA,DVALIN ApS,I,,,True,disbsad_energy_asset
+I_IFG-EDFT1,I_IFG-EDFT,,IFA,EDF TRADING LIMITED,I,,,True,disbsad_energy_asset
+I_IFG-EDMK1,I_IFG-EDMK,,IFA,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_IFG-ELEE1,I_IFG-ELEE,,IFA,Electrabel SA,I,,,True,disbsad_energy_asset
+I_IFG-ELTR1,I_IFG-ELTR,,IFA,ElectroRoute Energy Trading,I,,,True,disbsad_energy_asset
+I_IFG-ENTC1,I_IFG-ENTC,,IFA,Energetech Europe BV,I,,,True,disbsad_energy_asset
+I_IFG-EZCO1,I_IFG-EZCO,,IFA,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_IFG-GAZP1,I_IFG-GAZP,,IFA,SEFE Marketing & Trading LTD,I,,,True,disbsad_energy_asset
+I_IFG-HELI1,I_IFG-HELI,,IFA,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_IFG-INCM1,I_IFG-INCM,,IFA,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_IFG-MFTE1,I_IFG-MFTE,,IFA,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_IFG-NEAS1,I_IFG-NEAS,,IFA,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IFG-NITR1,I_IFG-NITR,,IFA,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_IFG-NORL1,I_IFG-NORL,,IFA,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IFG-NTPL1,I_IFG-NTPL,,IFA,Northpool BV,I,,,True,disbsad_energy_asset
+I_IFG-OPMX1,I_IFG-OPMX,,IFA,Optimax Energy GmbH,I,,,True,disbsad_energy_asset
+I_IFG-OUTL1,I_IFG-OUTL,,IFA,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_IFG-PLAN1,I_IFG-PLAN,,IFA,BCM Energy,I,,,True,disbsad_energy_asset
+I_IFG-PWMR1,I_IFG-PWMR,,IFA,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_IFG-QTPT1,I_IFG-QTPT,,IFA,Quantum Power Trading,I,,,True,disbsad_energy_asset
+I_IFG-QUEN1,I_IFG-QUEN,,IFA,QUENT ApS,I,,,True,disbsad_energy_asset
+I_IFG-SETL1,I_IFG-SETL,,IFA,Shell Energy Europe Limited,I,,,True,disbsad_energy_asset
+I_IFG-STGS1,I_IFG-STGS,,IFA,STG Switzerland GmbH,I,,,True,disbsad_energy_asset
+I_IFG-TRLS1,I_IFG-TRLS,,IFA,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_IFG-VOLT1,I_IFG-VOLT,,IFA,Volta Energy DAC,I,,,True,disbsad_energy_asset
+I_IFG-VSAL1,I_IFG-VSAL,,IFA,VITOL SA,I,,,True,disbsad_energy_asset
+I_IFG-VTFS1,I_IFG-VTFS,,IFA,Vattenfall Energy Trading,I,,,True,disbsad_energy_asset
+I_IFG-XNON1,I_IFG-XNON,,IFA,XENON CAPITAL MARKETS LTD,I,,,True,disbsad_energy_asset
+I_ILD-BAYW1,I_ILD-BAYW,,Eleclink,Baywa r.e. Energy Trading GmbH,I,,,True,disbsad_energy_asset
+I_ILD-BKWE1,I_ILD-BKWE,,Eleclink,BKW Energie AG,I,,,True,disbsad_energy_asset
+I_ILD-CBST1,I_ILD-CBST,,Eleclink,Cobblestone Energy,I,,,True,disbsad_energy_asset
+I_ILD-DMCC1,I_ILD-DMCC,,Eleclink,Cobblestone Energy DMCC,I,,,True,disbsad_energy_asset
+I_ILD-DSKC1,I_ILD-DSKC,,Eleclink,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_ILD-EDFT1,I_ILD-EDFT,,Eleclink,EDF TRADING LIMITED,I,,,True,disbsad_energy_asset
+I_ILD-EDMK1,I_ILD-EDMK,,Eleclink,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_ILD-ELTR1,I_ILD-ELTR,,Eleclink,ElectroRoute Energy Trading,I,,,True,disbsad_energy_asset
+I_ILD-HELI1,I_ILD-HELI,,Eleclink,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_ILD-INCM1,I_ILD-INCM,,Eleclink,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_ILD-MFTE1,I_ILD-MFTE,,Eleclink,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_ILD-NEAS1,I_ILD-NEAS,,Eleclink,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_ILD-NITR1,I_ILD-NITR,,Eleclink,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_ILD-NORL1,I_ILD-NORL,,Eleclink,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_ILD-NTPL1,I_ILD-NTPL,,Eleclink,Northpool BV,I,,,True,disbsad_energy_asset
+I_ILD-OUTL1,I_ILD-OUTL,,Eleclink,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_ILD-PWMR1,I_ILD-PWMR,,Eleclink,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_ILD-TRLS1,I_ILD-TRLS,,Eleclink,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_ILD-VTFS1,I_ILD-VTFS,,Eleclink,Vattenfall Energy Trading,I,,,True,disbsad_energy_asset
+I_ILD-XNON1,I_ILD-XNON,,Eleclink,XENON CAPITAL MARKETS LTD,I,,,True,disbsad_energy_asset
+I_ILG-BKWE1,I_ILG-BKWE,,Eleclink,BKW Energie AG,I,,,True,disbsad_energy_asset
+I_ILG-CBST1,I_ILG-CBST,,Eleclink,Cobblestone Energy,I,,,True,disbsad_energy_asset
+I_ILG-DMCC1,I_ILG-DMCC,,Eleclink,Cobblestone Energy DMCC,I,,,True,disbsad_energy_asset
+I_ILG-DSKC1,I_ILG-DSKC,,Eleclink,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_ILG-DUFE1,I_ILG-DUFE,,Eleclink,DXT Commodities SA,I,,,True,disbsad_energy_asset
+I_ILG-EDFT1,I_ILG-EDFT,,Eleclink,EDF TRADING LIMITED,I,,,True,disbsad_energy_asset
+I_ILG-EDMK1,I_ILG-EDMK,,Eleclink,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_ILG-ELTR1,I_ILG-ELTR,,Eleclink,ElectroRoute Energy Trading,I,,,True,disbsad_energy_asset
+I_ILG-EZCO1,I_ILG-EZCO,,Eleclink,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_ILG-HELI1,I_ILG-HELI,,Eleclink,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_ILG-INCM1,I_ILG-INCM,,Eleclink,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_ILG-MFTE1,I_ILG-MFTE,,Eleclink,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_ILG-NEAS1,I_ILG-NEAS,,Eleclink,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_ILG-NEHO1,I_ILG-NEHO,,Eleclink,Nordic Energy House ApS,I,,,True,disbsad_energy_asset
+I_ILG-NITR1,I_ILG-NITR,,Eleclink,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_ILG-NORL1,I_ILG-NORL,,Eleclink,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_ILG-NTPL1,I_ILG-NTPL,,Eleclink,Northpool BV,I,,,True,disbsad_energy_asset
+I_ILG-OUTL1,I_ILG-OUTL,,Eleclink,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_ILG-PWMR1,I_ILG-PWMR,,Eleclink,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_ILG-SEFE1,I_ILG-SEFE,,Eleclink,SEFE Marketing & Trading LTD,I,,,True,disbsad_energy_asset
+I_ILG-SETL1,I_ILG-SETL,,Eleclink,Shell Energy Europe Limited,I,,,True,disbsad_energy_asset
+I_ILG-TRLS1,I_ILG-TRLS,,Eleclink,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_ILG-VSAL1,I_ILG-VSAL,,Eleclink,VITOL SA,I,,,True,disbsad_energy_asset
+I_ILG-XNON1,I_ILG-XNON,,Eleclink,XENON CAPITAL MARKETS LTD,I,,,True,disbsad_energy_asset
+I_IND-BKWE1,I_IND-BKWE,,NEMO,BKW Energie AG,I,,,True,disbsad_energy_asset
+I_IND-CACM1,I_IND-CACM,,NEMO,C A Commodities A/S,I,,,True,disbsad_energy_asset
+I_IND-CBST1,I_IND-CBST,,NEMO,Cobblestone Energy,I,,,True,disbsad_energy_asset
+I_IND-COPN1,I_IND-COPN,,NEMO,Copenhagen Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IND-DARE1,I_IND-DARE,,NEMO,Dare Power Ltd,I,,,True,disbsad_energy_asset
+I_IND-DMCC1,I_IND-DMCC,,NEMO,Cobblestone Energy DMCC,I,,,True,disbsad_energy_asset
+I_IND-DSKC1,I_IND-DSKC,,NEMO,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_IND-DUFE1,I_IND-DUFE,,NEMO,DXT Commodities SA,I,,,True,disbsad_energy_asset
+I_IND-DVAL1,I_IND-DVAL,,NEMO,DVALIN ApS,I,,,True,disbsad_energy_asset
+I_IND-EDFT1,I_IND-EDFT,,NEMO,EDF TRADING LIMITED,I,,,True,disbsad_energy_asset
+I_IND-EDMK1,I_IND-EDMK,,NEMO,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_IND-ELEE1,I_IND-ELEE,,NEMO,Electrabel SA,I,,,True,disbsad_energy_asset
+I_IND-ELTR1,I_IND-ELTR,,NEMO,ElectroRoute Energy Trading,I,,,True,disbsad_energy_asset
+I_IND-ENTC1,I_IND-ENTC,,NEMO,Energetech Europe BV,I,,,True,disbsad_energy_asset
+I_IND-EZCO1,I_IND-EZCO,,NEMO,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_IND-HELI1,I_IND-HELI,,NEMO,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_IND-INCM1,I_IND-INCM,,NEMO,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_IND-MFTE1,I_IND-MFTE,,NEMO,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_IND-NEAS1,I_IND-NEAS,,NEMO,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IND-NEHO1,I_IND-NEHO,,NEMO,Nordic Energy House ApS,I,,,True,disbsad_energy_asset
+I_IND-NITR1,I_IND-NITR,,NEMO,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_IND-NORL1,I_IND-NORL,,NEMO,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IND-NTPL1,I_IND-NTPL,,NEMO,Northpool BV,I,,,True,disbsad_energy_asset
+I_IND-OPMX1,I_IND-OPMX,,NEMO,Optimax Energy GmbH,I,,,True,disbsad_energy_asset
+I_IND-OUTL1,I_IND-OUTL,,NEMO,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_IND-PWMR1,I_IND-PWMR,,NEMO,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_IND-QUEN1,I_IND-QUEN,,NEMO,QUENT ApS,I,,,True,disbsad_energy_asset
+I_IND-SETL1,I_IND-SETL,,NEMO,Shell Energy Europe Limited,I,,,True,disbsad_energy_asset
+I_IND-TRLS1,I_IND-TRLS,,NEMO,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_IND-VTET1,I_IND-VTET,,NEMO,Vattenfall Energy Trading,I,,,True,disbsad_energy_asset
+I_IND-XNON1,I_IND-XNON,,NEMO,XENON CAPITAL MARKETS LTD,I,,,True,disbsad_energy_asset
+I_ING-BKWE1,I_ING-BKWE,,NEMO,BKW Energie AG,I,,,True,disbsad_energy_asset
+I_ING-CACM1,I_ING-CACM,,NEMO,C A Commodities A/S,I,,,True,disbsad_energy_asset
+I_ING-CBST1,I_ING-CBST,,NEMO,Cobblestone Energy,I,,,True,disbsad_energy_asset
+I_ING-COPN1,I_ING-COPN,,NEMO,Copenhagen Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_ING-DARE1,I_ING-DARE,,NEMO,Dare Power Ltd,I,,,True,disbsad_energy_asset
+I_ING-DMCC1,I_ING-DMCC,,NEMO,Cobblestone Energy DMCC,I,,,True,disbsad_energy_asset
+I_ING-DSKC1,I_ING-DSKC,,NEMO,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_ING-DUFE1,I_ING-DUFE,,NEMO,DXT Commodities SA,I,,,True,disbsad_energy_asset
+I_ING-DVAL1,I_ING-DVAL,,NEMO,DVALIN ApS,I,,,True,disbsad_energy_asset
+I_ING-EDFT1,I_ING-EDFT,,NEMO,EDF TRADING LIMITED,I,,,True,disbsad_energy_asset
+I_ING-EDMK1,I_ING-EDMK,,NEMO,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_ING-ELEE1,I_ING-ELEE,,NEMO,Electrabel SA,I,,,True,disbsad_energy_asset
+I_ING-ELTR1,I_ING-ELTR,,NEMO,ElectroRoute Energy Trading,I,,,True,disbsad_energy_asset
+I_ING-ENTC1,I_ING-ENTC,,NEMO,Energetech Europe BV,I,,,True,disbsad_energy_asset
+I_ING-EZCO1,I_ING-EZCO,,NEMO,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_ING-GAZP1,I_ING-GAZP,,NEMO,SEFE Marketing & Trading LTD,I,,,True,disbsad_energy_asset
+I_ING-HELI1,I_ING-HELI,,NEMO,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_ING-IDCE1,I_ING-IDCE,,NEMO,DC Energy Trading V.O.F.,I,,,True,disbsad_energy_asset
+I_ING-INCM1,I_ING-INCM,,NEMO,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_ING-MFTE1,I_ING-MFTE,,NEMO,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_ING-NEAS1,I_ING-NEAS,,NEMO,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_ING-NITR1,I_ING-NITR,,NEMO,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_ING-NORL1,I_ING-NORL,,NEMO,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_ING-NTPL1,I_ING-NTPL,,NEMO,Northpool BV,I,,,True,disbsad_energy_asset
+I_ING-OPMX1,I_ING-OPMX,,NEMO,Optimax Energy GmbH,I,,,True,disbsad_energy_asset
+I_ING-OUTL1,I_ING-OUTL,,NEMO,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_ING-PWMR1,I_ING-PWMR,,NEMO,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_ING-QUEN1,I_ING-QUEN,,NEMO,QUENT ApS,I,,,True,disbsad_energy_asset
+I_ING-SETL1,I_ING-SETL,,NEMO,Shell Energy Europe Limited,I,,,True,disbsad_energy_asset
+I_ING-STGS1,I_ING-STGS,,NEMO,STG Switzerland GmbH,I,,,True,disbsad_energy_asset
+I_ING-TRLS1,I_ING-TRLS,,NEMO,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_ING-VOLT1,I_ING-VOLT,,NEMO,Volta Energy DAC,I,,,True,disbsad_energy_asset
+I_ING-VTET1,I_ING-VTET,,NEMO,Vattenfall Energy Trading,I,,,True,disbsad_energy_asset
+I_ING-XNON1,I_ING-XNON,,NEMO,XENON CAPITAL MARKETS LTD,I,,,True,disbsad_energy_asset
+I_IVD-CACM1,I_IVD-CACM,,Viking,C A Commodities A/S,I,,,True,disbsad_energy_asset
+I_IVD-COPN1,I_IVD-COPN,,Viking,Copenhagen Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IVD-DSKC1,I_IVD-DSKC,,Viking,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_IVD-DVAL1,I_IVD-DVAL,,Viking,DVALIN ApS,I,,,True,disbsad_energy_asset
+I_IVD-EDMK1,I_IVD-EDMK,,Viking,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_IVD-EZCO1,I_IVD-EZCO,,Viking,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_IVD-HELI1,I_IVD-HELI,,Viking,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_IVD-INCM1,I_IVD-INCM,,Viking,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_IVD-MFTE1,I_IVD-MFTE,,Viking,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_IVD-NEAS1,I_IVD-NEAS,,Viking,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IVD-NITR1,I_IVD-NITR,,Viking,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_IVD-NORL1,I_IVD-NORL,,Viking,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IVD-NTPL1,I_IVD-NTPL,,Viking,Northpool BV,I,,,True,disbsad_energy_asset
+I_IVD-OPMX1,I_IVD-OPMX,,Viking,Optimax Energy GmbH,I,,,True,disbsad_energy_asset
+I_IVD-OUTL1,I_IVD-OUTL,,Viking,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_IVD-PWMR1,I_IVD-PWMR,,Viking,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_IVD-QTPT1,I_IVD-QTPT,,Viking,Quantum Power Trading,I,,,True,disbsad_energy_asset
+I_IVD-TRLS1,I_IVD-TRLS,,Viking,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_IVD-VOLT1,I_IVD-VOLT,,Viking,Volta Energy DAC,I,,,True,disbsad_energy_asset
+I_IVG-CACM1,I_IVG-CACM,,Viking,C A Commodities A/S,I,,,True,disbsad_energy_asset
+I_IVG-COPN1,I_IVG-COPN,,Viking,Copenhagen Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IVG-DARE1,I_IVG-DARE,,Viking,Dare Power Ltd,I,,,True,disbsad_energy_asset
+I_IVG-DSKC1,I_IVG-DSKC,,Viking,Danske Commodities A/S,I,,,True,disbsad_energy_asset
+I_IVG-DVAL1,I_IVG-DVAL,,Viking,DVALIN ApS,I,,,True,disbsad_energy_asset
+I_IVG-EDMK1,I_IVG-EDMK,,Viking,Mind Energy A/S,I,,,True,disbsad_energy_asset
+I_IVG-EZCO1,I_IVG-EZCO,,Viking,ENZEE Commodities A/S,I,,,True,disbsad_energy_asset
+I_IVG-HELI1,I_IVG-HELI,,Viking,Helios Power Trading A/S,I,,,True,disbsad_energy_asset
+I_IVG-INCM1,I_IVG-INCM,,Viking,IN COMMODITIES A/S,I,,,True,disbsad_energy_asset
+I_IVG-MFTE1,I_IVG-MFTE,,Viking,MFT Energy A/S,I,,,True,disbsad_energy_asset
+I_IVG-NEAS1,I_IVG-NEAS,,Viking,Centrica Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IVG-NITR1,I_IVG-NITR,,Viking,Nitor Energy A/S,I,,,True,disbsad_energy_asset
+I_IVG-NORL1,I_IVG-NORL,,Viking,Norlys Energy Trading A/S,I,,,True,disbsad_energy_asset
+I_IVG-NTPL1,I_IVG-NTPL,,Viking,Northpool BV,I,,,True,disbsad_energy_asset
+I_IVG-OPMX1,I_IVG-OPMX,,Viking,Optimax Energy GmbH,I,,,True,disbsad_energy_asset
+I_IVG-OUTL1,I_IVG-OUTL,,Viking,Outlook Energy Ltd,I,,,True,disbsad_energy_asset
+I_IVG-PWMR1,I_IVG-PWMR,,Viking,PowerMart ApS,I,,,True,disbsad_energy_asset
+I_IVG-QTPT1,I_IVG-QTPT,,Viking,Quantum Power Trading,I,,,True,disbsad_energy_asset
+I_IVG-QUEN1,I_IVG-QUEN,,Viking,QUENT ApS,I,,,True,disbsad_energy_asset
+I_IVG-SEFE1,I_IVG-SEFE,,Viking,SEFE Marketing & Trading LTD,I,,,True,disbsad_energy_asset
+I_IVG-STGS1,I_IVG-STGS,,Viking,STG Switzerland GmbH,I,,,True,disbsad_energy_asset
+I_IVG-TRLS1,I_IVG-TRLS,,Viking,Engelhart CTP Renewables GmbH,I,,,True,disbsad_energy_asset
+I_IVG-VOLT1,I_IVG-VOLT,,Viking,Volta Energy DAC,I,,,True,disbsad_energy_asset
+M_CAS-BEU01,M_CAS-BEU,Beauly Cascade,NPSHYD,SSE Generation Ltd,T,93.514,,False,named_ispstack_id
+M_CAS-CLU01,M_CAS-CLU,Clunie Cascade,NPSHYD,SSE Generation Ltd,T,76.2,,False,named_ispstack_id
+M_CAS-CON01,M_CAS-CON,Conon Cascade,NPSHYD,SSE Generation Ltd,T,95.226,,False,named_ispstack_id
+M_CAS-GAR01,M_CAS-GAR,Garry Cascade,NPSHYD,SSE Generation Ltd,T,40.0,,False,named_ispstack_id
+M_CAS-KIL01,M_CAS-KIL,Killin Cascade,NPSHYD,SSE Generation Ltd,T,70.0,,False,named_ispstack_id
+M_CAS-MOR01,M_CAS-MOR,Moriston Cascade,NPSHYD,SSE Generation Ltd,T,74.0,,False,named_ispstack_id
+M_SLOY-1,M_SLOY,Sloy G1,NPSHYD,SSE Generation Ltd,T,50.0,,False,named_ispstack_id
+M_SLOY-4,M_SLOY,Sloy G4,NPSHYD,SSE Generation Ltd,T,40.0,,False,named_ispstack_id
+T_ABRBO-1,T_ABRBO,ABRBO-1,WIND,Aberdeen Offshore Wind Farm,T,99.0,,False,named_ispstack_id
+T_ACHRW-1,T_ACHRW,AChruach Wind Farm,WIND,Mobius Renewables Gen. (GB2,T,42.6,,False,named_ispstack_id
+T_AFTOW-1,T_AFTOW,Afton Wind Farm,WIND,Afton Wind Farm Limited,T,50.0,,False,named_ispstack_id
+T_AKGLW-2,T_AKGLW,AIKENGALL II,WIND,Aikengall 2 CWCL,T,63.84,,False,named_ispstack_id
+T_AKGLW-3,T_AKGLW,AIKENGALL2A-W,WIND,AIK2A Sustainable Energy Ltd,T,163.4,,False,named_ispstack_id
+T_ARCHW-1,T_ARCHW,Arecleoch,WIND,SP Renewables (UK) Limited,T,114.0,,False,named_ispstack_id
+T_BDCHW-1,T_BDCHW,Bad a Cheo Wind Farm,WIND,RWE Generation UK plc,T,270.0,,False,named_ispstack_id
+T_BEATO-1,T_BEATO,Beatrice Offshore WF 1,WIND,Beatrice Offshore Windfarm Ltd,T,184.0,,False,named_ispstack_id
+T_BEATO-2,T_BEATO,Beatrice Offshore WF 2,WIND,Beatrice Offshore Windfarm Ltd,T,166.0,,False,named_ispstack_id
+T_BEATO-3,T_BEATO,Beatrice Offshore WF 3,WIND,Beatrice Offshore Windfarm Ltd,T,166.0,,False,named_ispstack_id
+T_BEATO-4,T_BEATO,Beatrice Offshore WF 4,WIND,Beatrice Offshore Windfarm Ltd,T,165.526,,False,named_ispstack_id
+T_BEINW-1,T_BEINW,Beinneun Wind farm,WIND,Beinneun Wind Farm Ltd,T,108.8,,False,named_ispstack_id
+T_BHLAW-1,T_BHLAW,Bhlaraidh Windfarm 1,WIND,SSE Generation Ltd,T,108.0,,False,named_ispstack_id
+T_BLHLB-1,T_BLHLB_B,T_BLHLB-1,BATTERY,ZENOBE BLACKHILLOCK LIMITED,T,50.0,,False,named_ispstack_id
+T_BLHLB-2,T_BLHLB_B,T_BLHLB-2,BATTERY,ZENOBE BLACKHILLOCK LIMITED,T,50.42,,False,named_ispstack_id
+T_BLHLB-3,T_BLHLB_B,T_BLHLB-3,BATTERY,ZENOBE BLACKHILLOCK LIMITED,T,54.0,,False,named_ispstack_id
+T_BLHLB-4,T_BLHLB_OTH,T_BLHLB-4,OTHER,ZENOBE BLACKHILLOCK LIMITED,T,54.42,,False,named_ispstack_id
+T_BLKWW-1,T_BLKWW,Blackcraig Windfarm,WIND,Blackcraig Wind Farm Limited,T,56.216,,False,named_ispstack_id
+T_BLLA-1,T_BLLA,T_BLLA-1,WIND,SP Renewables (UK) Limited,T,118.0,,False,named_ispstack_id
+T_BLLA-2,T_BLLA,Black Law Windfarm Extension,WIND,SP Renewables (UK) Limited,T,69.0,,False,named_ispstack_id
+T_BOWLW-1,T_BOWLW,Barrow Offshore Wind,WIND,Barrow Offshore Wind Limited,T,90.0,,False,named_ispstack_id
+T_BRBEO-1,T_BRBEO,BURBO_EXTENSION,WIND,Burbo Extension Limited,T,257.7,,False,named_ispstack_id
+T_BRCHS-1,T_BRCHS,T_BRCHS-1,SOLAR,Burwell 11 Solar Ltd,T,50.0,,False,named_ispstack_id
+T_BREDB-1,T_BREDB,BREDBURY BESS,BATTERY,Pivoted Power LLP,T,49.9,,False,named_ispstack_id
+T_BROCW-1,T_BROCW,Broken Cross WF,WIND,Smartestenergy Limited,T,48.0,,False,named_ispstack_id
+T_BURWS-1,T_BURWS,Beechgreen Energy Farm,SOLAR,EDF Energy Customers Limited,T,49.952,,False,named_ispstack_id
+T_BUSTB-1,T_BUSTB,Pivot Power Bustleholme,BATTERY,Pivoted Power LLP,T,52.237,,False,named_ispstack_id
+T_CARR-1,T_CARR,Carrington Power Ltd - Unit 1,CCGT,Carrington Power Ltd,T,470.0,,False,named_ispstack_id
+T_CARR-2,T_CARR,Carrington Power Ltd - Unit 2,CCGT,Carrington Power Ltd,T,470.0,,False,named_ispstack_id
+T_CDCL-1,T_CDCL,T_CDCL-1,CCGT,Uniper UK Limited,T,445.0,,False,named_ispstack_id
+T_CGTHW-1,T_CGTHW,Corriegarth WF,WIND,Corriegarth Wind Energy LTD,T,69.0,,False,named_ispstack_id
+T_CLDCW-1,T_CLDCW,Clyde Central,WIND,Clyde Windfarm (Scotland) Ltd,T,200.0,,False,named_ispstack_id
+T_CLDNW-1,T_CLDNW,Clyde North,WIND,Clyde Windfarm (Scotland) Ltd,T,200.0,,False,named_ispstack_id
+T_CLDSW-1,T_CLDSW,Clyde South,WIND,Clyde Windfarm (Scotland) Ltd,T,150.0,,False,named_ispstack_id
+T_CLVHS-1,T_CLVHS,Cleve Hill Solar 1,SOLAR,Cleve Hill Solar Park,T,112.0,,False,named_ispstack_id
+T_CLVHS-2,T_CLVHS,Cleve Hill Solar 2,SOLAR,Cleve Hill Solar Park,T,205.0,,False,named_ispstack_id
+T_CNQPS-1,T_CNQPS,T_CNQPS-1,CCGT,Uniper UK Limited,T,351.162,,False,named_ispstack_id
+T_CNQPS-2,T_CNQPS,T_CNQPS-2,CCGT,Uniper UK Limited,T,352.0,,False,named_ispstack_id
+T_CNQPS-3,T_CNQPS,T_CNQPS-3,CCGT,Uniper UK Limited,T,352.0,,False,named_ispstack_id
+T_CNQPS-4,T_CNQPS,T_CNQPS-4,CCGT,Uniper UK Limited,T,352.0,,False,named_ispstack_id
+T_COSO-1,T_COSO,Coryton Power Station,CCGT,Coryton Energy Company Ltd,T,856.186,,False,named_ispstack_id
+T_COUWW-1,T_COUWW,Cour Wind Farm,WIND,Cour Wind farm (Scotland) Ltd,T,20.5,,False,named_ispstack_id
+T_COVNB-1,T_COVNB,Pivot Power Coventry,OTHER,Pivoted Power LLP,T,50.449,,False,named_ispstack_id
+T_COWB-1,T_COWB,Cowley,OTHER,Pivoted Power LLP,T,50.431,,False,named_ispstack_id
+T_CRDEW-1,T_CRDEW,Crossdykes WF-1,WIND,EDF Energy Customers Limited,T,24.0,,False,named_ispstack_id
+T_CRDEW-2,T_CRDEW,Crossdykes WF-2,WIND,EDF Energy Customers Limited,T,24.0,,False,named_ispstack_id
+T_CREAW-1,T_CREAW,Creag Riabhach Wind Farm,WIND,Creag Riabhach Wind Farm Ltd,T,93.0,,False,named_ispstack_id
+T_CRGHW-1,T_CRGHW,Carraig Gheal Wind Farm,WIND,Statkraft Markets Gmbh,T,46.0,,False,named_ispstack_id
+T_CRMLW-1,T_CRMLW,Corriemoillie,WIND,EDF Energy Customers Limited,T,48.0,,False,named_ispstack_id
+T_CRUA-1,T_CRUA,T_CRUA-1,PS,Drax Pumped Storage Limited,T,123.0,,False,named_ispstack_id
+T_CRUA-2,T_CRUA,T_CRUA-2,PS,Drax Pumped Storage Limited,T,124.76,,False,named_ispstack_id
+T_CRUA-3,T_CRUA,T_CRUA-3,PS,Drax Pumped Storage Limited,T,101.48,,False,named_ispstack_id
+T_CRUA-4,T_CRUA,T_CRUA-4,PS,Drax Pumped Storage Limited,T,104.0,,False,named_ispstack_id
+T_CRYRW-2,T_CRYRW,Crystal Rig II Windfarm,WIND,Eneco Energy Trade,T,150.62,,False,named_ispstack_id
+T_CRYRW-3,T_CRYRW,Crystal Rig III,WIND,Eneco Energy Trade,T,13.8,,False,named_ispstack_id
+T_CUMHW-1,T_CUMHW,Cumberhead wind energy limited,WIND,Uniper UK Limited,T,52.0,,False,named_ispstack_id
+T_DALQW-1,T_DALQW,Dalquhandy  Wind Farm,WIND,Statkraft Markets Gmbh,T,42.846,,False,named_ispstack_id
+T_DAMC-1,T_DAMC,Damhead Creek Ltd.,CCGT,VPI Power Limited,T,820.0,,False,named_ispstack_id
+T_DDGNO-1,T_DDGNO,Dudgeon Generator BMU 1,WIND,Dudgeon Offshore Wind Ltd,T,108.0,,False,named_ispstack_id
+T_DDGNO-2,T_DDGNO,Dudgeon Generator BMU 2,WIND,Dudgeon Offshore Wind Ltd,T,90.0,,False,named_ispstack_id
+T_DDGNO-3,T_DDGNO,Dudgeon Generator BMU 3,WIND,Dudgeon Offshore Wind Ltd,T,102.0,,False,named_ispstack_id
+T_DDGNO-4,T_DDGNO,Dudgeon Generator BMU 4,WIND,Dudgeon Offshore Wind Ltd,T,102.0,,False,named_ispstack_id
+T_DIDCB5,T_DIDCB,Didcot B main unit 5,CCGT,RWE Generation UK plc,T,770.0,,False,named_ispstack_id
+T_DIDCB6,T_DIDCB,Didcot B main unit 6,CCGT,RWE Generation UK plc,T,720.0,,False,named_ispstack_id
+T_DINO-1,T_DINO,Dinorwig 1,PS,First Hydro Company,T,320.0,,False,named_ispstack_id
+T_DINO-2,T_DINO,Dinorwig 2,PS,First Hydro Company,T,320.0,,False,named_ispstack_id
+T_DINO-3,T_DINO,Dinorwig 3,PS,First Hydro Company,T,320.0,,False,named_ispstack_id
+T_DINO-4,T_DINO,Dinorwig 4,PS,First Hydro Company,T,320.0,,False,named_ispstack_id
+T_DINO-5,T_DINO,Dinorwig 5,PS,First Hydro Company,T,320.0,,False,named_ispstack_id
+T_DINO-6,T_DINO,Dinorwig 6,PS,First Hydro Company,T,320.0,,False,named_ispstack_id
+T_DNLWW-1,T_DNLWW,Dunlaw Extension,WIND,SP Renewables (UK) Limited,T,29.75,,False,named_ispstack_id
+T_DOREW-1,T_DOREW,Dorenell Wind Farm One,WIND,Dorenell Windfarm Limited,T,156.92,,False,named_ispstack_id
+T_DOREW-2,T_DOREW,Dorenell Wind Farm Two,WIND,Dorenell Windfarm Limited,T,156.92,,False,named_ispstack_id
+T_DOUGW-1,T_DOUGW,T-DOUGW-1,WIND,Erova Energy Limited,T,45.0,,False,named_ispstack_id
+T_DRAXX-1,T_DRAXX,T_DRAXX-1,BIOMASS,Drax Power Ltd,T,665.248,,False,named_ispstack_id
+T_DRAXX-2,T_DRAXX,T_DRAXX-2,BIOMASS,Drax Power Ltd,T,669.4,,False,named_ispstack_id
+T_DRAXX-3,T_DRAXX,T_DRAXX-3,BIOMASS,Drax Power Ltd,T,661.4,,False,named_ispstack_id
+T_DRAXX-4,T_DRAXX,T_DRAXX-4,BIOMASS,Drax Power Ltd,T,645.0,,False,named_ispstack_id
+T_DRSLW-1,T_DRSLW,Dersalloch Windfarm,WIND,SP Renewables (UK) Limited,T,70.9,,False,named_ispstack_id
+T_DUNGW-1,T_DUNGW,Dunmglass Windfarm 1,WIND,Dunmaglass Wind Farm Limited,T,100.0,,False,named_ispstack_id
+T_EAAO-1,T_EAAO,East Anglia One Offshore 1,WIND,East Anglia One Limited,T,358.0,,False,named_ispstack_id
+T_EAAO-2,T_EAAO,East Anglia One Offshore 2,WIND,East Anglia One Limited,T,367.0,,False,named_ispstack_id
+T_EDINW-1,T_EDINW,Edinbane Windfarm,WIND,Vattenfall Wind Power Ltd,T,41.4,,False,named_ispstack_id
+T_EECL-1,T_EECL,Enfield Energy Centre Ltd BMU1,CCGT,Uniper UK Limited,T,444.0,,False,named_ispstack_id
+T_ERRO-1,T_ERRO,Errochty G1,NPSHYD,SSE Generation Ltd,T,25.3,,False,named_ispstack_id
+T_ERRO-2,T_ERRO,Errochty G2,NPSHYD,SSE Generation Ltd,T,25.26,,False,named_ispstack_id
+T_ERRO-3,T_ERRO,Errochty G3,NPSHYD,SSE Generation Ltd,T,25.66,,False,named_ispstack_id
+T_EWHLW-1,T_EWHLW,Ewe Hill II Windfarm,WIND,SP Renewables (UK) Limited,T,38.0,,False,named_ispstack_id
+T_FALGW-1,T_FALGW,Fallago Rig Wind Farm,WIND,Fallago Rig Wind Farm Limited,T,144.0,,False,named_ispstack_id
+T_FARR-1,T_FARR,Farr Unit 1,WIND,Smartestenergy Limited,T,92.0,,False,named_ispstack_id
+T_FARR-2,T_FARR,Farr Unit 2,WIND,Smartestenergy Limited,T,92.0,,False,named_ispstack_id
+T_FASN-1,T_FASN,Fasnakyle G1,NPSHYD,SSE Generation Ltd,T,23.04,,False,named_ispstack_id
+T_FASN-2,T_FASN,Fasnakyle  G2,NPSHYD,SSE Generation Ltd,T,23.28,,False,named_ispstack_id
+T_FFES-1,T_FFES,Ffestioniog 1,PS,First Hydro Company,T,91.033,,False,named_ispstack_id
+T_FFES-2,T_FFES,Ffestioniog 2,PS,First Hydro Company,T,91.875,,False,named_ispstack_id
+T_FFES-3,T_FFES,Ffestioniog 3,PS,First Hydro Company,T,90.0,,False,named_ispstack_id
+T_FFES-4,T_FFES,Ffestioniog 4,PS,First Hydro Company,T,90.92,,False,named_ispstack_id
+T_FINL-1,T_FINL,Finlarig,NPSHYD,SSE Generation Ltd,T,85.794,,False,named_ispstack_id
+T_FOYE-1,T_FOYE,Foyers G1,PS,SSE Generation Ltd,T,160.0,,False,named_ispstack_id
+T_FOYE-2,T_FOYE,Foyers G2,PS,SSE Generation Ltd,T,160.0,,False,named_ispstack_id
+T_GANW-11,T_GANW,Galloper OSP 11,WIND,Galloper Offshore WindFarm Ltd,T,88.0,,False,named_ispstack_id
+T_GANW-13,T_GANW,Galloper OSP 13,WIND,Galloper Offshore WindFarm Ltd,T,88.0,,False,named_ispstack_id
+T_GANW-22,T_GANW,Galloper OSP 22,WIND,Galloper Offshore WindFarm Ltd,T,385.82,,False,named_ispstack_id
+T_GANW-24,T_GANW,Galloper OSP 24,WIND,Galloper Offshore WindFarm Ltd,T,88.0,,False,named_ispstack_id
+T_GLNDO-1,T_GLNDO,Glendoe Generator 1,NPSHYD,SSE Generation Ltd,T,100.0,,False,named_ispstack_id
+T_GLNKW-1,T_GLNKW,GLEN KYLLACHY WINDFARM,WIND,EDF Energy Customers Limited,T,52.0,,False,named_ispstack_id
+T_GLWSW-1,T_GLWSW,Galawhistle Wind Farm,WIND,GALAWHISTLE WIND FARM,T,55.2,,False,named_ispstack_id
+T_GNAPW-1,T_GNAPW,Glen App Windfarm,WIND,SP Renewables (UK) Limited,T,22.0,,False,named_ispstack_id
+T_GNFSW-1,T_GNFSW,Gunfleet Sands 1,WIND,Gunfleet Sands Limited,T,108.0,,False,named_ispstack_id
+T_GNFSW-2,T_GNFSW,Gunfleet Sands 2,WIND,Gunfleet Sands II Limited,T,64.48,,False,named_ispstack_id
+T_GORDW-1,T_GORDW,Gordon Bush,WIND,SSE Generation Ltd,T,86.764,,False,named_ispstack_id
+T_GORDW-2,T_GORDW,Gordonbush WF Extension,WIND,SSE Generation Ltd,T,58.733,,False,named_ispstack_id
+T_GRAI-6,T_GRAI,T_GRAI-6,CCGT,Uniper UK Limited,T,468.0,,False,named_ispstack_id
+T_GRAI-7,T_GRAI,T_GRAI-7,CCGT,Uniper UK Limited,T,468.0,,False,named_ispstack_id
+T_GRAI-8,T_GRAI,T_GRAI-8,CCGT,Uniper UK Limited,T,468.0,,False,named_ispstack_id
+T_GRAI1G,T_GRAI1G,T_GRAI1G,OCGT,Uniper UK Limited,T,30.0,,False,named_ispstack_id
+T_GRGBW-1,T_GRGBW,Greater Gabbard Module 1,WIND,Greater Gabbard Offshore Winds,T,240.0,,False,named_ispstack_id
+T_GRGBW-2,T_GRGBW,Greater Gabbard Module 2,WIND,Greater Gabbard Offshore Winds,T,240.0,,False,named_ispstack_id
+T_GRGBW-3,T_GRGBW,Greater Gabbard Module 3,WIND,Greater Gabbard Offshore Winds,T,240.0,,False,named_ispstack_id
+T_GRIFW-1,T_GRIFW,Griffin Wind Farm 1,WIND,Griffin Wind Farm Ltd,T,102.0,,False,named_ispstack_id
+T_GRIFW-2,T_GRIFW,Griffin Wind Farm 2,WIND,Griffin Wind Farm Ltd,T,104.0,,False,named_ispstack_id
+T_GYMR-15,T_GYMR,GyM OSPE 15,WIND,Gwynt y Mor Offshore Wind Farm,T,148.0,,False,named_ispstack_id
+T_GYMR-17,T_GYMR,GyM OSPE 17,WIND,Gwynt y Mor Offshore Wind Farm,T,148.0,,False,named_ispstack_id
+T_GYMR-26,T_GYMR,GyM OSPW 26,WIND,Gwynt y Mor Offshore Wind Farm,T,148.0,,False,named_ispstack_id
+T_GYMR-28,T_GYMR,GyM OSPW 28,WIND,Gwynt y Mor Offshore Wind Farm,T,148.0,,False,named_ispstack_id
+T_HADHW-1,T_HADHW,Hadyard Hill Wind Farm,WIND,SSE Renewables Wind Farms,T,130.0,,False,named_ispstack_id
+T_HALSW-1,T_HALSW,Halsary Windfarm,WIND,SP Renewables (UK) Limited,T,30.0,,False,named_ispstack_id
+T_HMGTO-1,T_HMGTO,Humber Offshore Wind Farm BMU1,WIND,RWE Renewables UK Humber Wind,T,108.0,,False,named_ispstack_id
+T_HMGTO-2,T_HMGTO,Humber Offshore Wind Farm BMU2,WIND,RWE Renewables UK Humber Wind,T,111.0,,False,named_ispstack_id
+T_HOWAO-1,T_HOWAO,HORNSEA_1A,WIND,Hornsea 1 Limited,T,400.0,,False,named_ispstack_id
+T_HOWAO-2,T_HOWAO,HORNSEA_1B,WIND,Hornsea 1 Limited,T,400.0,,False,named_ispstack_id
+T_HOWAO-3,T_HOWAO,HORNSEA_1C,WIND,Hornsea 1 Limited,T,400.0,,False,named_ispstack_id
+T_HOWBO-1,T_HOWBO,HORNSEA_WF_2A,WIND,Breesea Limited,T,440.0,,False,named_ispstack_id
+T_HOWBO-2,T_HOWBO,HORNSEA_WF_2B,WIND,Sonningmay Wind Limited,T,440.0,,False,named_ispstack_id
+T_HOWBO-3,T_HOWBO,HORNSEA_WF_2C,WIND,Soundmark Wind Limited,T,440.0,,False,named_ispstack_id
+T_HRSTB-1,T_HRSTB,T_HRSTB-1,BATTERY,SP Renewables (UK) Limited,T,52.0,,False,named_ispstack_id
+T_HRSTW-1,T_HRSTW,Harestanes,WIND,SP Renewables (UK) Limited,T,142.3,,False,named_ispstack_id
+T_HUMR-1,T_HUMR_CC,HUMR-1,CCGT,VPI Immingham LLP,T,1283.0,,False,named_ispstack_id
+T_HUMR-2,T_HUMR_OTH,HUMR-2,OTHER,VPI Immingham Energy Park A,T,50.0,,False,named_ispstack_id
+T_KEAD-1,T_KEAD,KGL CCGT 1,CCGT,Keadby Generation Limited,T,764.0,,False,named_ispstack_id
+T_KEAD-2,T_KEAD,Keadby-2 Main,CCGT,Keadby Generation Limited,T,890.0,,False,named_ispstack_id
+T_KEADGT-3,T_KEADGT,KGL GT 3,OCGT,Keadby Generation Limited,T,30.0,,False,named_ispstack_id
+T_KEMB-1,T_KEMB,Pivot Power Kemsley,LOAD RESPONSE,EDF Energy Customers Limited,T,35.468,,False,named_ispstack_id
+T_KENNW-1,T_KENNW,Kennoxhead Wind Farm,WIND,Kennoxhead Wind Farm Limited,T,60.0,,False,named_ispstack_id
+T_KILBW-1,T_KILBW,KILBW,WIND,Kilbraur Wind Energy Ltd,T,68.51,,False,named_ispstack_id
+T_KILLPG-1,T_KILLPG,T_KILLPG-1,CCGT,Uniper UK Limited,T,311.0,,False,named_ispstack_id
+T_KILLPG-2,T_KILLPG,T_KILLPG-2,CCGT,Uniper UK Limited,T,316.0,,False,named_ispstack_id
+T_KILSB-1,T_KILSB,T_KILSB-1,BATTERY,ZENOBE KILMARNOCK SOUTH LTD,T,52.952,,False,named_ispstack_id
+T_KILSB-2,T_KILSB,T_KILSB-2,BATTERY,ZENOBE KILMARNOCK SOUTH LTD,T,51.894,,False,named_ispstack_id
+T_KILSB-3,T_KILSB,T_KILSB-3,BATTERY,ZENOBE KILMARNOCK SOUTH LTD,T,53.734,,False,named_ispstack_id
+T_KILSB-5,T_KILSB,T_KILSB-5,BATTERY,ZENOBE KILMARNOCK SOUTH LTD,T,50.856,,False,named_ispstack_id
+T_KILSB-6,T_KILSB,T_KILSB-6,BATTERY,ZENOBE KILMARNOCK SOUTH LTD,T,51.226,,False,named_ispstack_id
+T_KLGLW-1,T_KLGLW,Kilgallioch Windfarm,WIND,SP Renewables (UK) Limited,T,261.98,,False,named_ispstack_id
+T_KPMRW-1,T_KPMRW,KYPE MUIR WIND FARM,WIND,OnPath Energy Limited,T,89.0,,False,named_ispstack_id
+T_KYPEW-1,T_KYPEW,KYPE MUIR EXT WIND FARM,WIND,Kype Extension Wind Farm Ltd,T,67.0,,False,named_ispstack_id
+T_LAGA-1,T_LAGA,Langage Power Station,CCGT,EP UK INVESTMENTS LIMITED,T,905.0,,False,named_ispstack_id
+T_LARKB-1,T_LARKB,Larks Green Battery Storage,OTHER,EDF Energy Customers Limited,T,52.0,,False,named_ispstack_id
+T_LARKS-1,T_LARKS,Larks Green Solar,OTHER,Iron Acton Green Limited,T,49.9,,False,named_ispstack_id
+T_LARYW-1,T_LARYW,London Array BMU1,WIND,London Array Limited,T,171.0,,False,named_ispstack_id
+T_LARYW-2,T_LARYW,London Array BMU2,WIND,London Array Limited,T,171.0,,False,named_ispstack_id
+T_LARYW-3,T_LARYW,London Array BMU3,WIND,London Array Limited,T,171.0,,False,named_ispstack_id
+T_LARYW-4,T_LARYW,London Array BMU4,WIND,London Array Limited,T,191.099,,False,named_ispstack_id
+T_LBAR-1,T_LBAR,Little Barford main unit 1,CCGT,RWE Generation UK plc,T,750.0,,False,named_ispstack_id
+T_LCLTW-1,T_LCLTW,Lochluichart Windfarm,WIND,Eneco Energy Trade,T,69.0,,False,named_ispstack_id
+T_LIMKW-1,T_LIMKW,Limekiln Wind Farm,WIND,Limekiln Extension Ltd,T,106.0,,False,named_ispstack_id
+T_LKSDB-1,T_LKSDB,Lakeside  BESS,OTHER,Lakeside Energy Storage Ltd,T,105.0,,False,named_ispstack_id
+T_LNCSW-1,T_LNCSW,Lincs wind farm offshore BMU1,WIND,Lincs Wind Farm Ltd,T,150.0,,False,named_ispstack_id
+T_LNCSW-2,T_LNCSW,Lincs wind farm offshore BMU2,WIND,Lincs Wind Farm Ltd,T,150.0,,False,named_ispstack_id
+T_MEDP-1,T_MEDP,Medway Power,CCGT,Medway Power Ltd,T,750.0,,False,named_ispstack_id
+T_MIDMW-1,T_MIDMW,MIDDLE MUIR WIND FARM,WIND,OnPath Energy Limited,T,51.0,,False,named_ispstack_id
+T_MILWW-1,T_MILWW,MILWW,WIND,Millennium Wind Energy Ltd,T,65.0,,False,named_ispstack_id
+T_MKFRB-1,T_MKFRB,Monk Fryston,BATTERY,HD777FRY Ltd,T,57.0,,False,named_ispstack_id
+T_MKHLW-1,T_MKHLW,Mark Hill,WIND,SP Renewables (UK) Limited,T,53.0,,False,named_ispstack_id
+T_MOWEO-1,T_MOWEO,Moray East OWF1,WIND,Moray Offshore Wind East Ltd,T,300.0,,False,named_ispstack_id
+T_MOWEO-2,T_MOWEO,Moray East OWF2,WIND,Moray Offshore Wind East Ltd,T,300.0,,False,named_ispstack_id
+T_MOWEO-3,T_MOWEO,Moray East OWF3,WIND,Moray Offshore Wind East Ltd,T,300.0,,False,named_ispstack_id
+T_MOWWO-1,T_MOWWO,Moray West OWF1,WIND,Moray Offshore Wind West Ltd,T,215.0,,False,named_ispstack_id
+T_MOWWO-2,T_MOWWO,Moray West OWF2,WIND,Moray Offshore Wind West Ltd,T,215.0,,False,named_ispstack_id
+T_MOWWO-3,T_MOWWO,Moray West OWF3,WIND,Moray Offshore Wind West Ltd,T,143.0,,False,named_ispstack_id
+T_MOWWO-4,T_MOWWO,Moray West OWF4,WIND,Moray Offshore Wind West Ltd,T,287.0,,False,named_ispstack_id
+T_MRWD-1,T_MRWD,Marchwood Power Ltd,CCGT,Marchwood Power Limited,T,920.0,,False,named_ispstack_id
+T_MYGPW-1,T_MYGPW,Minnygap Wind Farm,WIND,Minnygap Energy Limited,T,25.0,,False,named_ispstack_id
+T_NANT-1,T_NANT,Nant,NPSHYD,SSE Generation Ltd,T,20.0,,False,named_ispstack_id
+T_NNGAO-1,T_NNGAO,Neart Na Gaiothe WF 1,WIND,Neart Na Gaoithe Offshore Wind,T,224.0,,False,named_ispstack_id
+T_NNGAO-2,T_NNGAO,Neart Na Gaiothe WF 2,WIND,Neart Na Gaoithe Offshore Wind,T,224.0,,False,named_ispstack_id
+T_NTRVB-1,T_NTRVB,Native River,BATTERY,Arenko Cleantech Limited,T,57.0,,False,named_ispstack_id
+T_NURSB-1,T_NURSB,Nursling Battery Storage,BATTERY,EDF Energy Customers Limited,T,48.0,,False,named_ispstack_id
+T_OCHLB-1,T_OCHLB,Ocker Hill,BATTERY,HD143OCK Ltd,T,58.0,,False,named_ispstack_id
+T_PEHE-1,T_PEHE,Peterhead Block 1,CCGT,SSE Thermal Generation,T,1200.0,,False,named_ispstack_id
+T_PEMB-11,T_PEMB,Pembroke Unit 11,CCGT,RWE Generation UK plc,T,475.0,,False,named_ispstack_id
+T_PEMB-21,T_PEMB,Pembroke Unit 21,CCGT,RWE Generation UK plc,T,475.0,,False,named_ispstack_id
+T_PEMB-31,T_PEMB,Pembroke Unit 31,CCGT,RWE Generation UK plc,T,475.0,,False,named_ispstack_id
+T_PEMB-41,T_PEMB,Pembroke Unit 41,CCGT,RWE Generation UK plc,T,475.0,,False,named_ispstack_id
+T_PEMB-51,T_PEMB,Pembroke Unit 51,CCGT,RWE Generation UK plc,T,475.0,,False,named_ispstack_id
+T_PINFB-1,T_PINFB_B,T_PINFB-1,BATTERY,Zenobe Capenhurst Limited,T,27.08,,False,named_ispstack_id
+T_PINFB-4,T_PINFB_B,T_PINFB-4,BATTERY,Zenobe Capenhurst Limited,T,26.0,,False,named_ispstack_id
+T_PINFB-2,T_PINFB_OTH,T_PINFB-2,OTHER,Zenobe Capenhurst Limited,T,26.0,,False,named_ispstack_id
+T_PINFB-3,T_PINFB_OTH,T_PINFB-3,OTHER,Zenobe Capenhurst Limited,T,26.0,,False,named_ispstack_id
+T_PNYCB-1,T_PNYCB,Pen y Cymoedd Battery,BATTERY,Arenko Cleantech Limited,T,22.0,,False,named_ispstack_id
+T_PNYCW-1,T_PNYCW,PNYCW-1 Export,WIND,Pen y Cymoedd Wind Farm LTD,T,228.0,,False,named_ispstack_id
+T_RATS-1,T_RATS,T_RATS-1,COAL,Uniper UK Limited,T,0.0,,False,named_ispstack_id
+T_RATS-2,T_RATS,T_RATS-2,COAL,Uniper UK Limited,T,0.0,,False,named_ispstack_id
+T_RATS-3,T_RATS,T_RATS-3,COAL,Uniper UK Limited,T,0.0,,False,named_ispstack_id
+T_RATS-4,T_RATS,T_RATS-4,COAL,Uniper UK Limited,T,0.0,,False,named_ispstack_id
+T_RATSGT-2,T_RATSGT,T_RATSGT-2,OCGT,Uniper UK Limited,T,0.0,,False,named_ispstack_id
+T_RATSGT-4,T_RATSGT,T_RATSGT-4,OCGT,Uniper UK Limited,T,0.0,,False,named_ispstack_id
+T_RCBKO-1,T_RCBKO,RACE_BANK_Z01,WIND,Race Bank Wind Farm Ltd,T,284.0,,False,named_ispstack_id
+T_RCBKO-2,T_RCBKO,RACE_BANK_Z02,WIND,Race Bank Wind Farm Ltd,T,290.0,,False,named_ispstack_id
+T_RICHB-1,T_RICHB,Richborough Energy Park 1,OTHER,Limejump Energy Limited,T,49.9,,False,named_ispstack_id
+T_RICHB-2,T_RICHB,Richborough Energy Park 2,OTHER,Limejump Energy Limited,T,49.9,,False,named_ispstack_id
+T_RMPNO-1,T_RMPNO,Rampion Offshore Wind BMU 1,WIND,Rampion Offshore Windfarm Ltd,T,200.1,,False,named_ispstack_id
+T_RMPNO-2,T_RMPNO,Rampion Offshore Wind BMU 2,WIND,Rampion Offshore Windfarm Ltd,T,200.1,,False,named_ispstack_id
+T_ROCK-1,T_ROCK,Rocksavage Power Station,CCGT,Rocksavage Power Company Ltd,T,810.0,,False,named_ispstack_id
+T_RRWW-1,T_RRWW,T_RRWW-1,WIND,RWE Renewables UK Robin Rigg,T,90.838,,False,named_ispstack_id
+T_RYHPS-1,T_RYHPS,T_RYHPS-1,CCGT,VPI Power Limited,T,720.98,,False,named_ispstack_id
+T_SAKNW-1,T_SAKNW,Sandy Knowe Wind Farm,WIND,Sandy Knowe Wind Farm Ltd,T,87.0,,False,named_ispstack_id
+T_SANQW-1,T_SANQW,SANQUHAR,WIND,SANQUHAR CWCL,T,32.08,,False,named_ispstack_id
+T_SCCL-1,T_SCCL,Unit 1,CCGT,SCCL,T,408.2,,False,named_ispstack_id
+T_SCCL-2,T_SCCL,Unit 2,CCGT,SCCL,T,409.1,,False,named_ispstack_id
+T_SCCL-3,T_SCCL,Unit 3,CCGT,SCCL,T,409.3,,False,named_ispstack_id
+T_SEAB-1,T_SEAB,Seabank Power Module,CCGT,Seabank Power Limited,T,830.0,,False,named_ispstack_id
+T_SEAB-2,T_SEAB,Seabank Power Module 2,CCGT,Seabank Power Limited,T,406.0,,False,named_ispstack_id
+T_SEEL-1,T_SEEL,Spalding Energy Expansion Ltd,OCGT,Spalding Energy Expansion Ltd,T,300.0,,False,named_ispstack_id
+T_SGRWO-1,T_SGRWO,Seagreen1 Offshore WF 1,WIND,Seagreen Wind Energy Limited,T,358.0,,False,named_ispstack_id
+T_SGRWO-2,T_SGRWO,Seagreen1 Offshore WF 2,WIND,Seagreen Wind Energy Limited,T,220.0,,False,named_ispstack_id
+T_SGRWO-3,T_SGRWO,Seagreen1 Offshore WF 3,WIND,Seagreen Wind Energy Limited,T,374.618,,False,named_ispstack_id
+T_SGRWO-4,T_SGRWO,Seagreen1 Offshore WF 4,WIND,Seagreen Wind Energy Limited,T,140.0,,False,named_ispstack_id
+T_SGRWO-5,T_SGRWO,Seagreen1 Offshore WF 5,WIND,Seagreen Wind Energy Limited,T,300.0,,False,named_ispstack_id
+T_SGRWO-6,T_SGRWO,Seagreen1 Offshore WF 6,WIND,Seagreen Wind Energy Limited,T,380.0,,False,named_ispstack_id
+T_SHBA-1,T_SHBA,SOUTH HUMBER BANK P/S PHASE 1,CCGT,EP UK INVESTMENTS LIMITED,T,821.4,,False,named_ispstack_id
+T_SHBA-2,T_SHBA,SOUTH HUMBER BANK P/S PHASE 2,CCGT,EP UK INVESTMENTS LIMITED,T,580.0,,False,named_ispstack_id
+T_SHRSW-1,T_SHRSW,Sheringham Shoal Unit 1,WIND,Scira Offshore Energy Limited,T,158.4,,False,named_ispstack_id
+T_SHRSW-2,T_SHRSW,Sheringham Shoal Unit 2,WIND,Scira Offshore Energy Limited,T,158.4,,False,named_ispstack_id
+T_SLOY-2,T_SLOY,Sloy G2,NPSHYD,SSE Generation Ltd,T,41.0,,False,named_ispstack_id
+T_SLOY-3,T_SLOY,Sloy G3,NPSHYD,SSE Generation Ltd,T,41.46,,False,named_ispstack_id
+T_SOKYW-1,T_SOKYW,South Kyle Wind Farm,WIND,South Kyle Wind Farm Limited,T,426.916,,False,named_ispstack_id
+T_SPLN-1,T_SPLN,Spalding Power Station,CCGT,Spalding Energy Company Ltd,T,950.0,,False,named_ispstack_id
+T_STAY-1,T_STAY,Staythorpe Unit 1,CCGT,RWE Generation UK plc,T,464.0,,False,named_ispstack_id
+T_STAY-2,T_STAY,Staythorpe Unit 2,CCGT,RWE Generation UK plc,T,464.0,,False,named_ispstack_id
+T_STAY-3,T_STAY,Staythorpe Unit 3,CCGT,RWE Generation UK plc,T,464.0,,False,named_ispstack_id
+T_STAY-4,T_STAY,Staythorpe Unit 4,CCGT,RWE Generation UK plc,T,464.0,,False,named_ispstack_id
+T_STLGW-1,T_STLGW,Stronelairg Windfarm 1,WIND,Stronelairg Windfarm Limited,T,108.0,,False,named_ispstack_id
+T_STLGW-2,T_STLGW,Stronelairg Windfarm 2,WIND,Stronelairg Windfarm Limited,T,108.0,,False,named_ispstack_id
+T_STLGW-3,T_STLGW,Stronelairg Windfarm 3,WIND,Stronelairg Windfarm Limited,T,108.0,,False,named_ispstack_id
+T_STRNW-1,T_STRNW,Strathy North Wind Farm 1,WIND,Strathy Wind Farm Limited,T,70.0,,False,named_ispstack_id
+T_SUNDB-1,T_SUNDB,SUNDON BESS,BATTERY,Pivoted Power LLP,T,50.246,,False,named_ispstack_id
+T_SUTB-1,T_SUTB,BMUid for Sutton Bridge Power,CCGT,SUTTON BRIDGE POWER GENERATION,T,850.0,,False,named_ispstack_id
+T_SUTBS-1,T_SUTBS,Sutton Bridge Solar Farm,SOLAR,EDF Energy Customers Limited,T,49.419,,False,named_ispstack_id
+T_SVRP-10,T_SVRP,Dong Energy Severn Power Ut 10,CCGT,Severn Power Limited,T,425.0,,False,named_ispstack_id
+T_SVRP-20,T_SVRP,Dong Energy Severn Power Ut 20,CCGT,Severn Power Limited,T,425.0,,False,named_ispstack_id
+T_SZJNB-1,T_SZJNB,Sizing John,BATTERY,Arenko Cleantech Limited,T,57.0,,False,named_ispstack_id
+T_TDBNW-1,T_TDBNW,Toddleburn,WIND,SSE Generation Ltd,T,31.6,,False,named_ispstack_id
+T_TEBWB-1,T_TEBWB,Tebworth BESS Power Park,BATTERY,Arenko Cleantech Limited,T,39.9,,False,named_ispstack_id
+T_THNTO-1,T_THNTO,Thanet Offshore Wind Limited 1,WIND,Thanet Offshore Wind Limited,T,287.699,,False,named_ispstack_id
+T_THNTO-2,T_THNTO,Thanet Offshore Wind Limited 2,WIND,Thanet Offshore Wind Limited,T,230.159,,False,named_ispstack_id
+T_THURB-1,T_THURB,T_THURB-1,BATTERY,THURROCK STORAGE LIMITED,T,100.0,,False,named_ispstack_id
+T_THURB-2,T_THURB,T_THURB-2,BATTERY,THURROCK STORAGE LIMITED,T,100.0,,False,named_ispstack_id
+T_THURB-3,T_THURB,T_THURB-3,BATTERY,THURROCK STORAGE LIMITED,T,100.0,,False,named_ispstack_id
+T_TKNEW-1,T_TKNEW,Triton Knoll OSP East 1,WIND,Triton Knoll Offshore Wind,T,412.0,,False,named_ispstack_id
+T_TKNWW-1,T_TKNWW,Triton Knoll OSP west 1,WIND,Triton Knoll Offshore Wind,T,412.0,,False,named_ispstack_id
+T_TRLGW-1,T_TRLGW,T_TRLGW-1,WIND,Smartestenergy Limited,T,18.742,,False,named_ispstack_id
+T_TWSHW-1,T_TWSHW,Twenty Shilling Wind Farm,WIND,Twentyshilling Limited,T,37.8,,False,named_ispstack_id
+T_TYLNB-1,T_TYLNB,Tye Lane BESS,BATTERY,Pivoted Power LLP,T,58.0,,False,named_ispstack_id
+T_VKNGW-1,T_VKNGW,Viking Energy Windfarm BMU-1,WIND,Viking Energy Wind Farm LLP,T,121.8,,False,named_ispstack_id
+T_VKNGW-2,T_VKNGW,Viking Energy Windfarm BMU-2,WIND,Viking Energy Wind Farm LLP,T,121.8,,False,named_ispstack_id
+T_VKNGW-3,T_VKNGW,Viking Energy Windfarm BMU-3,WIND,Viking Energy Wind Farm LLP,T,121.8,,False,named_ispstack_id
+T_VKNGW-4,T_VKNGW,Viking Energy Windfarm BMU-4,WIND,Viking Energy Wind Farm LLP,T,121.8,,False,named_ispstack_id
+T_WBURB-41,T_WBURB_B,West Burton B Battery,BATTERY,West Burton B Limited,T,31.0,,False,named_ispstack_id
+T_WBURB-43,T_WBURB_B,West Burton B Battery,BATTERY,West Burton B Limited,T,31.0,,False,named_ispstack_id
+T_WBURB-1,T_WBURB_CC,West Burton B Unit 1,CCGT,West Burton B Limited,T,470.0,,False,named_ispstack_id
+T_WBURB-2,T_WBURB_CC,West Burton B Unit 2,CCGT,West Burton B Limited,T,470.0,,False,named_ispstack_id
+T_WBURB-3,T_WBURB_CC,West Burton B Unit 3,CCGT,West Burton B Limited,T,470.0,,False,named_ispstack_id
+T_WDNSO-1,T_WDNSO,West of Duddon Sands Offshore1,WIND,Morecambe Wind Limited,T,197.0,,False,named_ispstack_id
+T_WDNSO-2,T_WDNSO,West of Duddon Sands Offshore2,WIND,Morecambe Wind Limited,T,201.0,,False,named_ispstack_id
+T_WDRGW-1,T_WDRGW,Windy Rig Wind Farm,WIND,Windy Rig Wind Farm Limited,T,42.8,,False,named_ispstack_id
+T_WHIHW-1,T_WHIHW,Whiteside Hill WF,WIND,Whiteside Hill,T,27.52,,False,named_ispstack_id
+T_WHILW-1,T_WHILW,T_WHILW-1,WIND,SP Renewables (UK) Limited,T,309.0,,False,named_ispstack_id
+T_WHILW-2,T_WHILW,Whitelee Extension,WIND,SP Renewables (UK) Limited,T,206.0,,False,named_ispstack_id
+T_WHLWB-1,T_WHLWB,Whitelee 1 Battery,BATTERY,SP Renewables (UK) Limited,T,50.2,,False,named_ispstack_id
+T_WISHB-1,T_WISHB,Wishaw BESS,BATTERY,Zenobe Wishaw Limited,T,51.0,,False,named_ispstack_id
+T_WISTW-2,T_WISTW,Brockloch Rig 2 WF Exp A,WIND,BROCKLOCH RIG WINDFARM LTD,T,61.5,,False,named_ispstack_id
+T_WLNYO-2,T_WLNYO,WALNEY_2,WIND,Walney Offshore Windfarms Ltd,T,183.6,,False,named_ispstack_id
+T_WLNYO-3,T_WLNYO,WALNEY_3,WIND,Walney Extension Ltd,T,330.0,,False,named_ispstack_id
+T_WLNYO-4,T_WLNYO,WALNEY_4,WIND,Walney Extension Ltd,T,330.0,,False,named_ispstack_id
+T_WLNYW-1,T_WLNYW,WALNEY_1,WIND,Walney Offshore Windfarms Ltd,T,182.0,,False,named_ispstack_id
+T_WTMSO-1,T_WTMSO,WESTERMOST_ROUGH,WIND,Westermost Rough Limited,T,205.0,,False,named_ispstack_id
+V__AFEEL002,V__AFEEL,V__AFEEL002,OTHER,EDF Energy Limited,V,50.0,Eastern,False,named_ispstack_id
+V__AFLEX002,V__AFLEX,V__AFLEX002,GAS,Flexitricity Limited,V,0.0,Eastern,False,named_ispstack_id
+V__AZENO002,V__AZENO,V__AZENO002,OTHER,BESS Holdco 2 Limited,V,0.0,Eastern,False,named_ispstack_id
+V__BADEL001,V__BADEL,ADELA_SBMU_B,GAS,Adela Energy Ltd,V,0.0,East Midlands,False,named_ispstack_id
+V__BCEND004,V__BCEND,V__BCEND004,BATTERY,Centrica Business Solutions UK,V,0.0,East Midlands,False,named_ispstack_id
+V__BEROV001,V__BEROV,V__BEROV001,OTHER,Erova Energy Limited,V,0.0,East Midlands,False,named_ispstack_id
+V__DWELS001,V__DWELS,MANWEB 1,OTHER,Welsh Power Group Limited,V,0.0,Merseyside and North Wales,False,named_ispstack_id
+V__DWELS002,V__DWELS,MANWEB 2,OTHER,Welsh Power Group Limited,V,0.0,Merseyside and North Wales,False,named_ispstack_id
+V__EADEL001,V__EADEL,ADELA_SBMU_E,GAS,Adela Energy Ltd,V,0.0,Midlands,False,named_ispstack_id
+V__EEXRG001,V__EEXRG,V__EEXRG001,OTHER,Exergy Solutions Limited,V,0.0,Midlands,False,named_ispstack_id
+V__EFEEL400,V__EFEEL,V__EFEEL400,BATTERY,EDF Energy Limited,V,20.0,Midlands,False,named_ispstack_id
+V__EGBLO001,V__EGBLO,V__EGBLO001,LOAD RESPONSE,GridBeyond Limited,V,0.0,Midlands,False,named_ispstack_id
+V__GADEL001,V__GADEL,ADELA_SBMU_G,GAS,Adela Energy Ltd,V,0.0,North Western,False,named_ispstack_id
+V__GDSKC001,V__GDSKC,V__GDSKC001,OTHER,Danske Commodities A/S,V,0.0,North Western,False,named_ispstack_id
+V__GHABI001,V__GHABI,Red Scar,OTHER,Habitat Energy Limited,V,0.0,North Western,False,named_ispstack_id
+V__GWELS001,V__GWELS,Welsh Power North West 1,OTHER,Welsh Power Group Limited,V,0.0,North Western,False,named_ispstack_id
+V__HDSKC001,V__HDSKC,V__HDSKC001,BATTERY,Danske Commodities A/S,V,0.0,Southern,False,named_ispstack_id
+V__HFEEL002,V__HFEEL,V__HFEEL002,BATTERY,EDF Energy Limited,V,42.0,Southern,False,named_ispstack_id
+V__HFEEL400,V__HFEEL,V__HFEEL400,BATTERY,EDF Energy Limited,V,10.0,Southern,False,named_ispstack_id
+V__HGBLO001,V__HGBLO,V__HGBLO001,LOAD RESPONSE,GridBeyond Limited,V,0.0,Southern,False,named_ispstack_id
+V__HHABI008,V__HHABI_B,Melksham,BATTERY,Habitat Energy Limited,V,0.0,Southern,False,named_ispstack_id
+V__HHABI001,V__HHABI_OTH,Roundponds,OTHER,Habitat Energy Limited,V,0.0,Southern,False,named_ispstack_id
+V__HWELS001,V__HWELS,Welsh Power Southern 1,OTHER,Welsh Power Group Limited,V,0.0,Southern,False,named_ispstack_id
+V__HWELS002,V__HWELS,Welsh Power Southern 2,OTHER,Welsh Power Group Limited,V,0.0,Southern,False,named_ispstack_id
+V__HZENO004,V__HZENO,V__HZENO004,BATTERY,BESS Holdco 2 Limited,V,0.0,Southern,False,named_ispstack_id
+V__JZENO001,V__JZENO,V__JZENO001,OTHER,BESS Holdco 2 Limited,V,0.0,South Eastern,False,named_ispstack_id
+V__KHABI007,V__KHABI,Hirwaun,BATTERY,Habitat Energy Limited,V,0.0,South Wales,False,named_ispstack_id
+V__KWELS001,V__KWELS,Welsh Power South Wales 1,OTHER,Welsh Power Group Limited,V,0.0,South Wales,False,named_ispstack_id
+V__KWELS002,V__KWELS,Welsh Power South Wales 2,OTHER,Welsh Power Group Limited,V,0.0,South Wales,False,named_ispstack_id
+V__LCEND005,V__LCEND,V__LCEND005,BATTERY,Centrica Business Solutions UK,V,0.0,South Western,False,named_ispstack_id
+V__LFLEX001,V__LFLEX,V__LFLEX001,LOAD RESPONSE,Flexitricity Limited,V,3.738,South Western,False,named_ispstack_id
+V__MADEL001,V__MADEL,ADELA_SBMU_M,GAS,Adela Energy Ltd,V,0.0,Yorkshire,False,named_ispstack_id
+V__MCEND001,V__MCEND,Brigg Battery,BATTERY,Centrica Business Solutions UK,V,0.0,Yorkshire,False,named_ispstack_id
+V__MCEND002,V__MCEND,Allen Diesels,BATTERY,Centrica Business Solutions UK,V,0.0,Yorkshire,False,named_ispstack_id
+V__MEROV001,V__MEROV,V__MEROV001,GAS,Erova Energy Limited,V,0.0,Yorkshire,False,named_ispstack_id
+V__MGBLO022,V__MGBLO,V__MGBLO022,LOAD RESPONSE,GridBeyond Limited,V,0.0,Yorkshire,False,named_ispstack_id
+V__NFLEX001,V__NFLEX,V__NFLEX001,LOAD RESPONSE,Flexitricity Limited,V,0.0,South Scotland,False,named_ispstack_id
+V__NGBLO013,V__NGBLO,V__NGBLO013,LOAD RESPONSE,GridBeyond Limited,V,0.0,South Scotland,False,named_ispstack_id
+V__NHABI005,V__NHABI,Camilla,OTHER,Habitat Energy Limited,V,0.0,South Scotland,False,named_ispstack_id
+V__PFLEX001,V__PFLEX,V__PFLEX001,LOAD RESPONSE,Flexitricity Limited,V,0.0,North Scotland,False,named_ispstack_id
+V__PHABI011,V__PHABI_B,Braco,BATTERY,Habitat Energy Limited,V,0.0,North Scotland,False,named_ispstack_id
+V__PHABI004,V__PHABI_OTH,Fordtown,OTHER,Habitat Energy Limited,V,0.0,North Scotland,False,named_ispstack_id
