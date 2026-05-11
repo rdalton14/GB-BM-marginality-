@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>BMU SHAP Interpretation Summary 2023–2025</title>
+
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+       max-width: 1200px; margin: 40px auto; padding: 0 20px; color: #212121; }
+h1 { color: #3F51B5; border-bottom: 3px solid #3F51B5; padding-bottom: 8px; }
+h2 { margin-top: 42px; color: #283593; border-left: 4px solid #7986CB; padding-left: 10px; }
+h3 { color: #37474F; margin-top: 24px; }
+table { border-collapse: collapse; width: 100%; font-size: 12px; margin: 14px 0 28px; }
+th { background: #3F51B5; color: white; text-align: left; padding: 6px 8px; }
+td { border-bottom: 1px solid #e0e0e0; padding: 5px 8px; }
+tr:nth-child(even) td { background: #f5f5f5; }
+p.note { color: #666; font-size: 13px; }
+li { margin: 6px 0; }
+code { background: #ECEFF1; padding: 1px 4px; border-radius: 4px; }
+</style>
+
+</head><body>
+<h1>BMU ID SHAP Interpretation Summary: 2023–2025</h1>
+<p>Consolidates the main BMU SHAP analysis, annual stability, price-regime stability, and
+the BMU bid-side accounting diagnostic into dissertation-ready findings.
+This is an interpretation layer, not a new model. Fuel type is annotated throughout — it
+does not enter any of the underlying RF models.</p>
+
+<h2>Headline Findings</h2>
+<ul><li>The main OFFER-side BMU price drivers are T_RYHPS-1_OFFER (CCGT), T_COSO-1_OFFER (CCGT), T_DAMC-1_OFFER (CCGT); the main BID-side drivers are T_DRAXX-1_BID (BIOMASS), T_DRAXX-2_BID (BIOMASS), T_DRAXX-3_BID (BIOMASS).</li>
+<li>The most persistent BMU drivers across all three years (2023–2025) include T_RYHPS-1_OFFER (CCGT), T_COSO-1_OFFER (CCGT), T_SEAB-1_OFFER (CCGT), T_DAMC-1_OFFER (CCGT), T_CRUA-1_OFFER (PS).</li>
+<li>In extreme-price regimes (> p95), the leading OFFER-side BMUs are T_CARR-1_OFFER (CCGT), T_RYHPS-1_OFFER (CCGT), T_CNQPS-1_OFFER (CCGT), T_COSO-1_OFFER (CCGT), T_DINO-2_OFFER (PS).</li>
+<li>Most leading BID-side BMUs are positive raw bids where the SO receives, including none with ≥75% share.</li>
+<li>A smaller set of important BID-side BMUs are negative raw bids where the SO pays, including T_DRAXX-1_BID (BIOMASS), T_PNYCW-1_BID (WIND), T_HOWBO-1_BID (WIND), T_TKNWW-1_BID (WIND).</li></ul>
+
+<h2>Method Caveats</h2>
+<ul>
+  <li>One-hot SHAP values are model associations: when a BMU×side dummy is active, predicted
+  system price moves above or below the model baseline. They should not be worded as clean
+  causal unit-offer experiments.</li>
+  <li>Regime SHAP explains variation within low, normal, high, or extreme price regimes; it
+  does not explain why the market entered that regime.</li>
+  <li>BID-side system-price effects and raw bid-price accounting are different quantities.
+  The BID raw bid-price diagnostic gives the accounting interpretation: negative bids mean
+  the SO pays, positive bids mean the SO receives.</li>
+  <li>Fuel type annotation is derived from the modal value of <code>marginal_fuel_type</code>
+  per BMU in the SP summary. A small number of BMUs may have mixed or ambiguous fuel types.</li>
+</ul>
+
+<h2>Top Pooled BMU Drivers</h2>
+<p class="note">Top whole-period BMU×side drivers by mean absolute SHAP, with fuel type annotation.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>overall_shap_rank</th>
+      <th>feature</th>
+      <th>fuel_type</th>
+      <th>side</th>
+      <th>mean_abs_shap</th>
+      <th>conditional_mean_shap_when_active</th>
+      <th>direction</th>
+      <th>share_positive_shap_when_active</th>
+      <th>share_negative_shap_when_active</th>
+      <th>active_rows_in_shap_sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>T_RYHPS-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.6806</td>
+      <td>55.7558</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>T_DRAXX-1_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>0.5605</td>
+      <td>-31.9970</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>T_COSO-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.5044</td>
+      <td>24.7024</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>T_DAMC-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.4220</td>
+      <td>21.9802</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>T_HUMR-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.3986</td>
+      <td>20.2188</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>T_SEAB-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.3959</td>
+      <td>18.6576</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>T_DINO-2_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>0.3937</td>
+      <td>25.1429</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>T_CRUA-1_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>0.3659</td>
+      <td>20.9410</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>T_DRAXX-2_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>0.2990</td>
+      <td>-13.8473</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>T_DRAXX-3_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>0.2822</td>
+      <td>-13.4675</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>T_PNYCW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>0.2791</td>
+      <td>-34.4085</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>T_CNQPS-2_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.2675</td>
+      <td>30.7474</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>T_DINO-3_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>0.2664</td>
+      <td>16.8837</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>T_CNQPS-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.2606</td>
+      <td>44.0812</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>T_HUMR-1_BID</td>
+      <td>CCGT</td>
+      <td>BID</td>
+      <td>0.2556</td>
+      <td>-10.1794</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>T_HOWBO-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>0.2382</td>
+      <td>-34.6882</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>T_TKNWW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>0.1933</td>
+      <td>-30.9449</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>T_SHBA-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.1841</td>
+      <td>12.7008</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>T_DINO-5_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>0.1838</td>
+      <td>24.8979</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>T_DRAXX-4_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>0.1649</td>
+      <td>-9.7407</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>T_CNQPS-3_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.1609</td>
+      <td>21.3826</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>T_FOYE-1_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>0.1606</td>
+      <td>16.4569</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>T_ROCK-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.1583</td>
+      <td>11.8629</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>T_TKNEW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>0.1553</td>
+      <td>-28.6831</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>T_DINO-4_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>0.1550</td>
+      <td>13.9975</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>T_DINO-6_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>0.1506</td>
+      <td>16.2187</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>T_HOWBO-2_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>0.1406</td>
+      <td>-26.2303</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>T_CLDCW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>0.1325</td>
+      <td>-31.1519</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>T_SEAB-2_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>0.1317</td>
+      <td>16.9535</td>
+      <td>raises predicted price</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>T_RCBKO-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>0.1238</td>
+      <td>-28.1644</td>
+      <td>suppresses predicted price</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Offer vs Bid Side Summary</h2>
+<p class="note">Compact side-level summary from the whole-period BMU model.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>side</th>
+      <th>top20_mean_abs_shap</th>
+      <th>top20_directional_mean</th>
+      <th>n_features</th>
+      <th>n_active_features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BID</td>
+      <td>0.1653</td>
+      <td>-22.4871</td>
+      <td>630</td>
+      <td>352</td>
+    </tr>
+    <tr>
+      <td>OFFER</td>
+      <td>0.2724</td>
+      <td>23.8016</td>
+      <td>503</td>
+      <td>302</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Persistent Annual BMU Drivers</h2>
+<p class="note">BMUs recurring in annual top-20 SHAP rankings. Direction pattern ordered 2023, 2024, 2025.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>feature</th>
+      <th>fuel_type</th>
+      <th>side</th>
+      <th>years_in_top20</th>
+      <th>top20_years</th>
+      <th>best_annual_rank</th>
+      <th>mean_abs_shap_mean</th>
+      <th>direction_pattern_2023_2025</th>
+      <th>min_active_rows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T_RYHPS-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>3</td>
+      <td>2023, 2024, 2025</td>
+      <td>1</td>
+      <td>0.8792</td>
+      <td>+++</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>T_COSO-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>3</td>
+      <td>2023, 2024, 2025</td>
+      <td>2</td>
+      <td>0.5682</td>
+      <td>+++</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>T_SEAB-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>3</td>
+      <td>2023, 2024, 2025</td>
+      <td>2</td>
+      <td>0.5031</td>
+      <td>+++</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>T_DAMC-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>3</td>
+      <td>2023, 2024, 2025</td>
+      <td>5</td>
+      <td>0.4822</td>
+      <td>+++</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>T_CRUA-1_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>3</td>
+      <td>2023, 2024, 2025</td>
+      <td>7</td>
+      <td>0.3693</td>
+      <td>+++</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>T_SHBA-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>3</td>
+      <td>2023, 2024, 2025</td>
+      <td>13</td>
+      <td>0.2379</td>
+      <td>+++</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>T_DINO-2_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>2023, 2025</td>
+      <td>1</td>
+      <td>0.4811</td>
+      <td>+++</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>T_DINO-1_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>2024, 2025</td>
+      <td>4</td>
+      <td>0.4362</td>
+      <td>NA++</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>T_DRAXX-1_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>2</td>
+      <td>2024, 2025</td>
+      <td>1</td>
+      <td>0.4009</td>
+      <td>---</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>T_DRAXX-3_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>2</td>
+      <td>2023, 2024</td>
+      <td>3</td>
+      <td>0.3848</td>
+      <td>---</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>T_DRAXX-2_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>2</td>
+      <td>2023, 2024</td>
+      <td>6</td>
+      <td>0.3327</td>
+      <td>---</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>T_HUMR-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>2023, 2024</td>
+      <td>6</td>
+      <td>0.3135</td>
+      <td>+++</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>T_HOWBO-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>2</td>
+      <td>2024, 2025</td>
+      <td>6</td>
+      <td>0.2786</td>
+      <td>---</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>T_PNYCW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>2</td>
+      <td>2023, 2024</td>
+      <td>9</td>
+      <td>0.2751</td>
+      <td>---</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>T_HUMR-1_BID</td>
+      <td>CCGT</td>
+      <td>BID</td>
+      <td>2</td>
+      <td>2023, 2024</td>
+      <td>8</td>
+      <td>0.2686</td>
+      <td>---</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>T_DINO-3_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>2023, 2024</td>
+      <td>12</td>
+      <td>0.2089</td>
+      <td>+++</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>T_HOWBO-2_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>2</td>
+      <td>2024, 2025</td>
+      <td>7</td>
+      <td>0.1893</td>
+      <td>---</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>T_HOWBO-3_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>2025</td>
+      <td>4</td>
+      <td>0.5475</td>
+      <td>NANA-</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>T_CNQPS-2_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>2025</td>
+      <td>2</td>
+      <td>0.2708</td>
+      <td>+++</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>T_TKNEW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>2023</td>
+      <td>10</td>
+      <td>0.2517</td>
+      <td>---</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>T_CNQPS-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>2025</td>
+      <td>3</td>
+      <td>0.2219</td>
+      <td>+++</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>T_DRAXX-4_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>2024</td>
+      <td>10</td>
+      <td>0.1760</td>
+      <td>---</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>T_TKNWW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>2023</td>
+      <td>17</td>
+      <td>0.1690</td>
+      <td>---</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>T_DINO-5_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>2023</td>
+      <td>11</td>
+      <td>0.1685</td>
+      <td>+0+</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>T_RCBKO-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>2023</td>
+      <td>16</td>
+      <td>0.1675</td>
+      <td>---</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>T_ROCK-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>2025</td>
+      <td>9</td>
+      <td>0.1666</td>
+      <td>+++</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>T_DINO-4_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>2024</td>
+      <td>18</td>
+      <td>0.1579</td>
+      <td>+++</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>T_CNQPS-3_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>2025</td>
+      <td>7</td>
+      <td>0.1540</td>
+      <td>+++</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>T_CLDCW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>2024</td>
+      <td>20</td>
+      <td>0.1524</td>
+      <td>---</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>T_DINO-6_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>2023</td>
+      <td>14</td>
+      <td>0.1338</td>
+      <td>+0+</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>T_CNQPS-4_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>2025</td>
+      <td>12</td>
+      <td>0.1216</td>
+      <td>+++</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>T_FOYE-1_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>2023</td>
+      <td>19</td>
+      <td>0.1184</td>
+      <td>+++</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>T_RCBKO-2_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>2023</td>
+      <td>18</td>
+      <td>0.1171</td>
+      <td>--0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>T_MRWD-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>2024</td>
+      <td>16</td>
+      <td>0.0964</td>
+      <td>+++</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>T_MOWEO-3_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>2025</td>
+      <td>15</td>
+      <td>0.0779</td>
+      <td>---</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>T_KLGLW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>2025</td>
+      <td>18</td>
+      <td>0.0521</td>
+      <td>---</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>E_PILLB-1_BID</td>
+      <td>BATTERY</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>2025</td>
+      <td>20</td>
+      <td>0.0427</td>
+      <td>0--</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Price-Regime Specialists</h2>
+<p class="note">BMUs recurring in regime top-20 SHAP rankings. Direction pattern: Low | Normal | High | Extreme.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>feature</th>
+      <th>fuel_type</th>
+      <th>side</th>
+      <th>regimes_in_top20</th>
+      <th>top20_regimes</th>
+      <th>best_regime_rank</th>
+      <th>mean_abs_shap_mean</th>
+      <th>direction_pattern_low_normal_high_extreme</th>
+      <th>min_active_rows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T_CARR-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>3</td>
+      <td>Normal p10–p75, High p90–p95, Extreme &gt; p95</td>
+      <td>13</td>
+      <td>0.0893</td>
+      <td>NA | + | - | -</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>T_RYHPS-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>High p90–p95, Extreme &gt; p95</td>
+      <td>1</td>
+      <td>2.5200</td>
+      <td>NA | + | + | +</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>T_CNQPS-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>High p90–p95, Extreme &gt; p95</td>
+      <td>2</td>
+      <td>1.3666</td>
+      <td>NA | + | + | +</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>T_COSO-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>Normal p10–p75, Extreme &gt; p95</td>
+      <td>4</td>
+      <td>0.3765</td>
+      <td>0 | + | - | +</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>T_DINO-2_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>High p90–p95, Extreme &gt; p95</td>
+      <td>1</td>
+      <td>0.3317</td>
+      <td>NA | + | + | -</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>T_SEAB-2_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>High p90–p95, Extreme &gt; p95</td>
+      <td>7</td>
+      <td>0.1719</td>
+      <td>NA | + | + | -</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>T_DRAXX-2_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>2</td>
+      <td>Low &lt;= p10, Normal p10–p75</td>
+      <td>3</td>
+      <td>0.1402</td>
+      <td>+ | - | 0 | NA</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>T_DRAXX-3_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>2</td>
+      <td>Low &lt;= p10, Normal p10–p75</td>
+      <td>6</td>
+      <td>0.1385</td>
+      <td>+ | - | NA | NA</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td>T_HUMR-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>Normal p10–p75, Extreme &gt; p95</td>
+      <td>8</td>
+      <td>0.1060</td>
+      <td>0 | + | - | -</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>T_ROCK-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>Normal p10–p75, Extreme &gt; p95</td>
+      <td>11</td>
+      <td>0.1051</td>
+      <td>NA | + | + | +</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>T_FFES-1_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>Normal p10–p75, Extreme &gt; p95</td>
+      <td>12</td>
+      <td>0.0958</td>
+      <td>NA | + | + | -</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>T_DAMC-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>Normal p10–p75, High p90–p95</td>
+      <td>3</td>
+      <td>0.0923</td>
+      <td>NA | + | - | -</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>T_CARR-2_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>High p90–p95, Extreme &gt; p95</td>
+      <td>2</td>
+      <td>0.0839</td>
+      <td>NA | + | + | -</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>T_CRUA-1_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>Normal p10–p75, High p90–p95</td>
+      <td>8</td>
+      <td>0.0721</td>
+      <td>NA | + | + | -</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>T_DINO-3_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>Normal p10–p75, Extreme &gt; p95</td>
+      <td>16</td>
+      <td>0.0710</td>
+      <td>NA | + | - | -</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>T_WBURB-3_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>Normal p10–p75, High p90–p95</td>
+      <td>9</td>
+      <td>0.0439</td>
+      <td>NA | + | - | -</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>T_SHBA-2_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>2</td>
+      <td>Normal p10–p75, High p90–p95</td>
+      <td>7</td>
+      <td>0.0329</td>
+      <td>0 | + | + | -</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>T_CNQPS-2_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Extreme &gt; p95</td>
+      <td>3</td>
+      <td>0.8434</td>
+      <td>NA | + | - | +</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>T_CNQPS-3_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Extreme &gt; p95</td>
+      <td>5</td>
+      <td>0.3058</td>
+      <td>NA | + | - | +</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>T_RCBKO-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>1</td>
+      <td>0.1726</td>
+      <td>- | - | NA | NA</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>T_TKNEW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>2</td>
+      <td>0.1494</td>
+      <td>- | - | NA | NA</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>T_HOWBO-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>6</td>
+      <td>0.1356</td>
+      <td>- | - | NA | NA</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>T_TKNWW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>4</td>
+      <td>0.1292</td>
+      <td>- | - | NA | NA</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>T_RCBKO-2_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>5</td>
+      <td>0.1120</td>
+      <td>- | - | NA | NA</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>T_HUMR-1_BID</td>
+      <td>CCGT</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Normal p10–p75</td>
+      <td>2</td>
+      <td>0.1111</td>
+      <td>+ | - | NA | NA</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td>T_SEAB-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Normal p10–p75</td>
+      <td>1</td>
+      <td>0.0913</td>
+      <td>NA | + | + | -</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td>I_IBG-INCM1_OFFER</td>
+      <td>BritNed</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Extreme &gt; p95</td>
+      <td>9</td>
+      <td>0.0805</td>
+      <td>NA | 0 | + | +</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>I_IVG-INCM1_OFFER</td>
+      <td>Viking</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Extreme &gt; p95</td>
+      <td>10</td>
+      <td>0.0804</td>
+      <td>NA | NA | 0 | +</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>T_DRAXX-4_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Normal p10–p75</td>
+      <td>13</td>
+      <td>0.0721</td>
+      <td>+ | - | NA | NA</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>T_DINO-1_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Normal p10–p75</td>
+      <td>3</td>
+      <td>0.0657</td>
+      <td>NA | + | - | 0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>T_BEATO-4_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>7</td>
+      <td>0.0654</td>
+      <td>- | NA | NA | NA</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>T_WBURB-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Extreme &gt; p95</td>
+      <td>18</td>
+      <td>0.0629</td>
+      <td>NA | + | + | -</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>T_SHBA-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Normal p10–p75</td>
+      <td>5</td>
+      <td>0.0612</td>
+      <td>NA | + | + | -</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>T_FOYE-1_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Extreme &gt; p95</td>
+      <td>15</td>
+      <td>0.0548</td>
+      <td>NA | + | - | -</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>T_EAAO-2_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>8</td>
+      <td>0.0516</td>
+      <td>- | 0 | NA | NA</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>T_MEDP-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Extreme &gt; p95</td>
+      <td>20</td>
+      <td>0.0511</td>
+      <td>NA | + | - | -</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>T_DRAXX-1_BID</td>
+      <td>BIOMASS</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Normal p10–p75</td>
+      <td>12</td>
+      <td>0.0495</td>
+      <td>- | - | NA | NA</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>T_MRWD-1_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Normal p10–p75</td>
+      <td>7</td>
+      <td>0.0491</td>
+      <td>0 | + | + | -</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>T_KEAD-2_BID</td>
+      <td>CCGT</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Normal p10–p75</td>
+      <td>15</td>
+      <td>0.0463</td>
+      <td>+ | - | NA | NA</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>E_BURWB-1_OFFER</td>
+      <td>OTHER</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Extreme &gt; p95</td>
+      <td>16</td>
+      <td>0.0457</td>
+      <td>NA | + | + | +</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>T_STAY-4_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>Extreme &gt; p95</td>
+      <td>17</td>
+      <td>0.0444</td>
+      <td>NA | 0 | + | -</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>T_BRBEO-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>10</td>
+      <td>0.0398</td>
+      <td>- | NA | NA | NA</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>T_DIDCB6_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>High p90–p95</td>
+      <td>20</td>
+      <td>0.0388</td>
+      <td>NA | + | + | -</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>T_DINO-6_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>High p90–p95</td>
+      <td>17</td>
+      <td>0.0355</td>
+      <td>NA | + | + | -</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>T_HOWBO-3_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>12</td>
+      <td>0.0354</td>
+      <td>- | - | NA | NA</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>T_BEATO-2_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>13</td>
+      <td>0.0322</td>
+      <td>- | NA | NA | NA</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>T_BEATO-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>14</td>
+      <td>0.0316</td>
+      <td>- | NA | NA | NA</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>T_CLDCW-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>18</td>
+      <td>0.0313</td>
+      <td>- | - | NA | NA</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>T_BEATO-3_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>15</td>
+      <td>0.0311</td>
+      <td>- | NA | NA | NA</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>T_GRAI-7_BID</td>
+      <td>CCGT</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>16</td>
+      <td>0.0275</td>
+      <td>+ | - | 0 | NA</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>T_DINO-3_BID</td>
+      <td>PS</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>20</td>
+      <td>0.0271</td>
+      <td>+ | - | NA | NA</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>T_WBURB-2_OFFER</td>
+      <td>CCGT</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>High p90–p95</td>
+      <td>6</td>
+      <td>0.0254</td>
+      <td>NA | + | + | -</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>T_DINO-5_OFFER</td>
+      <td>PS</td>
+      <td>OFFER</td>
+      <td>1</td>
+      <td>High p90–p95</td>
+      <td>15</td>
+      <td>0.0236</td>
+      <td>NA | + | + | +</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>T_GRAI-8_BID</td>
+      <td>CCGT</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>11</td>
+      <td>0.0226</td>
+      <td>+ | - | 0 | NA</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>T_EAAO-1_BID</td>
+      <td>WIND</td>
+      <td>BID</td>
+      <td>1</td>
+      <td>Low &lt;= p10</td>
+      <td>19</td>
+      <td>0.0184</td>
+      <td>- | - | 0 | NA</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>BID-side BMUs: Raw Bid-Price Check</h2>
+<p class="note">Canonical bid-side accounting: starts from the main pooled BMU SHAP BID drivers,
+then checks whether those marginal BID rows carry negative or positive raw bid prices.
+Negative = SO pays; positive = SO receives.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>bid_shap_rank</th>
+      <th>feature</th>
+      <th>fuel_type</th>
+      <th>mean_abs_shap</th>
+      <th>bid_rows</th>
+      <th>median_raw_bid_price</th>
+      <th>weighted_mean_raw_bid_price</th>
+      <th>share_so_pays_weighted</th>
+      <th>share_so_receives_weighted</th>
+      <th>raw_bid_price_direction</th>
+      <th>raw_bid_price_read</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>T_DRAXX-1_BID</td>
+      <td>BIOMASS</td>
+      <td>0.5605</td>
+      <td>481</td>
+      <td>-45.000</td>
+      <td>-39.8631</td>
+      <td>0.8279</td>
+      <td>0.1072</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>T_DRAXX-2_BID</td>
+      <td>BIOMASS</td>
+      <td>0.2990</td>
+      <td>729</td>
+      <td>0.000</td>
+      <td>6.7711</td>
+      <td>0.1995</td>
+      <td>0.4235</td>
+      <td>mixed</td>
+      <td>SO usually receives</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>T_DRAXX-3_BID</td>
+      <td>BIOMASS</td>
+      <td>0.2822</td>
+      <td>731</td>
+      <td>0.000</td>
+      <td>3.7504</td>
+      <td>0.2851</td>
+      <td>0.4061</td>
+      <td>mixed</td>
+      <td>SO usually receives</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>T_PNYCW-1_BID</td>
+      <td>WIND</td>
+      <td>0.2791</td>
+      <td>222</td>
+      <td>-95.000</td>
+      <td>-88.0590</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>T_HUMR-1_BID</td>
+      <td>CCGT</td>
+      <td>0.2556</td>
+      <td>823</td>
+      <td>5.000</td>
+      <td>3.4744</td>
+      <td>0.3904</td>
+      <td>0.6096</td>
+      <td>leans positive bid (SO receives)</td>
+      <td>SO usually receives</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>T_HOWBO-1_BID</td>
+      <td>WIND</td>
+      <td>0.2382</td>
+      <td>254</td>
+      <td>-65.000</td>
+      <td>-73.2282</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>T_TKNWW-1_BID</td>
+      <td>WIND</td>
+      <td>0.1933</td>
+      <td>166</td>
+      <td>-115.375</td>
+      <td>-119.5160</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>T_DRAXX-4_BID</td>
+      <td>BIOMASS</td>
+      <td>0.1649</td>
+      <td>524</td>
+      <td>0.000</td>
+      <td>7.8959</td>
+      <td>0.2244</td>
+      <td>0.3990</td>
+      <td>mixed</td>
+      <td>SO usually receives</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>T_TKNEW-1_BID</td>
+      <td>WIND</td>
+      <td>0.1553</td>
+      <td>177</td>
+      <td>-118.870</td>
+      <td>-123.3160</td>
+      <td>0.9910</td>
+      <td>0.0090</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>T_HOWBO-2_BID</td>
+      <td>WIND</td>
+      <td>0.1406</td>
+      <td>154</td>
+      <td>-65.000</td>
+      <td>-73.9950</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>T_CLDCW-1_BID</td>
+      <td>WIND</td>
+      <td>0.1325</td>
+      <td>149</td>
+      <td>-97.100</td>
+      <td>-92.7051</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>T_RCBKO-1_BID</td>
+      <td>WIND</td>
+      <td>0.1238</td>
+      <td>160</td>
+      <td>-151.230</td>
+      <td>-154.6990</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>T_HOWBO-3_BID</td>
+      <td>WIND</td>
+      <td>0.0803</td>
+      <td>127</td>
+      <td>-67.030</td>
+      <td>-67.6004</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>T_CLDSW-1_BID</td>
+      <td>WIND</td>
+      <td>0.0752</td>
+      <td>83</td>
+      <td>-95.980</td>
+      <td>-90.4025</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>T_MOWEO-2_BID</td>
+      <td>WIND</td>
+      <td>0.0664</td>
+      <td>79</td>
+      <td>-80.110</td>
+      <td>-82.2736</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>mostly negative bid (SO pays)</td>
+      <td>SO usually pays</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Suggested Dissertation Wording</h2>
+<p>The BMU-level SHAP model shows that system price formation is strongly asymmetric by
+marginal side. OFFER-side BMUs are associated with higher predicted prices, typically
+belonging to CCGT, storage, and flexible generation types. BID-side BMU effects are
+associated with lower-price system states, with the leading BID-side drivers tending to
+carry positive raw bid prices where the System Operator receives payment.
+Annual stability checks confirm that the key BMUs are not artefacts of a single year.
+Price-regime analysis shows that extreme-price periods shift toward a narrower set of
+high-value OFFER-side BMUs, while low-price periods are dominated by BID-side features.
+The bid-price accounting diagnostic then separates price importance from cost accounting:
+the most important BID-side BMUs by SHAP are predominantly positive bids where the SO
+receives, while a smaller set of negative-bid BMUs represent cost obligations to the SO.</p>
+</body></html>

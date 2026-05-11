@@ -1,0 +1,3 @@
+side,top20_mean_abs_shap,top20_directional_mean,n_features,n_active_features
+BID,0.1652985568276875,-22.487073607166515,630,352
+OFFER,0.27238659682276645,23.801631248396667,503,302
