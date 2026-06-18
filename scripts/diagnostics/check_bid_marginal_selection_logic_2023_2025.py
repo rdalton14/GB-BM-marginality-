@@ -14,7 +14,6 @@ STACK_PATH = (
 )
 NIV_PATH = (
     PROJECT_ROOT
-    / "archive" / "final_non_raw_data_archive_2026_04_27"
     / "data" / "processed" / "full_2023_2025" / "fundamentals"
     / "system_price_niv_2023_2025.csv"
 )
