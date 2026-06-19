@@ -24,8 +24,8 @@ REPORT_DIR = PROJECT_ROOT / "reports" / "full_2023_2025"
 OUT_HTML = REPORT_DIR / "canonical" / "shap_price_importance_2023_2025_sided_updated.html"
 OUT_CSV = REPORT_DIR / "tables" / "shap_price_importance_2023_2025_sided_updated.csv"
 
-TOP_N      = 30
-BEESWARM_N = 20
+COVERAGE_THRESHOLD = 0.85   # show however many features capture this share of total mean |SHAP|
+BEESWARM_N         = 20    # beeswarm kept at fixed cap — too many rows becomes unreadable
 
 # Per-predictor settings: family/BMU have 749/1043 features — fewer trees keeps both RF
 # fitting and TreeSHAP traversal fast; 100 trees gives stable SHAP rankings.
@@ -71,6 +71,16 @@ def fig_to_b64(fig: plt.Figure) -> str:
 
 def make_sided_col(sp: pd.DataFrame, col: str) -> pd.Series:
     return sp[col].fillna("MISSING") + "_" + sp["niv_active_side"].str.upper()
+
+
+def n_for_coverage(mean_abs: np.ndarray, threshold: float) -> int:
+    """Return the minimum number of top features (by mean |SHAP|) to capture `threshold` of total."""
+    total = mean_abs.sum()
+    if total == 0:
+        return len(mean_abs)
+    cumulative = np.cumsum(np.sort(mean_abs)[::-1]) / total
+    idx = int(np.searchsorted(cumulative, threshold))
+    return min(idx + 1, len(mean_abs))
 
 
 def fit_rf(
@@ -164,16 +174,24 @@ def plot_mean_shap_signed(
 
     mean_abs = np.abs(sv).mean(axis=0)   # unconditional |SHAP| for ranking
     eligible = np.flatnonzero(active_counts > 0)
-    top_idx  = eligible[np.argsort(mean_abs[eligible])[-TOP_N:]]
+    k        = n_for_coverage(mean_abs, COVERAGE_THRESHOLD)
+    top_idx  = eligible[np.argsort(mean_abs[eligible])[-k:]]
     names    = [feature_names[i] for i in top_idx]
     values   = cond_mean[top_idx]
     colours  = ["#4CAF50" if v >= 0 else "#EF5350" for v in values]
 
-    fig, ax = plt.subplots(figsize=(9, max(4, 0.42 * TOP_N + 1)))
+    total         = mean_abs.sum()
+    actual_cov    = mean_abs[top_idx].sum() / total * 100 if total > 0 else 0.0
+
+    fig, ax = plt.subplots(figsize=(9, max(4, 0.42 * k + 1)))
     ax.barh(names, values, color=colours, edgecolor="white")
     ax.axvline(0, color="black", linewidth=0.8)
     ax.set_xlabel(f"Conditional mean SHAP (£/MWh) when feature=1  [baseline = {ev:.1f} £/MWh]")
-    ax.set_title(f"SHAP directional effect — {label} × side  (top {TOP_N} by mean |SHAP|)", fontsize=11)
+    ax.set_title(
+        f"SHAP directional effect — {label} × side\n"
+        f"top {k} features, {actual_cov:.0f}% of total SHAP mass ({int(COVERAGE_THRESHOLD*100)}% threshold)",
+        fontsize=11,
+    )
     ax.legend(handles=[
         Patch(facecolor="#4CAF50", label="Positive → raises predicted price when at margin"),
         Patch(facecolor="#EF5350", label="Negative → lowers predicted price when at margin"),
@@ -187,7 +205,8 @@ def plot_mdi_vs_shap(
 ) -> str:
     """Side-by-side normalised bar comparing MDI rank with mean |SHAP| rank."""
     mean_abs  = np.abs(sv).mean(axis=0)
-    top_idx   = np.argsort(mdi)[-TOP_N:]             # rank by MDI, ascending
+    k         = n_for_coverage(mean_abs, COVERAGE_THRESHOLD)
+    top_idx   = np.argsort(mdi)[-k:]                 # rank by MDI, ascending
     names     = [feature_names[i] for i in top_idx]
     mdi_vals  = mdi[top_idx]
     shap_vals = mean_abs[top_idx]
@@ -195,13 +214,17 @@ def plot_mdi_vs_shap(
     shap_n    = shap_vals / shap_vals.max() if shap_vals.max() > 0 else shap_vals
 
     y = np.arange(len(names))
-    fig, ax = plt.subplots(figsize=(9, max(4, 0.42 * TOP_N + 1)))
+    fig, ax = plt.subplots(figsize=(9, max(4, 0.42 * k + 1)))
     ax.barh(y - 0.18, mdi_n,  0.35, label="MDI (normalised)",         color="#7986CB", edgecolor="white")
     ax.barh(y + 0.18, shap_n, 0.35, label="Mean |SHAP| (normalised)", color="#FF7043", edgecolor="white")
     ax.set_yticks(y)
     ax.set_yticklabels(names, fontsize=8)
     ax.set_xlabel("Normalised importance (each method scaled to max = 1)")
-    ax.set_title(f"MDI vs mean |SHAP| — {label} × side  (top {TOP_N} by MDI)", fontsize=11)
+    ax.set_title(
+        f"MDI vs mean |SHAP| — {label} × side\n"
+        f"top {k} by MDI ({int(COVERAGE_THRESHOLD*100)}% SHAP coverage threshold)",
+        fontsize=11,
+    )
     ax.legend(fontsize=8)
     fig.tight_layout()
     return fig_to_b64(fig)
@@ -473,10 +496,11 @@ def main() -> None:
 
   <h3>MDI vs mean |SHAP| — importance method comparison</h3>
   <img src="data:image/png;base64,{b64_comp}" style="width:100%;max-width:850px;">
-  <p class="note">Both metrics normalised to max=1 for visual comparison (top {TOP_N} features by MDI).
-     Close agreement validates the MDI ranking. Divergence highlights cases where MDI overstates
-     importance (high split frequency but low actual price contribution) or understates it
-     (infrequent but high-impact splits).</p>
+  <p class="note">Both metrics normalised to max=1 for visual comparison.
+     Features shown are the top-k by MDI where k is set by the {int(COVERAGE_THRESHOLD*100)}% SHAP
+     coverage threshold. Close agreement validates the MDI ranking. Divergence highlights cases
+     where MDI overstates importance (high split frequency but low actual price contribution)
+     or understates it (infrequent but high-impact splits).</p>
 
   <h3>SHAP beeswarm — distribution of per-SP effects (top {BEESWARM_N} features)</h3>
   <img src="data:image/png;base64,{b64_bee}" style="width:100%;max-width:850px;">
