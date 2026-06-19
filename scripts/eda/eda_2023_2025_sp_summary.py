@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import base64
+import html
 import io
 from pathlib import Path
 
@@ -22,6 +23,7 @@ SP_SUMMARY_PATH = (
 REPORT_DIR = PROJECT_ROOT / "reports" / "full_2023_2025"
 OUT_HTML = REPORT_DIR / "canonical" / "eda_2023_2025_sp_summary.html"
 SHAP_IMPORTANCE_CSV = REPORT_DIR / "tables" / "shap_price_importance_2023_2025_sided_updated.csv"
+UNIT_CONDITIONAL_CSV = REPORT_DIR / "tables" / "bmu_side_conditional_system_price_distribution_2023_2025.csv"
 
 FUEL_COLOURS = {
     "BATTERY":        "#2196F3",
@@ -64,8 +66,8 @@ def fig_to_b64(fig: plt.Figure) -> str:
     return base64.b64encode(buf.read()).decode()
 
 
-def img_tag(b64: str, width: str = "100%") -> str:
-    return f'<img src="data:image/png;base64,{b64}" style="width:{width};max-width:900px;">'
+def img_tag(b64: str, width: str = "100%", max_width: str = "900px") -> str:
+    return f'<img src="data:image/png;base64,{b64}" style="width:{width};max-width:{max_width};">'
 
 
 def section(title: str, content: str) -> str:
@@ -74,6 +76,11 @@ def section(title: str, content: str) -> str:
   <h2>{title}</h2>
   {content}
 </section>"""
+
+
+def details_block(summary: str, content: str, open_: bool = False) -> str:
+    open_attr = " open" if open_ else ""
+    return f"<details{open_attr}><summary>{html.escape(summary)}</summary>{content}</details>"
 
 
 def table_html(df: pd.DataFrame) -> str:
@@ -98,14 +105,15 @@ def plot_fuel_bar(sp: pd.DataFrame) -> str:
         .sort_values(ascending=False)
         .reset_index()
     )
-    fig, ax = plt.subplots(figsize=(10, 4))
+    fig, ax = plt.subplots(figsize=(13, 4))
     colours = _fuel_colour_list(counts["marginal_fuel_type"].tolist())
-    bars = ax.bar(counts["marginal_fuel_type"], counts["n_candidates"], color=colours, edgecolor="white")
+    bars = ax.bar(counts["marginal_fuel_type"], counts["n_candidates"], color=colours,
+                  edgecolor="white", width=0.6)
     ax.bar_label(bars, fmt="%d", fontsize=8, padding=2)
     ax.set_xlabel("Fuel type")
     ax.set_ylabel("Marginal candidate rows")
     ax.set_title("Marginal candidates by fuel type — 2023–2025")
-    ax.tick_params(axis="x", rotation=35)
+    ax.tick_params(axis="x", rotation=40)
     ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{int(x):,}"))
     fig.tight_layout()
     return fig_to_b64(fig)
@@ -146,12 +154,12 @@ def plot_tied_dist(sp: pd.DataFrame) -> str:
 
 
 def plot_price_hist(sp: pd.DataFrame) -> str:
-    fig, axes = plt.subplots(1, 3, figsize=(13, 4), sharey=False)
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4), sharey=False)
     for ax, col, label, colour in zip(
         axes,
-        ["systemBuyPrice", "systemSellPrice", "marginal_final_price"],
-        ["System Buy Price", "System Sell Price", "Raw marginal final price"],
-        ["#EF5350", "#42A5F5", "#66BB6A"],
+        ["systemPrice", "marginal_final_price"],
+        ["System Price", "Raw marginal final price"],
+        ["#EF5350", "#66BB6A"],
     ):
         data = sp[col].dropna()
         ax.hist(data, bins=60, color=colour, edgecolor="white", alpha=0.85)
@@ -395,43 +403,6 @@ def plot_technology_share_trends(sp: pd.DataFrame) -> str:
     return fig_to_b64(fig)
 
 
-def plot_lorenz_bmu(sp: pd.DataFrame) -> str:
-    """Lorenz curve of BMU marginal-candidate concentration, annotated with Gini."""
-    bmu_counts = sp.groupby("marginal_bmu_id").size().sort_values()
-    n = len(bmu_counts)
-    cum_freq = np.arange(1, n + 1) / n
-    cum_share = np.cumsum(bmu_counts.values) / bmu_counts.values.sum()
-
-    # Gini via trapezoidal rule
-    area = float(np.sum((cum_share[:-1] + cum_share[1:]) / 2 * np.diff(cum_freq)))
-    gini = 1 - 2 * area
-
-    # Top-k concentration stats (top BMUs = right-hand tail)
-    top10_share = 1 - cum_share[int(n * 0.9)]
-    top20_share = 1 - cum_share[int(n * 0.8)]
-    top5_abs = bmu_counts.nlargest(5).sum() / bmu_counts.sum()
-
-    fig, ax = plt.subplots(figsize=(7, 6))
-    ax.plot(cum_freq * 100, cum_share * 100,
-            color="#1565C0", linewidth=2, label="BMU concentration")
-    ax.plot([0, 100], [0, 100], color="grey", linestyle="--", linewidth=1,
-            label="Perfect equality")
-    ax.fill_between(cum_freq * 100, cum_share * 100, cum_freq * 100,
-                    alpha=0.12, color="#1565C0")
-    ax.set_xlabel("Cumulative % of BMUs (ascending frequency)")
-    ax.set_ylabel("Cumulative % of marginal candidate rows")
-    ax.set_title(f"Lorenz curve — BMU concentration at margin\nGini = {gini:.3f}")
-    ax.legend(fontsize=9)
-    ax.text(4, 82,
-            f"Top 10% of BMUs → {top10_share*100:.1f}% of rows\n"
-            f"Top 20% of BMUs → {top20_share*100:.1f}% of rows\n"
-            f"Top 5 BMUs → {top5_abs*100:.1f}% of rows",
-            fontsize=8, color="#1565C0",
-            bbox=dict(facecolor="white", edgecolor="#1565C0", alpha=0.7, pad=4))
-    fig.tight_layout()
-    return fig_to_b64(fig)
-
-
 def plot_freq_vs_shap(sp: pd.DataFrame, shap_imp: pd.DataFrame) -> str:
     """Frequency vs mean|SHAP| scatter — one point per technology×side label."""
     if shap_imp.empty:
@@ -451,35 +422,83 @@ def plot_freq_vs_shap(sp: pd.DataFrame, shap_imp: pd.DataFrame) -> str:
     count_med = merged["count"].median()
     shap_med  = merged["mean_abs_shap"].median()
 
-    fig, ax = plt.subplots(figsize=(11, 7))
+    merged["fuel"] = merged["label_x_side"].str.rsplit("_", n=1).str[0]
+    merged["side"] = merged["label_x_side"].str.rsplit("_", n=1).str[1]
 
-    for _, row in merged.iterrows():
-        fuel = row["label_x_side"].rsplit("_", 1)[0]
-        colour = FUEL_COLOURS.get(fuel, "#9E9E9E")
-        ax.scatter(row["count"], row["mean_abs_shap"],
-                   s=110, color=colour, edgecolors="white", linewidth=0.8, zorder=3)
-        ax.annotate(row["label_x_side"], (row["count"], row["mean_abs_shap"]),
-                    fontsize=7.5, xytext=(5, 3), textcoords="offset points", color="#37474F")
+    fig, ax = plt.subplots(figsize=(10.5, 6.2))
+
+    for side, marker, alpha in [("OFFER", "o", 0.78), ("BID", "s", 0.72)]:
+        subset = merged[merged["side"].eq(side)]
+        colours = [FUEL_COLOURS.get(f, "#9E9E9E") for f in subset["fuel"]]
+        ax.scatter(
+            subset["count"],
+            subset["mean_abs_shap"],
+            s=95,
+            marker=marker,
+            color=colours,
+            edgecolors="white",
+            linewidth=0.9,
+            alpha=alpha,
+            label=side.title(),
+            zorder=3,
+        )
+
+    focus_labels = {
+        "CCGT_OFFER",
+        "CCGT_BID",
+        "BATTERY_OFFER",
+        "BATTERY_BID",
+        "WIND_BID",
+        "WIND_OFFER",
+        "PS_OFFER",
+        "PS_BID",
+    }
+    label_set = set(merged.nlargest(5, "mean_abs_shap")["label_x_side"])
+    label_set |= set(merged.nlargest(5, "count")["label_x_side"])
+    label_set |= focus_labels
+
+    offsets = {
+        "CCGT_OFFER": (8, 8),
+        "CCGT_BID": (8, -10),
+        "BATTERY_OFFER": (8, -12),
+        "BATTERY_BID": (-72, 8),
+        "WIND_BID": (8, 8),
+        "WIND_OFFER": (8, -10),
+        "PS_OFFER": (8, 8),
+        "PS_BID": (8, -10),
+    }
+    for _, row in merged[merged["label_x_side"].isin(label_set)].iterrows():
+        xytext = offsets.get(row["label_x_side"], (7, 4))
+        ax.annotate(
+            row["label_x_side"],
+            (row["count"], row["mean_abs_shap"]),
+            fontsize=8,
+            xytext=xytext,
+            textcoords="offset points",
+            color="#263238",
+            arrowprops=dict(arrowstyle="-", color="#B0BEC5", linewidth=0.6, shrinkA=0, shrinkB=3),
+        )
 
     ax.axhline(shap_med,  color="#9E9E9E", linestyle="--", linewidth=0.8)
     ax.axvline(count_med, color="#9E9E9E", linestyle=":", linewidth=0.8)
 
-    # Quadrant labels
-    xlim = ax.get_xlim()
-    ylim = ax.get_ylim()
+    # Light quadrant hints, without labelling every point.
     for (xp, yp, txt) in [
-        (0.72, 0.93, "frequent & high-impact\n(price setter)"),
-        (0.05, 0.93, "rare & high-impact\n(scarce setter)"),
+        (0.70, 0.92, "frequent & high-impact"),
+        (0.07, 0.92, "rarer & high-impact"),
         (0.72, 0.03, "frequent & low-impact\n(price taker ←)"),
-        (0.05, 0.03, "rare & low-impact"),
+        (0.07, 0.07, "rarer & low-impact"),
     ]:
-        ax.text(xp, yp, txt, transform=ax.transAxes, fontsize=7.5,
+        ax.text(xp, yp, txt, transform=ax.transAxes, fontsize=8,
                 color="#757575", va="top" if yp > 0.5 else "bottom")
 
+    ax.set_xscale("log")
     ax.set_xlabel("Marginal candidate count (frequency at margin)")
     ax.set_ylabel("Mean |SHAP| — contribution to predicted SBP (£/MWh)")
     ax.set_title("Marginal frequency vs SHAP impact by technology × side\n"
-                 "Bottom-right = frequent but low-impact = price-taker fingerprint")
+                 "Log x-axis; labels limited to high-frequency, high-impact, and thesis-relevant fuels")
+    ax.legend(title="NIV side", fontsize=8)
+    ax.grid(axis="both", color="#E0E0E0", linewidth=0.6, alpha=0.7)
     fig.tight_layout()
     return fig_to_b64(fig)
 
@@ -550,6 +569,213 @@ def plot_gap_by_fuel(sp: pd.DataFrame) -> str:
 
 # ── table / section functions ─────────────────────────────────────────────────
 
+def _mode_or_missing(s: pd.Series) -> str:
+    values = s.dropna().astype(str)
+    if values.empty:
+        return "MISSING"
+    mode = values.mode()
+    if mode.empty:
+        return values.iloc[0]
+    return mode.iloc[0]
+
+
+def marginal_bmu_side_rows(sp: pd.DataFrame) -> pd.DataFrame:
+    """One observed target row per SP/unit/side where that BMU is marginal."""
+    keep_cols = [
+        "settlementDate",
+        "settlementPeriod",
+        "marginal_bmu_id",
+        "niv_active_side",
+        "marginal_fuel_type",
+        "marginal_family_id",
+        "systemPrice",
+        "marginal_final_price",
+        "niv_volume",
+    ]
+    cols = [c for c in keep_cols if c in sp.columns]
+    data = sp.loc[:, cols].dropna(
+        subset=["settlementDate", "settlementPeriod", "marginal_bmu_id", "niv_active_side", "systemPrice"]
+    ).copy()
+    data = data.drop_duplicates(
+        subset=["settlementDate", "settlementPeriod", "marginal_bmu_id", "niv_active_side"]
+    )
+    data["bmu_side_label"] = make_sided_label(data, "marginal_bmu_id")
+    data["systemPrice"] = pd.to_numeric(data["systemPrice"], errors="coerce")
+    if "marginal_final_price" in data.columns:
+        data["marginal_final_price"] = pd.to_numeric(data["marginal_final_price"], errors="coerce")
+    if "niv_volume" in data.columns:
+        data["niv_volume"] = pd.to_numeric(data["niv_volume"], errors="coerce")
+    return data.dropna(subset=["systemPrice"])
+
+
+def unit_conditional_distribution_stats(sp: pd.DataFrame) -> pd.DataFrame:
+    """Empirical target distribution conditional on BMU x side being at the margin."""
+    data = marginal_bmu_side_rows(sp)
+    if data.empty:
+        return pd.DataFrame()
+
+    agg_kwargs = dict(
+        marginal_bmu_id=("marginal_bmu_id", _mode_or_missing),
+        niv_active_side=("niv_active_side", _mode_or_missing),
+        marginal_fuel_type=("marginal_fuel_type", _mode_or_missing),
+        marginal_family_id=("marginal_family_id", _mode_or_missing),
+        n_rows=("systemPrice", "size"),
+        mean_system_price=("systemPrice", "mean"),
+        sd_system_price=("systemPrice", "std"),
+        min_system_price=("systemPrice", "min"),
+        p05_system_price=("systemPrice", lambda s: s.quantile(0.05)),
+        p25_system_price=("systemPrice", lambda s: s.quantile(0.25)),
+        median_system_price=("systemPrice", "median"),
+        p75_system_price=("systemPrice", lambda s: s.quantile(0.75)),
+        p95_system_price=("systemPrice", lambda s: s.quantile(0.95)),
+        max_system_price=("systemPrice", "max"),
+    )
+    if "marginal_final_price" in data.columns:
+        agg_kwargs.update(
+            median_raw_marginal_price=("marginal_final_price", "median"),
+            p05_raw_marginal_price=("marginal_final_price", lambda s: s.quantile(0.05)),
+            p95_raw_marginal_price=("marginal_final_price", lambda s: s.quantile(0.95)),
+        )
+    if "niv_volume" in data.columns:
+        agg_kwargs.update(
+            median_niv_mwh=("niv_volume", "median"),
+        )
+
+    stats = (
+        data.groupby("bmu_side_label", dropna=False)
+        .agg(**agg_kwargs)
+        .reset_index()
+        .rename(columns={"bmu_side_label": "label_x_side"})
+        .sort_values("n_rows", ascending=False)
+    )
+    stats["share_of_unit_margin_rows"] = stats["n_rows"] / len(data)
+    stats["rank_by_frequency"] = np.arange(1, len(stats) + 1)
+    return stats
+
+
+def plot_bmu_side_conditional_distribution(sp: pd.DataFrame, top_n_each_side: int = 12) -> str:
+    """Full observed SBP distributions for frequent BMU x side marginal setters."""
+    data = marginal_bmu_side_rows(sp)
+    if data.empty:
+        return ""
+
+    selected_labels: list[str] = []
+    for side in ["offer", "bid"]:
+        labels = (
+            data.loc[data["niv_active_side"].eq(side), "bmu_side_label"]
+            .value_counts()
+            .head(top_n_each_side)
+            .index.tolist()
+        )
+        selected_labels.extend(labels)
+    selected = data[data["bmu_side_label"].isin(selected_labels)].copy()
+    if selected.empty:
+        return ""
+
+    fig, axes = plt.subplots(
+        1,
+        2,
+        figsize=(15, max(6, 0.43 * top_n_each_side + 2)),
+        sharex=True,
+    )
+    rng = np.random.default_rng(4)
+    side_specs = [
+        ("offer", "#C62828", "Offer-active BMUs"),
+        ("bid", "#1565C0", "Bid-active BMUs"),
+    ]
+
+    for ax, (side, colour, title) in zip(axes, side_specs):
+        side_data = selected[selected["niv_active_side"].eq(side)].copy()
+        if side_data.empty:
+            ax.text(0.5, 0.5, f"No {side} rows", transform=ax.transAxes, ha="center", va="center")
+            ax.set_axis_off()
+            continue
+
+        order = (
+            side_data.groupby("bmu_side_label")["systemPrice"]
+            .median()
+            .sort_values()
+            .index.tolist()
+        )
+        y_positions = np.arange(len(order))
+        for y, label in zip(y_positions, order):
+            values = side_data.loc[side_data["bmu_side_label"].eq(label), "systemPrice"].dropna()
+            jitter = rng.uniform(-0.24, 0.24, size=len(values))
+            ax.scatter(values, y + jitter, s=9, alpha=0.17, color=colour, linewidths=0)
+
+            q10, q25, q50, q75, q90 = values.quantile([0.10, 0.25, 0.50, 0.75, 0.90])
+            ax.hlines(y, q10, q90, color="#263238", linewidth=1.0, alpha=0.85)
+            ax.hlines(y, q25, q75, color=colour, linewidth=4.0, alpha=0.90)
+            ax.plot(q50, y, marker="|", color="black", markersize=13, markeredgewidth=2)
+
+        meta = (
+            side_data.groupby("bmu_side_label")
+            .agg(
+                n=("systemPrice", "size"),
+                fuel=("marginal_fuel_type", _mode_or_missing),
+            )
+            .reindex(order)
+        )
+        labels = [f"{label} [{row.fuel}], n={int(row.n):,}" for label, row in meta.iterrows()]
+        ax.set_yticks(y_positions)
+        ax.set_yticklabels(labels, fontsize=7)
+        ax.set_title(title)
+        ax.axvline(0, color="#616161", linestyle=":", linewidth=0.8)
+        ax.axvline(data["systemPrice"].median(), color="#212121", linestyle="--", linewidth=0.8)
+        ax.grid(axis="x", color="#E0E0E0", linewidth=0.6, alpha=0.9)
+        ax.set_xscale("symlog", linthresh=50)
+        ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x:,.0f}"))
+
+    axes[0].set_ylabel("BMU x NIV side, ordered by median observed SBP")
+    for ax in axes:
+        ax.set_xlabel("Observed systemPrice (GBP/MWh), symlog scale")
+    fig.suptitle(
+        "Direct conditional distribution: observed SBP when each BMU is at the margin\n"
+        "Dots are individual SP observations; thick bar = IQR; thin bar = P10-P90; black tick = median",
+        fontsize=11,
+    )
+    fig.tight_layout()
+    return fig_to_b64(fig)
+
+
+def unit_conditional_distribution_table(stats: pd.DataFrame, n: int = 30) -> str:
+    if stats.empty:
+        return "<p class='note'>No BMU-level conditional distribution rows available.</p>"
+    show = stats.head(n).copy()
+    show["share_of_unit_margin_rows"] = show["share_of_unit_margin_rows"].map("{:.2%}".format)
+    keep = [
+        "rank_by_frequency",
+        "label_x_side",
+        "marginal_fuel_type",
+        "marginal_family_id",
+        "n_rows",
+        "share_of_unit_margin_rows",
+        "median_system_price",
+        "p05_system_price",
+        "p95_system_price",
+        "min_system_price",
+        "max_system_price",
+        "median_raw_marginal_price",
+        "median_niv_mwh",
+    ]
+    show = show[[c for c in keep if c in show.columns]].rename(columns={
+        "rank_by_frequency": "Rank",
+        "label_x_side": "BMU x side",
+        "marginal_fuel_type": "Fuel",
+        "marginal_family_id": "Family",
+        "n_rows": "Rows",
+        "share_of_unit_margin_rows": "Share",
+        "median_system_price": "Median SBP",
+        "p05_system_price": "P5 SBP",
+        "p95_system_price": "P95 SBP",
+        "min_system_price": "Min SBP",
+        "max_system_price": "Max SBP",
+        "median_raw_marginal_price": "Median raw marginal",
+        "median_niv_mwh": "Median NIV MWh",
+    })
+    return show.round(2).to_html(index=False, border=0, classes="tbl")
+
+
 def distributional_summary_table(sp: pd.DataFrame) -> str:
     sp_unique = sp.drop_duplicates(subset=["settlementDate", "settlementPeriod"])
 
@@ -572,8 +798,7 @@ def distributional_summary_table(sp: pd.DataFrame) -> str:
         }
 
     rows = [
-        _row(sp_unique["systemBuyPrice"],          "System Buy Price (SP-unique)"),
-        _row(sp_unique["systemSellPrice"],          "System Sell Price (SP-unique)"),
+        _row(sp_unique["systemPrice"],              "System Price (SP-unique)"),
         _row(sp["marginal_final_price"],            "Marginal final price (all candidate rows)"),
         _row(sp_unique["niv_volume"],               "NIV volume MWh (SP-unique)"),
         _row(sp["n_tied_marginal_candidates"].astype(float), "n tied co-marginals (SP-unique duplicated)"),
@@ -703,24 +928,6 @@ def family_rollup_table(sp: pd.DataFrame, n: int = 20) -> str:
     return tbl.round(2).to_html(index=False, border=0, classes="tbl")
 
 
-def hhi_table(sp: pd.DataFrame) -> str:
-    rows = []
-    for label, subset in [("All", sp),
-                           ("Offer-active", sp[sp["niv_active_side"] == "offer"]),
-                           ("Bid-active",   sp[sp["niv_active_side"] == "bid"])]:
-        shares = subset.groupby("marginal_bmu_id").size() / len(subset)
-        hhi    = (shares ** 2).sum() * 10_000
-        rows.append({
-            "Side":           label,
-            "HHI (0–10,000)": f"{hhi:.0f}",
-            "Distinct BMUs":  len(shares),
-            "Top-5 share":    f"{shares.nlargest(5).sum():.1%}",
-            "Top-10 share":   f"{shares.nlargest(10).sum():.1%}",
-            "Top-20 share":   f"{shares.nlargest(20).sum():.1%}",
-        })
-    return pd.DataFrame(rows).to_html(index=False, border=0, classes="tbl")
-
-
 def other_bucket_section(sp: pd.DataFrame) -> str:
     other = sp[sp["marginal_fuel_type"] == "OTHER"].copy()
     other_bmu = (
@@ -828,6 +1035,7 @@ def marginal_setter_frequency_table(
     label: str,
     shap_imp: pd.DataFrame,
     top_n: int = 25,
+    include_heading: bool = True,
 ) -> str:
     feature_col = f"{source_column}_sided"
     block = sp.copy()
@@ -884,7 +1092,8 @@ def marginal_setter_frequency_table(
         "overall_shap_rank":              "SHAP rank",
         "frequency_importance_read":      "Freq / impact read",
     })
-    return f"<h3>{label}</h3>" + freq.round(4).to_html(index=False, border=0, classes="tbl")
+    heading = f"<h3>{label}</h3>" if include_heading else ""
+    return heading + freq.round(4).to_html(index=False, border=0, classes="tbl")
 
 
 def marginal_setter_frequency_section(sp: pd.DataFrame, shap_imp: pd.DataFrame) -> str:
@@ -892,7 +1101,8 @@ def marginal_setter_frequency_section(sp: pd.DataFrame, shap_imp: pd.DataFrame) 
         "<p class='note'>Frequency is not importance. Count and share show how often a "
         "label×side combination is marginal; RF importance and mean |SHAP| come from the main "
         "sided SHAP/RF model. This separates frequent-but-ordinary setters from rarer "
-        "high-impact setters.</p>"
+        "high-impact setters. Technology is shown inline; family and BMU detail are collapsed "
+        "below so the evidence is available without dominating the report.</p>"
     )
     metric_key = (
         "<p class='note'><strong>_BID / _OFFER</strong> = NIV active side "
@@ -902,12 +1112,36 @@ def marginal_setter_frequency_section(sp: pd.DataFrame, shap_imp: pd.DataFrame) 
         "<strong>Mean SHAP when active</strong> = signed direction: negative pulls SBP down, "
         "positive pulls SBP up.</p>"
     )
-    tables = [
-        marginal_setter_frequency_table(sp, "marginal_fuel_type", "Generation type", shap_imp),
-        marginal_setter_frequency_table(sp, "marginal_family_id",  "Family ID",       shap_imp),
-        marginal_setter_frequency_table(sp, "marginal_bmu_id",     "BMU ID",          shap_imp),
-    ]
-    return note + metric_key + "\n".join(tables)
+    gen_table = marginal_setter_frequency_table(
+        sp,
+        "marginal_fuel_type",
+        "Generation type",
+        shap_imp,
+        top_n=18,
+    )
+    family_table = marginal_setter_frequency_table(
+        sp,
+        "marginal_family_id",
+        "Family ID",
+        shap_imp,
+        top_n=20,
+        include_heading=False,
+    )
+    bmu_table = marginal_setter_frequency_table(
+        sp,
+        "marginal_bmu_id",
+        "BMU ID",
+        shap_imp,
+        top_n=25,
+        include_heading=False,
+    )
+    return (
+        note
+        + metric_key
+        + gen_table
+        + details_block("Family ID frequency and SHAP table", family_table)
+        + details_block("BMU ID frequency and SHAP table", bmu_table)
+    )
 
 
 def marginal_vs_system_gap_table(sp: pd.DataFrame) -> str:
@@ -985,6 +1219,10 @@ CSS = """
   .callout p { margin: 6px 0; }
   .hook { background: #fff8e1; border-left: 4px solid #F9A825;
           padding: 10px 14px; margin: 12px 0; font-size: 13px; color: #5D4037; }
+  details { margin: 14px 0 18px 0; border: 1px solid #e0e0e0; border-radius: 6px;
+            padding: 8px 12px 12px 12px; background: #fafafa; }
+  summary { cursor: pointer; font-weight: 600; color: #283593; }
+  details .tbl { margin-top: 10px; }
 </style>
 """
 
@@ -999,14 +1237,16 @@ def main() -> None:
     print(f"  {len(sp):,} rows, {n_unique:,} unique SPs")
 
     shap_imp = load_shap_importance()
+    unit_cond_stats = unit_conditional_distribution_stats(sp)
+    unit_conditional_csv_rel = str(UNIT_CONDITIONAL_CSV.relative_to(PROJECT_ROOT)).replace("\\", "/")
 
     print("Building charts ...")
     b64_fuel_bar        = plot_fuel_bar(sp)
     b64_niv_fuel        = plot_niv_side_fuel(sp)
     b64_temporal        = plot_temporal_trajectory_sided(sp)
     b64_tech_trends     = plot_technology_share_trends(sp)
-    b64_lorenz          = plot_lorenz_bmu(sp)
     b64_freq_shap       = plot_freq_vs_shap(sp, shap_imp)
+    b64_unit_cond       = plot_bmu_side_conditional_distribution(sp)
     b64_sbp_cond        = plot_sbp_conditional_fuel(sp)
     b64_price_box       = plot_price_box(sp)
     b64_niv_scatter     = plot_niv_scatter(sp)
@@ -1055,30 +1295,17 @@ def main() -> None:
     + img_tag(b64_temporal)
     + "<h3>CCGT vs BATTERY — share trends by side</h3>"
     + img_tag(b64_tech_trends)
-    + """<div class="hook">
-         <strong>&#x1F4CC; Hook — GB battery installed capacity overlay:</strong>
-         No battery-capacity time series was found in this repository. To add one, load a
-         monthly GW series (e.g. from ESO capacity data) and plot it on a secondary y-axis
-         against the BATTERY share line above. This would complete the "scale without
-         price-setting power" visual argument.
-       </div>"""
+    + ""
 )}
 
-{section("4. BMU-level concentration — why unit identity matters",
-    "<p>Fuel-type shares mask sharp concentration in a small number of plant families. "
+{section("4. BMU-level view — why unit identity matters",
+    "<p>Fuel-type shares mask how marginal setting is distributed across individual BMUs and plant families. "
     "Price-setting power is not evenly distributed across CCGT BMUs. This is the "
     "empirical motivation for going to unit level rather than stopping at technology.</p>"
     + "<h3>Top 20 BMUs by marginal frequency</h3>"
     + top_bmu_table(sp)
     + "<h3>Top 20 plant families by marginal frequency</h3>"
     + family_rollup_table(sp)
-    + "<h3>Concentration metrics (HHI and top-k share)</h3>"
-    + "<p class='note'>HHI below 1,500 is considered unconcentrated; 1,500–2,500 moderately "
-      "concentrated; above 2,500 highly concentrated (US DOJ thresholds). "
-      "Offer and bid sides are assessed separately to reflect their distinct pricing mechanisms.</p>"
-    + hhi_table(sp)
-    + "<h3>Lorenz curve — BMU marginal-candidate concentration</h3>"
-    + img_tag(b64_lorenz)
 )}
 
 {section("5. Frequency vs impact: the price-taker fingerprint",
@@ -1086,11 +1313,24 @@ def main() -> None:
     "against its mean |SHAP| (y). The bottom-right quadrant — frequent but low-impact — "
     "is the price-taker fingerprint. BATTERY sits there; CCGT_OFFER and WIND_BID do not.</p>"
     + img_tag(b64_freq_shap)
-    + "<h3>Frequency and SHAP tables — fuel type, family, and BMU level</h3>"
+    + "<h3>Frequency and SHAP tables by granularity</h3>"
     + marginal_setter_frequency_section(sp, shap_imp)
 )}
 
-{section("6. Price conditional on marginal technology",
+{section("6. Direct unit-conditional price distributions",
+    "<p>This is the direct empirical check: for each BMU x side, take every SP where that "
+    "unit is marginal and plot the observed <code>systemPrice</code>. The plot shows the "
+    "most frequent offer-side and bid-side BMU setters; the CSV contains the full "
+    "BMU x side percentile table for all units.</p>"
+    + img_tag(b64_unit_cond, max_width="1100px")
+    + "<p class='note'>The x-axis uses a symlog scale so negative prices and high-price tails "
+      "remain visible. Dots are individual SP observations, not model effects.</p>"
+    + "<h3>Top BMU x side conditional distribution stats</h3>"
+    + unit_conditional_distribution_table(unit_cond_stats)
+    + f"<p class='note'>Full table saved to <code>{unit_conditional_csv_rel}</code>.</p>"
+)}
+
+{section("7. Price conditional on marginal technology",
     "<p>Hypothesis: BATTERY is predominantly marginal in lower-price, long-system periods — "
     "the mechanism behind its low SHAP. Box plots of published SBP conditional on the marginal "
     "technology, shown separately for offer-active and bid-active SPs.</p>"
@@ -1101,7 +1341,7 @@ def main() -> None:
       "Outliers hidden (IQR only).</p>"
 )}
 
-{section("7. Bid/offer asymmetry — why separating bids and offers matters",
+{section("8. Bid/offer asymmetry — why separating bids and offers matters",
     "<p>WIND_BID has a mean SHAP of −56.8 £/MWh when active — the second-most-impactful "
     "feature overall — yet it appears almost exclusively on the bid side (4,684 bid rows vs "
     "50 offer rows). Pooling bids and offers would bury this signal entirely. "
@@ -1114,7 +1354,7 @@ def main() -> None:
       "above the marginal unit. Offer-active SPs only.</p>"
 )}
 
-{section("8. Marginal action price vs published SBP — target justification",
+{section("9. Marginal action price vs published SBP — target justification",
     "<p>The raw marginal final price identified from the stack is not the same as the "
     "published System Buy Price. The gap is systematic: bid-active periods are far less "
     "likely than offer-active periods to have their marginal price close to SBP. "
@@ -1128,7 +1368,7 @@ def main() -> None:
     + marginal_vs_system_gap_table(sp)
 )}
 
-{section("9. Supporting distributions",
+{section("10. Supporting distributions",
     "<h3>Price distributions</h3>"
     + img_tag(b64_price_hist)
     + "<h3>Co-marginal candidate count distribution</h3>"
@@ -1137,10 +1377,14 @@ def main() -> None:
       "SPs with n_tied > 1 contribute multiple rows to the candidate dataset.</p>"
 )}
 
-{section("10. Data quality and taxonomy",
+{section("11. Data quality and taxonomy",
     other_bucket_section(sp)
 )}
 """
+
+    UNIT_CONDITIONAL_CSV.parent.mkdir(parents=True, exist_ok=True)
+    unit_cond_stats.to_csv(UNIT_CONDITIONAL_CSV, index=False)
+    print(f"Saved -> {UNIT_CONDITIONAL_CSV}")
 
     OUT_HTML.parent.mkdir(parents=True, exist_ok=True)
     OUT_HTML.write_text(
