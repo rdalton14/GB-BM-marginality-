@@ -1,0 +1,529 @@
+<!doctype html><html><head><meta charset="utf-8"><title>RF+SHAP SP-weighting robustness</title><style>body{font-family:Segoe UI,sans-serif;max-width:1200px;margin:35px auto;color:#222}h1{color:#283593;border-bottom:3px solid #3f51b5}h2{color:#283593;margin-top:36px}.tbl{border-collapse:collapse;width:100%;font-size:12px}.tbl th{background:#3f51b5;color:white;padding:6px}.tbl td{padding:5px;border-bottom:1px solid #ddd}.tbl tr:nth-child(even){background:#f5f5f5}.note{color:#666;font-size:12px}.callout{background:#e8eaf6;padding:14px;border-left:5px solid #3f51b5}</style></head><body>
+<h1>RF + SHAP settlement-period weighting robustness — 2023–2025</h1>
+<div class="callout">Primary specification: each tied marginal-candidate row receives 1/n<sub>t</sub>, so every settlement period contributes total weight one to RF fitting, SHAP aggregation and evaluation. Unweighted models use the identical rows, features, hyperparameters and common SHAP samples.</div>
+<h2>Split audit and model performance</h2><p class="note">Unique SPs are ordered chronologically; the first 80% train and final 20% test. All tied rows remain grouped. Both models are evaluated using SP weights.</p>
+<table class="dataframe tbl">
+  <thead>
+    <tr style="text-align: right;">
+      <th>predictor</th>
+      <th>source_column</th>
+      <th>rows</th>
+      <th>unique_sps</th>
+      <th>holdout_cutoff</th>
+      <th>unweighted_train_r2</th>
+      <th>weighted_train_r2</th>
+      <th>unweighted_test_r2</th>
+      <th>unweighted_test_mae</th>
+      <th>unweighted_test_rmse</th>
+      <th>weighted_test_r2</th>
+      <th>weighted_test_mae</th>
+      <th>weighted_test_rmse</th>
+      <th>rank_spearman</th>
+      <th>conditional_sign_agreement</th>
+      <th>top30_overlap</th>
+      <th>unweighted_features_to_85pct</th>
+      <th>weighted_features_to_85pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Generation type</td>
+      <td>marginal_fuel_type</td>
+      <td>67955</td>
+      <td>50684</td>
+      <td>2025-05-26 SP14</td>
+      <td>0.3656</td>
+      <td>0.3673</td>
+      <td>0.5046</td>
+      <td>20.4178</td>
+      <td>29.3025</td>
+      <td>0.5087</td>
+      <td>20.1645</td>
+      <td>29.1815</td>
+      <td>0.9912</td>
+      <td>0.9459</td>
+      <td>30</td>
+      <td>9</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>marginal_family_id</td>
+      <td>67955</td>
+      <td>50684</td>
+      <td>2025-05-26 SP14</td>
+      <td>0.1820</td>
+      <td>0.1888</td>
+      <td>0.1602</td>
+      <td>27.4522</td>
+      <td>38.1546</td>
+      <td>0.1494</td>
+      <td>27.5914</td>
+      <td>38.3983</td>
+      <td>0.8807</td>
+      <td>0.8990</td>
+      <td>26</td>
+      <td>34</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>marginal_bmu_id</td>
+      <td>67955</td>
+      <td>50684</td>
+      <td>2025-05-26 SP14</td>
+      <td>0.1263</td>
+      <td>0.1390</td>
+      <td>0.0875</td>
+      <td>29.1813</td>
+      <td>39.7718</td>
+      <td>0.0719</td>
+      <td>29.3823</td>
+      <td>40.1097</td>
+      <td>0.8713</td>
+      <td>0.8736</td>
+      <td>27</td>
+      <td>46</td>
+      <td>45</td>
+    </tr>
+  </tbody>
+</table>
+<h2>SHAP robustness</h2><p class="note">Rank correlations cover all features. Sign agreement compares conditional signed SHAP where the feature is active. Top-30 overlap is out of 30. The 85% count is the minimum feature set reaching 85% of total mean |SHAP|.</p>
+<table class="dataframe tbl">
+  <thead>
+    <tr style="text-align: right;">
+      <th>predictor</th>
+      <th>rank_spearman</th>
+      <th>conditional_sign_agreement</th>
+      <th>top30_overlap</th>
+      <th>unweighted_features_to_85pct</th>
+      <th>weighted_features_to_85pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Generation type</td>
+      <td>0.9912</td>
+      <td>94.59%</td>
+      <td>30</td>
+      <td>9</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>0.8807</td>
+      <td>89.9%</td>
+      <td>26</td>
+      <td>34</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>0.8713</td>
+      <td>87.36%</td>
+      <td>27</td>
+      <td>46</td>
+      <td>45</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Technology attribution shares: battery and pumped storage</h2>
+<table class="dataframe tbl">
+  <thead>
+    <tr style="text-align: right;">
+      <th>predictor</th>
+      <th>specification</th>
+      <th>technology</th>
+      <th>shap_mass</th>
+      <th>shap_share</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Generation type</td>
+      <td>unweighted</td>
+      <td>BATTERY</td>
+      <td>7.5755</td>
+      <td>15.19%</td>
+    </tr>
+    <tr>
+      <td>Generation type</td>
+      <td>unweighted</td>
+      <td>PS</td>
+      <td>6.1280</td>
+      <td>12.28%</td>
+    </tr>
+    <tr>
+      <td>Generation type</td>
+      <td>weighted</td>
+      <td>BATTERY</td>
+      <td>7.3776</td>
+      <td>14.56%</td>
+    </tr>
+    <tr>
+      <td>Generation type</td>
+      <td>weighted</td>
+      <td>PS</td>
+      <td>7.4669</td>
+      <td>14.73%</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>unweighted</td>
+      <td>BATTERY</td>
+      <td>0.7424</td>
+      <td>4.21%</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>unweighted</td>
+      <td>PS</td>
+      <td>3.8545</td>
+      <td>21.85%</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>weighted</td>
+      <td>BATTERY</td>
+      <td>0.5620</td>
+      <td>2.95%</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>weighted</td>
+      <td>PS</td>
+      <td>4.8083</td>
+      <td>25.21%</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>unweighted</td>
+      <td>BATTERY</td>
+      <td>0.0674</td>
+      <td>0.59%</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>unweighted</td>
+      <td>PS</td>
+      <td>2.4305</td>
+      <td>21.16%</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>weighted</td>
+      <td>BATTERY</td>
+      <td>0.1042</td>
+      <td>0.79%</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>weighted</td>
+      <td>PS</td>
+      <td>3.1150</td>
+      <td>23.7%</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Battery: conditional effects, SHAP mass and atomisation</h2>
+<table class="dataframe tbl">
+  <thead>
+    <tr style="text-align: right;">
+      <th>predictor</th>
+      <th>technology</th>
+      <th>specification</th>
+      <th>side</th>
+      <th>conditional_shap</th>
+      <th>total_mean_abs_shap_mass</th>
+      <th>share_total_mean_abs_shap</th>
+      <th>features_in_85pct_set</th>
+      <th>total_features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Generation type</td>
+      <td>BATTERY</td>
+      <td>unweighted</td>
+      <td>BID</td>
+      <td>-19.5698</td>
+      <td>7.5755</td>
+      <td>15.19%</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Generation type</td>
+      <td>BATTERY</td>
+      <td>unweighted</td>
+      <td>OFFER</td>
+      <td>18.7339</td>
+      <td>7.5755</td>
+      <td>15.19%</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Generation type</td>
+      <td>BATTERY</td>
+      <td>weighted</td>
+      <td>BID</td>
+      <td>-19.5010</td>
+      <td>7.3776</td>
+      <td>14.56%</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Generation type</td>
+      <td>BATTERY</td>
+      <td>weighted</td>
+      <td>OFFER</td>
+      <td>17.3255</td>
+      <td>7.3776</td>
+      <td>14.56%</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>BATTERY</td>
+      <td>unweighted</td>
+      <td>BID</td>
+      <td>-1.1959</td>
+      <td>0.7424</td>
+      <td>4.21%</td>
+      <td>1</td>
+      <td>151</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>BATTERY</td>
+      <td>unweighted</td>
+      <td>OFFER</td>
+      <td>3.5707</td>
+      <td>0.7424</td>
+      <td>4.21%</td>
+      <td>1</td>
+      <td>151</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>BATTERY</td>
+      <td>weighted</td>
+      <td>BID</td>
+      <td>-1.2585</td>
+      <td>0.5620</td>
+      <td>2.95%</td>
+      <td>1</td>
+      <td>151</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>BATTERY</td>
+      <td>weighted</td>
+      <td>OFFER</td>
+      <td>2.1259</td>
+      <td>0.5620</td>
+      <td>2.95%</td>
+      <td>1</td>
+      <td>151</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>BATTERY</td>
+      <td>unweighted</td>
+      <td>BID</td>
+      <td>-0.3428</td>
+      <td>0.0674</td>
+      <td>0.59%</td>
+      <td>0</td>
+      <td>268</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>BATTERY</td>
+      <td>unweighted</td>
+      <td>OFFER</td>
+      <td>0.0834</td>
+      <td>0.0674</td>
+      <td>0.59%</td>
+      <td>0</td>
+      <td>268</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>BATTERY</td>
+      <td>weighted</td>
+      <td>BID</td>
+      <td>-0.6453</td>
+      <td>0.1042</td>
+      <td>0.79%</td>
+      <td>0</td>
+      <td>268</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>BATTERY</td>
+      <td>weighted</td>
+      <td>OFFER</td>
+      <td>0.0494</td>
+      <td>0.1042</td>
+      <td>0.79%</td>
+      <td>0</td>
+      <td>268</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Pumped storage comparator (PS)</h2><p class="note">PS is the source-data technology code for pumped storage and supplies the requested low-co-marginality comparator.</p>
+<table class="dataframe tbl">
+  <thead>
+    <tr style="text-align: right;">
+      <th>predictor</th>
+      <th>technology</th>
+      <th>specification</th>
+      <th>side</th>
+      <th>conditional_shap</th>
+      <th>total_mean_abs_shap_mass</th>
+      <th>share_total_mean_abs_shap</th>
+      <th>features_in_85pct_set</th>
+      <th>total_features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Generation type</td>
+      <td>PS</td>
+      <td>unweighted</td>
+      <td>BID</td>
+      <td>-16.2974</td>
+      <td>6.1280</td>
+      <td>12.28%</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Generation type</td>
+      <td>PS</td>
+      <td>unweighted</td>
+      <td>OFFER</td>
+      <td>32.4111</td>
+      <td>6.1280</td>
+      <td>12.28%</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Generation type</td>
+      <td>PS</td>
+      <td>weighted</td>
+      <td>BID</td>
+      <td>-16.1629</td>
+      <td>7.4669</td>
+      <td>14.73%</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Generation type</td>
+      <td>PS</td>
+      <td>weighted</td>
+      <td>OFFER</td>
+      <td>31.7667</td>
+      <td>7.4669</td>
+      <td>14.73%</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>PS</td>
+      <td>unweighted</td>
+      <td>BID</td>
+      <td>-7.6378</td>
+      <td>3.8545</td>
+      <td>21.85%</td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>PS</td>
+      <td>unweighted</td>
+      <td>OFFER</td>
+      <td>25.5365</td>
+      <td>3.8545</td>
+      <td>21.85%</td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>PS</td>
+      <td>weighted</td>
+      <td>BID</td>
+      <td>-8.1453</td>
+      <td>4.8083</td>
+      <td>25.21%</td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Family ID</td>
+      <td>PS</td>
+      <td>weighted</td>
+      <td>OFFER</td>
+      <td>25.1125</td>
+      <td>4.8083</td>
+      <td>25.21%</td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>PS</td>
+      <td>unweighted</td>
+      <td>BID</td>
+      <td>-1.1413</td>
+      <td>2.4305</td>
+      <td>21.16%</td>
+      <td>12</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>PS</td>
+      <td>unweighted</td>
+      <td>OFFER</td>
+      <td>16.5422</td>
+      <td>2.4305</td>
+      <td>21.16%</td>
+      <td>12</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>PS</td>
+      <td>weighted</td>
+      <td>BID</td>
+      <td>-1.4663</td>
+      <td>3.1150</td>
+      <td>23.7%</td>
+      <td>12</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td>BMU ID</td>
+      <td>PS</td>
+      <td>weighted</td>
+      <td>OFFER</td>
+      <td>16.7941</td>
+      <td>3.1150</td>
+      <td>23.7%</td>
+      <td>12</td>
+      <td>31</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Interpretation</h2><p>The weighted rows are the corrected estimand. Technology-level mass tests whether battery attribution remains material; family/BMU counts in the 85% set and aggregate mass show whether that effect is fragmented across identities. Differences from the unweighted columns quantify sensitivity to tie expansion rather than a change in sample or model settings.</p>
+</body></html>

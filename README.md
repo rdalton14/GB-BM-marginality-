@@ -2,6 +2,10 @@
 
 This project builds GB Balancing Mechanism datasets for dissertation analysis.
 
+## Published results
+
+- [Unified Results, Analysis and Supporting Evidence (2023–2025)](reports/full_2023_2025/canonical/combined_rqs_supporting_evidence_2023_2025.html)
+
 ## Structure
 
 - `config/` - local configuration.
