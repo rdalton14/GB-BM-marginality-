@@ -5,6 +5,7 @@ This project builds GB Balancing Mechanism datasets for dissertation analysis.
 ## Published results
 
 - [Unified Results, Analysis and Supporting Evidence (2023–2025)](reports/full_2023_2025/canonical/combined_rqs_supporting_evidence_2023_2025.html)
+- [RQ1 Amendment: Structural change, capacity and exploratory associations (2023–2025)](reports/full_2023_2025/canonical/amendments/rq1_amendment_01_quarterly_structural_change_2023_2025.html)
 
 ## Structure
 
